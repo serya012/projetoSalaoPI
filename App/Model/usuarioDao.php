@@ -53,7 +53,7 @@ class UsuarioDao {
        }    
    }
 
-   public function buscarNivel(User $u){
+   public function buscarNivel(Usuario $u){
 
     $sql = 'SELECT * FROM usuario WHERE email_usuario = ?';
 
