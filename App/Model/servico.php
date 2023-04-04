@@ -6,11 +6,11 @@ class Servico{
   
    private $id_servico, $tipo_de_servico, $descricao, $servico, $valor;
  
-   public function getIdU(){
+   public function getIdS(){
         return $this->id_servico;
    }
 
-   public function setIdU($idS){
+   public function setIdS($idS){
     $this->id_servico = $idS;
    }
 
@@ -18,16 +18,16 @@ class Servico{
     return $this->tipo_de_servico;
      }
   
-     public function setTipo($tipo){
-    $this->tipo_de_servico = $tipo;
+     public function setTipo($t){
+    $this->tipo_de_servico = $t;
      }
 
      public function getDescricao(){
       return $this->descricao;
        }
     
-       public function setDescricao($desc){
-      $this->descricao = $desc;
+       public function setDescricao($d){
+      $this->descricao = $d;
        }
 
        public function getServico(){
@@ -42,8 +42,8 @@ class Servico{
           return $this->valor;
            }
         
-           public function setValor($val){
-          $this->valor = $val;
+           public function setValor($v){
+          $this->valor = $v;
            }
 }
 

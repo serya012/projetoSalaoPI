@@ -123,7 +123,7 @@ class FuncionarioDao {
     }
 }
 
-public function create(Funcionario $f){
+public function createF(Funcionario $f){
 
    //testar se já existe um usuário com este email_funcionario
    $sql = 'SELECT * FROM funcionario WHERE email_funcionario = ?';
