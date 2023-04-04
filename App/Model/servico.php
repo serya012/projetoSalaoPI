@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class Usuario{
+class Servico{
   
    private $id_servico, $tipo_de_servico, $descricao, $servico, $valor;
  
