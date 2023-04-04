@@ -39,11 +39,11 @@
 </header>
 
   <section class="section">
-    <div class=main-content>
-      <div class="img-back-section"><img src="img/Roby_Salao_Beleza-3774.png" alt="img-index" class="img-section" ></div>
+    
+   
     
 
-    </div>
+  
   </section>
 
   <footer class="footer"></footer>
