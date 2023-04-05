@@ -10,7 +10,7 @@ class Funcionario{
         return $this->id_funcionario;
    }
 
-   public function setIdU($idF){
+   public function setIdF($idF){
     $this->id_funcionario = $idF;
    }
 
