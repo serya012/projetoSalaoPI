@@ -1,63 +1,48 @@
 <?php
-if(count($_POST) > 0) {
+$nome = $cpf = $telefone = $email = $senha = $confirma = "";
+$nivel = 1;
+$nome_err = $cpf_err = $telefone_err = $email_err = $senha_err = $confirma_err = "";
+
+
+if (isset($_POST["gravar"])){
+
     require_once '..\Model\conexao.php';
     require_once '..\Model\usuario.php';
     require_once '..\Model\usuarioDao.php';
     
-    $erro = false;
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
-    $cpf = $_POST['cpf'];
-    $senha = $_POST['senha'];
-    $confsenha = $_POST['confsenha'];
-
-    if(empty($nome) && strlen($nome)<2) {
-        $erro = "Preencha o nome da usuario";
-    } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $erro = "Insira um email válido";
-    } else if(empty($cpf) && strlen($cpf)==11) {
-        $erro = "Insira um CPF válido";
-    } else if(empty($telefone) && strlen($telefone)==11) {
-        $erro = "Insira uma telefone válido";
-    } else if(empty(trim($senha)) || strlen($senha)<=8) { 
-        $erro = "Insira uma senha válida com no mínimo 8 caracteres";
-    } else if($senha != $confsenha) {
-        $erro = "As senhas não são iguais";
+    if(empty(trim($_POST["nome"])) || strlen($_POST["nome"])<8){   
+        $nome_err = "O nome precisa ser preenchido com no mínimo 8 caracteres.";
+    } elseif(empty(trim($_POST["cpf"])) || strlen($_POST["cpf"])<11){   
+        $cpf_err = "Insira um CPF válido.";
+    } elseif(empty(trim($_POST["telefone"])) || strlen($_POST["telefone"])<11){   
+        $telefone_err = "O telefone tem que ser válido.";
+    } elseif(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
+        $email_err = "Por favor coloque um email válido para o nome de usuário.";
+    } elseif(empty(trim($_POST["senha"])) || strlen($_POST["senha"])<8){   
+        $senha_err = "A senha precisa ser preenchida com no mínimo 8 caracteres.";
+    } elseif($_POST['senha'] != $_POST['confirma']) {
+        $confirma_err = 'As duas senhas devem ser iguais!';
+        $username = $_POST["email"];
+        $password = $_POST["senha"];
     } 
     
-    /*else {
-        //$usuarios = $cpf;
-       
+    else {
+            
+        $username = $_POST['email'];
+        $senha = password_hash($_POST['senha'],PASSWORD_DEFAULT);
+        $nivel = $_POST['nivel']; // acrescentei aqui
 
-      
-
-        $usuarioDao = new \App\Model\usuarioDao();
-        if($usuarioDao->create($usuario)){
-            echo "CPF já cadastrado";
+        $user = new \App\Model\User();
+        $user->setUsername($username);
+        $user->setPassword($senha); 
+        $user->setNivel($nivel); // acrescentei aqui
+        $userDao = new \App\Model\UserDao();
+        if ($userDao->create($user)){
+            $username_err = "Email já cadastrado no sistema.";
         } else{
-            echo '<script>alert("usuario cadastrada com sucesso!")</script>';
+            echo '<script>alert("Usuário cadastrado com sucesso!")</script>';
+            $username = $password = "";
         }
-        
-    }*/
-
-    if($erro) {
-        echo '<script>alert("'.$erro.'")</script>';
-    } else {
-        $versenha = password_hash($senha,PASSWORD_DEFAULT);
-
-        $usuario = new \App\Model\usuario();
-        $usuario->setNomeU($nome);
-        $usuario->setEmailU($email);
-        $usuario->setTelefoneU($telefone);
-        $usuario->setCpfU($cpf);
-        $usuario->setSenhaU($versenha);
-        
-        $usuarioDao = new \App\Model\usuarioDao();
-        $usuarioDao->create($usuario);
-        unset($_POST);
-        echo '<script>alert("usuario salva com sucesso!!")</script>';
-       
     }
 }
 
@@ -69,46 +54,48 @@ if(count($_POST) > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">    
-    
-    <title>Cadastrar-se</title>
+    <title>Cadastrar Senha</title>
 </head>
 <body>
-    <div class="container">
-        <div class="display-3">Cadastro</div>
-        <form method="POST" action="">
-        <p class="lead">
-            <label>Nome de usuário:</label>
-            <input name="nome" type="text"   size="50">
-        </p>
-        <p class="lead">
-            <label>Email:</label>
-            <input name="email" type="text" placeholder="exemplo@gmail.com"  size="51">
-        </p>
-        <p class="lead">
-            <label>Telefone:</label>
-            <input name="telefone" type="text" size="48"  >
-        </p>
-        <p class="lead">
-            <label>CPF:</label>
-            <input name="cpf" type="text" size="22">
-        </p>
-        <p class="lead">
-            <label>Senha:</label>
-            <input name="senha" type="password" size="50">
-        </p>
-        <p class="lead">
-            <label>Confirmar Senha:</label>
-            <input name="confsenha" type="password" size="39">
-        </p>
-        
-        <p>
-            <button type="submit" class="btn btn-light" title="Cadastro">Cadastrar-se</button>
-            
-
-        </p>
+  <div class="container">
+        <form action="" method="post">
+            <div class="form-group">
+                <label>Nome Completo:</label>
+                <input type="text" name="nome" class="form-control <?php echo (!empty($nome_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nome; ?>">
+                <span class="invalid-feedback"><?php echo $nome_err; ?></span>
+            </div>    
+            <div class="form-group">
+                <label>CPF:</label>
+                <input type="text" name="cpf" class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
+                <span class="invalid-feedback"><?php echo $cpf_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Telefone:</label>
+                <input type="text" name="telefone" class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
+                <span class="invalid-feedback"><?php echo $telefone_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
+                <span class="invalid-feedback"><?php echo $email_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Senha:</label>
+                <input type="password" name="senha" class="form-control <?php echo (!empty($senha_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $senha; ?>">
+                <span class="invalid-feedback"><?php echo $senha_err; ?></span>
+            </div>
+            <!-- montando a área de confirmação -->
+            <div class="form-group">
+                <label>Confirmar Senha:</label>
+                <input type="password" name="confirma" class="form-control <?php echo (!empty($confirma_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirma; ?>">
+                <span class="invalid-feedback"><?php echo $confirma_err; ?></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Criar Conta" name="gravar">
+            </div>
+            <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
         </form>
-    </div>
+    </div>    
 </body>
 </html>
