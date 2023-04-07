@@ -1,6 +1,5 @@
 <?php
 $nome = $cpf = $telefone = $email = $senha = $confirma = "";
-$nivel = 1;
 $nome_err = $cpf_err = $telefone_err = $email_err = $senha_err = $confirma_err = "";
 
 
@@ -22,26 +21,32 @@ if (isset($_POST["gravar"])){
         $senha_err = "A senha precisa ser preenchida com no mínimo 8 caracteres.";
     } elseif($_POST['senha'] != $_POST['confirma']) {
         $confirma_err = 'As duas senhas devem ser iguais!';
-        $username = $_POST["email"];
-        $password = $_POST["senha"];
     } 
     
     else {
             
-        $username = $_POST['email'];
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $telefone = $_POST['telefone'];
+        $email = $_POST['email'];
         $senha = password_hash($_POST['senha'],PASSWORD_DEFAULT);
-        $nivel = $_POST['nivel']; // acrescentei aqui
+        $nivel = 1;
+       
+        
 
-        $user = new \App\Model\User();
-        $user->setUsername($username);
-        $user->setPassword($senha); 
-        $user->setNivel($nivel); // acrescentei aqui
-        $userDao = new \App\Model\UserDao();
-        if ($userDao->create($user)){
-            $username_err = "Email já cadastrado no sistema.";
+        $usuario = new \App\Model\Usuario();
+        $usuario->setNomeU($nome);
+        $usuario->setCpfU($cpf);
+        $usuario->setTelefoneU($telefone);
+        $usuario->setEmailU($email);
+        $usuario->setSenhaU($senha); 
+        $usuario->setNivel($nivel); 
+        $usuarioDao = new \App\Model\UsuarioDao();
+        if ($usuarioDao->create($usuario)){
+            $cpf_err = "Email já cadastrado no sistema.";
         } else{
             echo '<script>alert("Usuário cadastrado com sucesso!")</script>';
-            $username = $password = "";
+            $nome = $cpf = $telefone = $email = $senha = "";
         }
     }
 }

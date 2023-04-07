@@ -6,10 +6,10 @@ class UsuarioDao {
 
     public function localizar(Usuario $u){
 
-        $sql = 'SELECT * FROM usuario WHERE email_usuario = ?';
+        $sql = 'SELECT * FROM usuario WHERE cpf_usuario = ?';
     
         $stmt = Conexao::getConn()->prepare($sql);
-        $stmt->bindValue(1,$u->getEmailU());
+        $stmt->bindValue(1,$u->getCpflU());
     
         $stmt->execute();
     
@@ -28,10 +28,10 @@ class UsuarioDao {
 
     public function create(Usuario $u){
 
-       //testar se já existe um usuário com este email_usuario
-       $sql = 'SELECT * FROM usuario WHERE email_usuario = ?';
+       //testar se já existe um usuário com este cpf_usuario
+       $sql = 'SELECT * FROM usuario WHERE cpf_usuario = ?';
        $stmt = Conexao::getConn()->prepare($sql);
-       $stmt->bindValue(1,$u->getEmailU());
+       $stmt->bindValue(1,$u->getCpfU());
    
        $stmt->execute();
    
@@ -55,10 +55,10 @@ class UsuarioDao {
 
    public function buscarNivel(Usuario $u){
 
-    $sql = 'SELECT * FROM usuario WHERE email_usuario = ?';
+    $sql = 'SELECT * FROM usuario WHERE cpf_usuario = ?';
 
     $stmt = Conexao::getConn()->prepare($sql);
-    $stmt->bindValue(1,$u->getEmailU());
+    $stmt->bindValue(1,$u->getCpfU());
 
     $stmt->execute();
 
