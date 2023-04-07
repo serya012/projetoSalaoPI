@@ -51,7 +51,6 @@ if(isset($_POST['buscar'])){
 <body>
 
   <div class="container">
-        
         <h2>Logo</h2>      
          <form action="" method="post">
             <div class="form-group">
@@ -66,7 +65,7 @@ if(isset($_POST['buscar'])){
             </div>
             <p></p>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Realizar Login" name="buscar">
+                <input type="submit" class="btn btn-primary" value="Login" name="buscar">
             </div>
             <p><a href="create_usuario.php">Não tem uma conta? Registre-se aqui!</a></p>
         </form>

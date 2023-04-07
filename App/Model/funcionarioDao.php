@@ -14,17 +14,18 @@ class FuncionarioDao {
    # função para criar um registro de produto
    public function create(Funcionario $f){
        // não estamos inserindo o campo id abaixo, porque o mesmo é auto-incremento
-       $sql = 'INSERT INTO funcionario (nome_funcionario, telefone_funcionario, funcao, cpf_funcionario, email_funcionario, senha_funcionario, endereco, nivel) VALUES (?,?,?,?,?,?,?,?)';
+       $sql = 'INSERT INTO funcionario (nome_funcionario, telefone_funcionario, funcao, cpf_funcionario, data_nascimento_funcionario, email_funcionario, senha_funcionario, endereco, nivel) VALUES (?,?,?,?,?,?,?,?,?)';
       
        $stmt = Conexao::getConn()->prepare($sql); //prepare é um método da classe PDO
        $stmt->bindValue(1, $f->getNomeF());
        $stmt->bindValue(2, $f->getTelefoneF());
        $stmt->bindValue(3, $f->getFuncao());
        $stmt->bindValue(4, $f->getCpfF());
-       $stmt->bindValue(5, $f->getEmailF());
-       $stmt->bindValue(6, $f->getSenhaF());
-       $stmt->bindValue(7, $f->getEndereco());
-       $stmt->bindValue(8, $f->getNivel());
+       $stmt->bindValue(5, $f->getDataF());
+       $stmt->bindValue(6, $f->getEmailF());
+       $stmt->bindValue(7, $f->getSenhaF());
+       $stmt->bindValue(8, $f->getEndereco());
+       $stmt->bindValue(9, $f->getNivel());
 
 
        $stmt->execute();
@@ -125,10 +126,10 @@ class FuncionarioDao {
 
 public function createF(Funcionario $f){
 
-   //testar se já existe um usuário com este email_funcionario
-   $sql = 'SELECT * FROM funcionario WHERE email_funcionario = ?';
+   //testar se já existe um usuário com este cpf_funcionario
+   $sql = 'SELECT * FROM funcionario WHERE cpf_funcionario = ?';
    $stmt = Conexao::getConn()->prepare($sql);
-   $stmt->bindValue(1,$f->getEmailF());
+   $stmt->bindValue(1,$f->getCpfF());
 
    $stmt->execute();
 
@@ -137,27 +138,28 @@ public function createF(Funcionario $f){
      return $retorno;
    } else {
   
-       $sql = 'INSERT INTO funcionario (nome_funcionario, telefone_funcionario, funcao, cpf_funcionario, email_funcionario, senha_funcionario, endereco, nivel) VALUES (?,?,?,?,?,?,?,?)';
+       $sql = 'INSERT INTO funcionario (nome_funcionario, telefone_funcionario, funcao, data_nascimento_funcionario, cpf_funcionario, email_funcionario, senha_funcionario, endereco, nivel) VALUES (?,?,?,?,?,?,?,?,?)';
   
        $stmt = Conexao::getConn()->prepare($sql); 
        $stmt->bindValue(1, $f->getNomeF());
        $stmt->bindValue(2, $f->getTelefoneF());
        $stmt->bindValue(3, $f->getFuncao());
-       $stmt->bindValue(4, $f->getCpfF());
-       $stmt->bindValue(5, $f->getEmailF());
-       $stmt->bindValue(6, $f->getSenhaF());
-       $stmt->bindValue(7, $f->getEndereco());
-       $stmt->bindValue(8, $f->getNivel());
+       $stmt->bindValue(4, $f->getDataF());
+       $stmt->bindValue(5, $f->getCpfF());
+       $stmt->bindValue(6, $f->getEmailF());
+       $stmt->bindValue(7, $f->getSenhaF());
+       $stmt->bindValue(8, $f->getEndereco());
+       $stmt->bindValue(9, $f->getNivel());
        $stmt->execute();
    }    
 }
 
 public function buscarNivel(Funcionario $f){
 
-$sql = 'SELECT * FROM funcionario WHERE email_funcionario = ?';
+$sql = 'SELECT * FROM funcionario WHERE cpf_funcionario = ?';
 
 $stmt = Conexao::getConn()->prepare($sql);
-$stmt->bindValue(1,$f->getEmailF());
+$stmt->bindValue(1,$f->getCpfF());
 
 $stmt->execute();
 

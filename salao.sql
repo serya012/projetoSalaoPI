@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Abr-2023 às 20:37
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.6
+-- Tempo de geração: 07-Abr-2023 às 17:55
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,7 +33,7 @@ CREATE TABLE `agenda` (
   `data_agenda` date NOT NULL,
   `id_usuario` int(10) NOT NULL,
   `id_servico` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -45,13 +45,14 @@ CREATE TABLE `funcionario` (
   `id_funcionario` int(10) NOT NULL,
   `nome_funcionario` varchar(50) NOT NULL,
   `cpf_funcionario` varchar(11) NOT NULL,
+  `data_nascimento_funcionario` date NOT NULL,
   `telefone_funcionario` varchar(20) NOT NULL,
   `email_funcionario` varchar(100) NOT NULL,
   `senha_funcionario` varchar(255) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   `funcao` varchar(50) NOT NULL,
   `nivel` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,7 @@ CREATE TABLE `servico` (
   `servico` varchar(100) NOT NULL,
   `valor` decimal(10,2) NOT NULL,
   `id_funcionario` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,14 @@ CREATE TABLE `usuario` (
   `email_usuario` varchar(100) NOT NULL,
   `senha_usuario` varchar(255) NOT NULL,
   `nivel` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `cpf_usuario`, `telefone_usuario`, `email_usuario`, `senha_usuario`, `nivel`) VALUES
+(1, 'Thiago Viannay dos Santos Soares', '180.939.567', '21998827325', 'thiago@gmail.com', '$2y$10$gKz6hdDK9tscF7kNyF4RWuEeSYFDRGLib8Zh59YgsMsMIrF31HzJC', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -140,7 +148,7 @@ ALTER TABLE `servico`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para despejos de tabelas

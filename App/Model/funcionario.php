@@ -4,7 +4,7 @@ namespace App\Model;
 
 class Funcionario{
   
-   private $id_funcionario, $nome_funcionario, $telefone_funcionario, $funcao ,$cpf_funcionario, $email_funcionario, $senha_funcionario, $endereco ,$nivel;
+   private $id_funcionario, $nome_funcionario, $telefone_funcionario, $funcao ,$cpf_funcionario, $data_nascimento_funcionario, $email_funcionario, $senha_funcionario, $endereco ,$nivel;
  
    public function getIdF(){
         return $this->id_funcionario;
@@ -46,6 +46,14 @@ class Funcionario{
        $this->cpf_funcionario = $cF;
    }
 
+   public function getDataF(){
+    return $this->data_nascimento_funcionario;
+    }
+
+    public function setDataF($dF){
+    $this->data_nascimento_funcionario = $dF;
+    }
+
    public function getEmailF(){
     return $this->email_funcionario;
     }
@@ -66,8 +74,8 @@ class Funcionario{
        return $this->endereco;
     }
 
-    public function setEndereco($end){
-       $this->endereco = $end;
+    public function setEndereco($en){
+       $this->endereco = $en;
     }
 
     public function getNivel(){
