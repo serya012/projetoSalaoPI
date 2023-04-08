@@ -78,12 +78,12 @@ if (isset($_POST["gravar"])){
             </div>    
             <div class="form-group">
                 <label>CPF:</label>
-                <input type="text" name="cpf"  class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
+                <input type="text" name="cpf" class="cpf" class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
                 <span class="invalid-feedback"><?php echo $cpf_err; ?></span>
             </div>
             <div class="form-group">
                 <label>Telefone:</label>
-                <input type="text" name="telefone" class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
+                <input type="text" name="telefone" class="telefone" class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
                 <span class="invalid-feedback"><?php echo $telefone_err; ?></span>
             </div>
             <div class="form-group">
