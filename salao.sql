@@ -54,13 +54,6 @@ CREATE TABLE `funcionario` (
   `nivel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Extraindo dados da tabela `funcionario`
---
-
-INSERT INTO `funcionario` (`id_funcionario`, `nome_funcionario`, `cpf_funcionario`, `data_nascimento_funcionario`, `telefone_funcionario`, `email_funcionario`, `senha_funcionario`, `endereco`, `funcao`, `nivel`) VALUES
-(2, 'THIAGO VIANNAY DOS SANTOS SOARES', '180.939.567', '2003-04-24', '21998827325', 'thiagoviannay24@gmail.com', '$2y$10$IyXa/Bvt10tcJpt6JFC65OvMcvSwbhqa8oi/AhgTMJJmrPnpXNqM.', 'Rua Cesário, 245', 'gostoso', 2),
-(3, 'Ellen Oliveira', '180.939.567', '0000-00-00', '21998827325', 'ellenviannay@hotmail.com', '$2y$10$CTpMufcbvZVe2CVkzYX0L.kuZ1kqAOUXW30embNQsucFVRHIQMVua', 'Rua Césario, 245 Santo Elias Mesquita', 'mãe', 2);
 
 -- --------------------------------------------------------
 
@@ -78,11 +71,6 @@ CREATE TABLE `servico` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `servico`
---
-
-INSERT INTO `servico` (`id_servico`, `tipo_de_servico`, `servico`, `descricao`, `valor`, `id_funcionario`) VALUES
-(4, 'cabelo', 'Corte', 'Corta o cabelo', '30.00', 2);
 
 -- --------------------------------------------------------
 
@@ -99,13 +87,6 @@ CREATE TABLE `usuario` (
   `senha_usuario` varchar(255) NOT NULL,
   `nivel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Extraindo dados da tabela `usuario`
---
-
-INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `cpf_usuario`, `telefone_usuario`, `email_usuario`, `senha_usuario`, `nivel`) VALUES
-(1, 'Thiago Viannay dos Santos Soares', '180.939.567', '21998827325', 'thiago@gmail.com', '$2y$10$gKz6hdDK9tscF7kNyF4RWuEeSYFDRGLib8Zh59YgsMsMIrF31HzJC', 1);
 
 --
 -- Índices para tabelas despejadas
