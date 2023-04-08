@@ -59,11 +59,18 @@ if (isset($_POST["gravar"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/estiloLogin.css">
     <title>Cadastrar Senha</title>
 </head>
 <body>
   <div class="container">
+    <div class="caixaLogin">
         <form action="" method="post">
+            <div class="logoCadastro">
+
+            <img src="../../img/iconeLogo1.png" alt="">
+
+            </div>
             <div class="form-group">
                 <label>Nome Completo:</label>
                 <input type="text" name="nome" class="form-control <?php echo (!empty($nome_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nome; ?>">
@@ -101,6 +108,7 @@ if (isset($_POST["gravar"])){
             </div>
             <p>Já tem uma conta? <a href="login_usuario.php">Entre aqui</a>.</p>
         </form>
+        </div>
     </div>    
 </body>
 </html>

@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+/*Create Usuario*/
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  
+  
+}
+.caixaLogin{
+  display: flex;
+  padding-left: 20px;
+  background-color: #C68E8D;
+  height: 600px;
+  width: 600px;
+  margin-top: 2px;
+  border: 2px solid #E8A525;
+  border-radius: 15px;
+}
+.logoCadastro{
+  display: flex;
+  justify-content: center;
+}
+.form-control{
+    width: 550px;
+    color: #E8A525;
+    border: 2px solid #E8A525;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background-color: white;
+    border-radius: 20px;
+    height: 40px;
+    
+}
+.form-control:active {
+    box-shadow: 2px 2px 15px #E8A525 inset;
+}
+.form-group{
+ 
+}
+label{
+  color: white;
+  
+}
