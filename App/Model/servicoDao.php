@@ -14,12 +14,12 @@ class ServicoDao {
    # função para criar um registro de produto
    public function create(Servico $s){
        // não estamos inserindo o campo id abaixo, porque o mesmo é auto-incremento
-       $sql = 'INSERT INTO servico (tipo_de_servico, descricao, servico, valor) VALUES (?,?,?,?)';
+       $sql = 'INSERT INTO servico (tipo_de_servico, servico, descricao, valor) VALUES (?,?,?,?)';
       
        $stmt = Conexao::getConn()->prepare($sql); //prepare é um método da classe PDO
        $stmt->bindValue(1, $s->getTipo());
-       $stmt->bindValue(2, $s->getDescricao());
-       $stmt->bindValue(3, $s->getServico());
+       $stmt->bindValue(2, $s->getServico());
+       $stmt->bindValue(3, $s->getDescricao());
        $stmt->bindValue(4, $s->getValor());
        
 

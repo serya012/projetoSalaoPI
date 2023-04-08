@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Abr-2023 às 17:55
+-- Tempo de geração: 08-Abr-2023 às 03:25
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -44,15 +44,16 @@ CREATE TABLE `agenda` (
 CREATE TABLE `funcionario` (
   `id_funcionario` int(10) NOT NULL,
   `nome_funcionario` varchar(50) NOT NULL,
-  `cpf_funcionario` varchar(11) NOT NULL,
+  `cpf_funcionario` varchar(14) NOT NULL,
   `data_nascimento_funcionario` date NOT NULL,
-  `telefone_funcionario` varchar(20) NOT NULL,
+  `telefone_funcionario` varchar(13) NOT NULL,
   `email_funcionario` varchar(100) NOT NULL,
   `senha_funcionario` varchar(255) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   `funcao` varchar(50) NOT NULL,
   `nivel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
 
 -- --------------------------------------------------------
 
@@ -64,9 +65,12 @@ CREATE TABLE `servico` (
   `id_servico` int(10) NOT NULL,
   `tipo_de_servico` varchar(50) NOT NULL,
   `servico` varchar(100) NOT NULL,
+  `descricao` varchar(255) NOT NULL,
   `valor` decimal(10,2) NOT NULL,
   `id_funcionario` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
 
 -- --------------------------------------------------------
 
@@ -77,19 +81,12 @@ CREATE TABLE `servico` (
 CREATE TABLE `usuario` (
   `id_usuario` int(10) NOT NULL,
   `nome_usuario` varchar(100) NOT NULL,
-  `cpf_usuario` varchar(11) NOT NULL,
+  `cpf_usuario` varchar(14) NOT NULL,
   `telefone_usuario` varchar(20) NOT NULL,
   `email_usuario` varchar(100) NOT NULL,
   `senha_usuario` varchar(255) NOT NULL,
   `nivel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Extraindo dados da tabela `usuario`
---
-
-INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `cpf_usuario`, `telefone_usuario`, `email_usuario`, `senha_usuario`, `nivel`) VALUES
-(1, 'Thiago Viannay dos Santos Soares', '180.939.567', '21998827325', 'thiago@gmail.com', '$2y$10$gKz6hdDK9tscF7kNyF4RWuEeSYFDRGLib8Zh59YgsMsMIrF31HzJC', 1);
 
 --
 -- Índices para tabelas despejadas
@@ -136,13 +133,13 @@ ALTER TABLE `agenda`
 -- AUTO_INCREMENT de tabela `funcionario`
 --
 ALTER TABLE `funcionario`
-  MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_funcionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `servico`
 --
 ALTER TABLE `servico`
-  MODIFY `id_servico` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_servico` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
