@@ -99,7 +99,7 @@ if (isset($_POST["gravar"])){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Criar Conta" name="gravar">
             </div>
-            <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
+            <p>Já tem uma conta? <a href="login_usuario.php">Entre aqui</a>.</p>
         </form>
     </div>    
 </body>
