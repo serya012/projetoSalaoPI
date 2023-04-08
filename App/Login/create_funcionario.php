@@ -80,18 +80,18 @@ if (isset($_POST["gravar"])){
                 <span class="invalid-feedback"><?php echo $nome_err; ?></span>
             </div>    
             <div class="form-group">
-                <label>CPF:</label>
-                <input type="text" name="cpf" class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
+                <label>CPF:</label><br>
+                <input type="text" name="cpf" class="cpf" class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
                 <span class="invalid-feedback"><?php echo $cpf_err; ?></span>
             </div>
             <div class="form-group">
-                <label>Data de Nascimento:</label>
-                <input type="date" name="data" class="form-control <?php echo (!empty($data_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $data; ?>">
+                <label>Data de Nascimento:</label><br>
+                <input type="date" name="data" class="data" class="form-control <?php echo (!empty($data_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $data; ?>">
                 <span class="invalid-feedback"><?php echo $data_err; ?></span>
             </div>
             <div class="form-group">
-                <label>Telefone:</label>
-                <input type="text" name="telefone" class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
+                <label>Telefone:</label><br>
+                <input type="text" name="telefone" class="telefone" class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
                 <span class="invalid-feedback"><?php echo $telefone_err; ?></span>
             </div>
             <div class="form-group">
@@ -125,6 +125,18 @@ if (isset($_POST["gravar"])){
                 <input type="submit" class="btn btn-primary" value="Criar Conta" name="gravar">
             </div>
         </form>
-    </div>    
+    </div>  
+    
+    
+
+
+    <script type= "text/javascript" src="../../js/jquery-3.6.4.js"></script>
+    <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            $('.telefone').mask('(00)00000-0000');
+            $('.cpf').mask('000.000.000-00');
+       }); 
+    </script>
 </body>
 </html>

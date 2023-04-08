@@ -71,12 +71,12 @@ if (isset($_POST["gravar"])){
             </div>    
             <div class="form-group">
                 <label>CPF:</label>
-                <input type="text" name="cpf" class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
+                <input type="text" name="cpf" class='cpf' class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
                 <span class="invalid-feedback"><?php echo $cpf_err; ?></span>
             </div>
             <div class="form-group">
                 <label>Telefone:</label>
-                <input type="text" name="telefone" class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
+                <input type="text" name="telefone" class='telefone' class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
                 <span class="invalid-feedback"><?php echo $telefone_err; ?></span>
             </div>
             <div class="form-group">
@@ -102,5 +102,16 @@ if (isset($_POST["gravar"])){
             <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
         </form>
     </div>    
+
+
+
+    <script type= "text/javascript" src="../../js/jquery-3.6.4.js"></script>
+    <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            $('.telefone').mask('(00)00000-0000');
+            $('.cpf').mask('000.000.000-00');
+       }); 
+    </script>
 </body>
 </html>
