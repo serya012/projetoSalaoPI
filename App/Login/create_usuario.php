@@ -59,7 +59,7 @@ if (isset($_POST["gravar"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/estiloLogin.css">
+    <link rel="stylesheet" href="../../css/estiloCadastro.css">
     <title>Cadastrar Senha</title>
 </head>
 <body>
@@ -78,12 +78,12 @@ if (isset($_POST["gravar"])){
             </div>    
             <div class="form-group">
                 <label>CPF:</label>
-                <input type="text" name="cpf" class="cpf" class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
+                <input type="text" name="cpf" id="cpf" class="form-control <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
                 <span class="invalid-feedback"><?php echo $cpf_err; ?></span>
             </div>
             <div class="form-group">
                 <label>Telefone:</label>
-                <input type="text" name="telefone" class="telefone" class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
+                <input type="text" name="telefone" id="telefone" class="form-control <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
                 <span class="invalid-feedback"><?php echo $telefone_err; ?></span>
             </div>
             <div class="form-group">
@@ -117,8 +117,8 @@ if (isset($_POST["gravar"])){
     <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
     <script type="text/javascript">
        $(document).ready(function(){
-            $('.telefone').mask('(00)00000-0000');
-            $('.cpf').mask('000.000.000-00');
+            $('#telefone').mask('(00)00000-0000');
+            $('#cpf').mask('000.000.000-00');
        }); 
     </script>
 </body>
