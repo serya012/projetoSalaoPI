@@ -59,7 +59,7 @@ if (isset($_POST["gravar"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloCadastro.css">
+    <link rel="stylesheet" href="../../css/estiloCadastroU.css">
     <title>Cadastro SóDelas</title>
 </head>
 <body>
@@ -113,9 +113,6 @@ if (isset($_POST["gravar"])){
             
         </form>
     </div>
-<div>
-    <img src="../../img/" alt="">
-</div>
     <script type= "text/javascript" src="../../js/jquery-3.6.4.js"></script>
     <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
     <script type="text/javascript">
