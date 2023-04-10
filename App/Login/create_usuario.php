@@ -11,12 +11,12 @@ if (isset($_POST["gravar"])){
     
     if(empty(trim($_POST["nome"])) || strlen($_POST["nome"])<8){   
         $nome_err = "O nome precisa ser preenchido com no mínimo 8 caracteres.";
-    } elseif(empty(trim($_POST["cpf"])) || strlen($_POST["cpf"])<11){   
-        $cpf_err = "Insira um CPF válido.";
-    } elseif(empty(trim($_POST["telefone"])) || strlen($_POST["telefone"])<11){   
-        $telefone_err = "O telefone tem que ser válido.";
     } elseif(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
         $email_err = "Por favor coloque um email válido para o nome de usuário.";
+    } elseif(empty(trim($_POST["telefone"])) || strlen($_POST["telefone"])<11){   
+        $telefone_err = "O telefone tem que ser válido.";
+    } elseif(empty(trim($_POST["cpf"])) || strlen($_POST["cpf"])<11){   
+        $cpf_err = "Insira um CPF válido.";
     } elseif(empty(trim($_POST["senha"])) || strlen($_POST["senha"])<8){   
         $senha_err = "A senha precisa ser preenchida com no mínimo 8 caracteres.";
     } elseif($_POST['senha'] != $_POST['confirma']) {
@@ -36,9 +36,9 @@ if (isset($_POST["gravar"])){
 
         $usuario = new \App\Model\Usuario();
         $usuario->setNomeU($nome);
-        $usuario->setCpfU($cpf);
-        $usuario->setTelefoneU($telefone);
         $usuario->setEmailU($email);
+        $usuario->setTelefoneU($telefone);
+        $usuario->setCpfU($cpf);
         $usuario->setSenhaU($senha); 
         $usuario->setNivel($nivel); 
         $usuarioDao = new \App\Model\UsuarioDao();
@@ -63,6 +63,9 @@ if (isset($_POST["gravar"])){
     <title>Cadastro SóDelas</title>
 </head>
 <body>
+    <div>
+
+    </div>
     <div class="box">
         <form action="">
             <fieldset>
@@ -110,7 +113,9 @@ if (isset($_POST["gravar"])){
             
         </form>
     </div>
-
+<div>
+    <img src="../../img/" alt="">
+</div>
     <script type= "text/javascript" src="../../js/jquery-3.6.4.js"></script>
     <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
     <script type="text/javascript">
@@ -119,5 +124,6 @@ if (isset($_POST["gravar"])){
             $('#cpf').mask('000.000.000-00');
        }); 
     </script>
+
 </body>
 </html>
