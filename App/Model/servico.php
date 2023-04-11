@@ -23,28 +23,28 @@ class Servico{
      }
 
      public function getDescricao(){
-      return $this->descricao;
-       }
+     return $this->descricao;
+     }
     
-       public function setDescricao($d){
-      $this->descricao = $d;
-       }
+     public function setDescricao($d){
+     $this->descricao = $d;
+     }
 
-       public function getServico(){
-        return $this->servico;
-         }
+     public function getServico(){
+     return $this->servico;
+     }
       
-         public function setServico($serv){
-        $this->servico = $serv;
-         }
+     public function setServico($serv){
+     $this->servico = $serv;
+     }
 
-         public function getValor(){
-          return $this->valor;
-           }
+     public function getValor(){
+     return $this->valor;
+     }
         
-           public function setValor($v){
-          $this->valor = $v;
-           }
+     public function setValor($v){
+     $this->valor = $v;
+     }
 }
 
 
