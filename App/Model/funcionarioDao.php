@@ -177,9 +177,12 @@ if($stmt->rowCount() == 1){  // se for encontrado
  
        try {
           $sql = "SELECT * FROM funcionario"; // Substitua "tabela" pelo nome da sua tabela
-          $stmt = $conn->query($sql);
+          $stmt = Conexao::getConn()->prepare($sql); //$conn->query($sql);
+          $stmt->execute();
           $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+          
           return $result;
+          //var_dump($result);
        } catch(\PDOException $e) {
           echo "Erro ao obter dados da tabela: " . $e->getMessage();
           return null;

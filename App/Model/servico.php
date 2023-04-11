@@ -4,7 +4,7 @@ namespace App\Model;
 
 class Servico{
   
-   private $id_servico, $tipo_de_servico, $descricao, $servico, $valor;
+   private $id_servico, $tipo_de_servico, $descricao, $servico, $valor, $id_funcionariofk;
  
    public function getIdS(){
         return $this->id_servico;
@@ -13,6 +13,14 @@ class Servico{
    public function setIdS($idS){
     $this->id_servico = $idS;
    }
+
+     public function getIdFk(){
+     return $this->id_funcionariofk;
+     }
+
+     public function setIdFk($idFk){
+     $this->id_funcionariofk = $idFk;
+     }
 
    public function getTipo(){
     return $this->tipo_de_servico;

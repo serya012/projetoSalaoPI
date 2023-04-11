@@ -12,7 +12,8 @@ if(count($_POST) > 0) {
     $serv = $_POST['servico'];
     $descricao = $_POST['descricao'];
     $valor = $_POST['valor'];
-    
+    $funcionario = $_POST['funcionario'];
+
     if($_POST['tipo']!='cabelos' && $_POST['tipo']!='maquiagem' && $_POST['tipo']!='estetica' && $_POST['tipo']!='cilios e sobrancelhas' && $_POST['tipo']!='pes e maos' && $_POST['tipo']!='depilacao') {
         $erro = "Insira um tipo de serviço válido";
     } else if(empty($serv)) {
@@ -31,6 +32,7 @@ if(count($_POST) > 0) {
         $servico->setServico($serv);
         $servico->setDescricao($descricao);
         $servico->setValor($valor);
+        $servico->setIdFk($funcionario);
         $servicoDao = new \App\Model\ServicoDao();
         $servicoDao->create($servico);
         unset($_POST);
@@ -88,7 +90,6 @@ if(count($_POST) > 0) {
             <?php 
                     $pegarDados = new \App\Model\FuncionarioDao();
                     $dados = $pegarDados->obterDados();
-                    
                     if ($dados){
                         foreach ($dados as $row) { ?>
                 <option value="<?php $row['id_funcionario'] ?>"><?php $row['nome_funcionario'] ?></option>;
@@ -99,6 +100,7 @@ if(count($_POST) > 0) {
                 ?>
             </select>
         </p>
+        
         
             <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
             <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>

@@ -8,10 +8,11 @@ require_once '..\Model\agendaDao.php';
 if(count($_POST) > 0) {
     
     $erro = false;
-    $tipo = $_POST['tipo'];
-    $serv = $_POST['servico'];
-    $descricao = $_POST['descricao'];
-    $valor = $_POST['valor'];
+    $servico = $_POST['servico'];
+    $data = $_POST['data'];
+    $hora = $_POST['hora'];
+    
+   
     
     if($_POST['tipo']!='cabelos' && $_POST['tipo']!='maquiagem' && $_POST['tipo']!='estetica' && $_POST['tipo']!='cilios e sobrancelhas' && $_POST['tipo']!='pes e maos' && $_POST['tipo']!='depilacao') {
         $erro = "Insira um tipo de serviço válido";
@@ -50,16 +51,16 @@ if(count($_POST) > 0) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">    
     
-    <title>Cadastrar Produto</title>
+    <title>Agendar</title>
 </head>
 <body>
     <div class="container">
-        <div class="display-3">Cadastro de Serviços</div>
+        <div class="display-3">Agendamento</div>
         
         <form method="POST" action="">
         <p class="lead">
             <label>Serviços:</label>
-            <select name="hora">
+            <select name="servico">
                 <option value=""></option>
             </select>
         </p>

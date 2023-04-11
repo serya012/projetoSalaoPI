@@ -1,12 +1,12 @@
 <?php
 
     require_once '..\Model\conexao.php';
-    require_once '..\Model\funcionario.php';
-    require_once '..\Model\funcionarioDao.php';
+    require_once '..\Model\agenda.php';
+    require_once '..\Model\agendaDao.php';
 
-    $id = intval($_GET['id_funcionario']);
-    $funcionario = new \App\Model\funcionario();
-    $funcionarioDao = new \App\Model\funcionarioDao();
+    $id = intval($_GET['id_agenda']);
+    $agenda = new \App\Model\Agenda();
+    $agendaDao = new \App\Model\AgendaDao();
    
  
     if(count($_POST) > 0) {
@@ -32,13 +32,13 @@
             echo "<p><b>ERRO: $erro</b></p>";
         } else {
 
-            $funcionario->setIdF($id);
-            $funcionario->setTelefoneF($telefone);
-            $funcionario->setEmailF($email);
-            $funcionario->setEndereco($endereco);
-            $funcionario->setFuncao($funcao);
+            $agenda->setIdF($id);
+            $agenda->setTelefoneF($telefone);
+            $agenda->setEmailF($email);
+            $agenda->setEndereco($endereco);
+            $agenda->setFuncao($funcao);
             
-            $funcionarioDao->update($funcionario);
+            $agendaDao->update($agenda);
 
             echo "<p><b>Funcionário atualizado com sucesso!!!</b></p>";
             unset($_POST);
@@ -61,29 +61,36 @@
     
     <form method="POST" action="">
     <?php
-       foreach ($funcionarioDao->readUpdate($id) as $funcionario): ?>
-          <div class="form-group">
-                <label>Telefone:</label><br>
-                <input type="text" name="telefone" class="telefone" class="form-control">
-                
-            </div>
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="text" name="email" class="form-control">
-            </div>
-            <div class="form-group">
-                <label>Endereço:</label>
-                <input type="text" name="endereco" class="form-control">
+       foreach ($agendaDao->readUpdate($id) as $agenda): ?>
+        <p class="lead">
+            <label>Serviços:</label>
+            <select name="servico">
+                <option value=""></option>
+            </select>
+        </p>
+        <p class="lead">
+            <label>Data:</label>
+            <input type="date" name="data">
+        </p>
+        <p class="lead">
+            <label>Hora:</label>
+            <select name="hora">
+                <option value=""></option>
+            </select>
+        </p>
+        
+        
+        
+            <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
+            <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
 
-            <div class="form-group">
-                <label>Função:</label>
-                <input type="text" name="funcao" class="form-control">
-            </div>
+        </p>
+        </form>
     <?php
         endforeach;
     ?>
         <button type="submit" class="btn btn-light" title="Gravar atualização">Salvar Alterações</button>
-        <a href="read_funcionario.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
+        <a href="read_agenda.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
         </p>
         
        

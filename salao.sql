@@ -46,7 +46,7 @@ CREATE TABLE `funcionario` (
   `nome_funcionario` varchar(50) NOT NULL,
   `cpf_funcionario` varchar(14) NOT NULL,
   `data_nascimento_funcionario` date NOT NULL,
-  `telefone_funcionario` varchar(13) NOT NULL,
+  `telefone_funcionario` varchar(14) NOT NULL,
   `email_funcionario` varchar(100) NOT NULL,
   `senha_funcionario` varchar(255) NOT NULL,
   `endereco` varchar(100) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE `usuario` (
   `id_usuario` int(10) NOT NULL,
   `nome_usuario` varchar(100) NOT NULL,
   `cpf_usuario` varchar(14) NOT NULL,
-  `telefone_usuario` varchar(20) NOT NULL,
+  `telefone_usuario` varchar(14) NOT NULL,
   `email_usuario` varchar(100) NOT NULL,
   `senha_usuario` varchar(255) NOT NULL,
   `nivel` int(11) NOT NULL
