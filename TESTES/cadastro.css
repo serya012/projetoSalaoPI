@@ -141,6 +141,7 @@ body{
 
 /* responsividade */
 
+
 @media screen and (max-width: 1280px) {
   .form-image{
     display: none;
@@ -184,14 +185,14 @@ body{
 @media screen and (max-width: 448px){
   .container{
     width: 90%;
-    height: auto;
+    min-height: 650px;
   }
   .input-group{
     flex-direction: column;
     overflow-y: scroll;
     flex-wrap: nowrap;
-    max-height: 10rem;
-    padding-right: 4rem;
+    max-height: 25rem;
+    padding-right: 2rem;
   }
 }
 
