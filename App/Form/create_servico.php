@@ -1,9 +1,11 @@
 <?php
-if(count($_POST) > 0) {
 
-    require_once '..\Model\conexao.php';
-    require_once '..\Model\servico.php';
-    require_once '..\Model\servicoDao.php';
+require_once '..\Model\conexao.php';
+require_once '..\Model\servico.php';
+require_once '..\Model\servicoDao.php';
+require_once '..\Model\funcionarioDao.php';
+
+if(count($_POST) > 0) {
     
     $erro = false;
     $tipo = $_POST['tipo'];
@@ -36,7 +38,7 @@ if(count($_POST) > 0) {
        
     }
 }
-
+ 
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +55,7 @@ if(count($_POST) > 0) {
 <body>
     <div class="container">
         <div class="display-3">Cadastro de Serviços</div>
+        
         <form method="POST" action="">
         <p class="lead">
             <label >Tipo de Serviço:</label><br>
@@ -78,15 +81,22 @@ if(count($_POST) > 0) {
             <input name="valor" type="number" size="20">
         </p>
         <p class="lead">
-        <label >Quem está cadastrando?</label><br>
-            <select name="funcionario" class="form-control">
-                <?php
-                while ($dados = mysqli_fetch_assoc($result)) {
+                
+            <label for="funcionario">Quem está cadastrando?:</label><br>
+            <select id="funcionario" name='funcionario'>
+                <option value="">Selecione...</option>
+            <?php 
+                    $pegarDados = new \App\Model\FuncionarioDao();
+                    $dados = $pegarDados->obterDados();
+                    
+                    if ($dados){
+                        foreach ($dados as $row) { ?>
+                <option value="<?php $row['id_funcionario'] ?>"><?php $row['nome_funcionario'] ?></option>;
+                    <?php    }
+                    } else { ?>
+                        <option value="">Nenhum item encontrado</option>
+                  <?php } ?>
                 ?>
-                <option value="<?php echo $dados ['id_funcionario'] ?>">
-                    <?php echo $dados['nome_funcionario']?>
-                </option>
-                <?php } ?>
             </select>
         </p>
         
