@@ -9,21 +9,7 @@ if (isset($_POST["gravar"])){
     require_once '..\Model\usuario.php';
     require_once '..\Model\usuarioDao.php';
     
-    if(empty(trim($_POST["nome"])) || strlen($_POST["nome"])<8){   
-        $nome_err = "O nome precisa ser preenchido com no mínimo 8 caracteres.";
-    } elseif(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
-        $email_err = "Por favor coloque um email válido para o nome de usuário.";
-    } elseif(empty(trim($_POST["telefone"])) || strlen($_POST["telefone"])<11){   
-        $telefone_err = "O telefone tem que ser válido.";
-    } elseif(empty(trim($_POST["cpf"])) || strlen($_POST["cpf"])<11){   
-        $cpf_err = "Insira um CPF válido.";
-    } elseif(empty(trim($_POST["senha"])) || strlen($_POST["senha"])<8){   
-        $senha_err = "A senha precisa ser preenchida com no mínimo 8 caracteres.";
-    } elseif($_POST['senha'] != $_POST['confirma']) {
-        $confirma_err = 'As duas senhas devem ser iguais!';
-    } 
     
-    else {
             
         $nome = $_POST['nome'];
         $cpf = $_POST['cpf'];
@@ -43,13 +29,13 @@ if (isset($_POST["gravar"])){
         $usuario->setNivel($nivel); 
         $usuarioDao = new \App\Model\UsuarioDao();
         if ($usuarioDao->create($usuario)){
-            $cpf_err = "Email já cadastrado no sistema.";
+            $cpf_err = "CPF já cadastrado no sistema.";
         } else{
             echo '<script>alert("Usuário cadastrado com sucesso!")</script>';
             $nome = $cpf = $telefone = $email = $senha = "";
         }
-    }
-}
+  }
+
 
 ?>
 
@@ -84,43 +70,43 @@ if (isset($_POST["gravar"])){
         <div class="input-group">
           <div class="input-box">
             <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="inputUser <?php echo (!empty($nome_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nome; ?>">
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" class="inputUser <?php echo (!empty($nome_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $nome; ?>" required>
             <span class="invalid-feedback"><?php echo $nome_err; ?></span>
           </div>
 
           <div class="input-box">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu E-mail" class="inputUser <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
+            <input type="email" id="email" name="email" placeholder="Digite seu E-mail" class="inputUser <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" required>
             <span class="invalid-feedback"><?php echo $email_err; ?></span>
           </div>
 
           <div class="input-box">
             <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" class="inputUser <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>">
+            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" class="inputUser <?php echo (!empty($telefone_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $telefone; ?>" required>
             <span class="invalid-feedback"><?php echo $telefone_err; ?></span>
           </div>
 
           <div class="input-box">
             <label for="cpf">CPF</label>
-            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" class="inputUser <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>">
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" class="inputUser <?php echo (!empty($cpf_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $cpf; ?>" required>
             <span class="invalid-feedback"><?php echo $cpf_err; ?></span>
           </div>
 
           <div class="input-box">
             <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" class="inputUser <?php echo (!empty($senha_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $senha; ?>">
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" class="inputUser <?php echo (!empty($senha_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $senha; ?>" required>
             <span class="invalid-feedback"><?php echo $senha_err; ?></span>
           </div>
 
           <div class="input-box">
             <label for="confirma">Confirmar senha</label>
-            <input type="password" id="confirma" name="confirma" placeholder="Confirme sua senha" class="inputUser <?php echo (!empty($confirma_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirma; ?>">
+            <input type="password" id="confirma" name="confirma" placeholder="Confirme sua senha" class="inputUser <?php echo (!empty($confirma_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirma; ?>" required>
             <span class="invalid-feedback"><?php echo $confirma_err; ?></span>
           </div>
         </div>
 
         <div class="continue-button">
-          <button><a href="">Continuar</a></button>
+          <button type="submit" name="gravar"><a href="">Continuar</a></button>
         </div>
       </form>
     </div>
