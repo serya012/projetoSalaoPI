@@ -193,18 +193,10 @@ if($stmt->rowCount() == 1){  // se for encontrado
         //$msg = "oi";
        //return $msg;
      
-        try{
-           $sql = "SELECT * FROM funcionario order by nome_funcionario"; // Substitua "tabela" pelo nome da sua tabela
-           $stmt = Conexao::getConn()->prepare($sql); //$conn->query($sql);
-           $stmt->execute();
-           $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-           //return $stmt;
-           return $result;
-           //var_dump($result);
-        } catch(\PDOException $e){
-           echo "Erro ao obter dados da tabela: " . $e->getMessage();
-           return null;
-        }
+        $query = "SELECT id_funcionario, nome_funcionario FROM funcionario";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         
      }
  

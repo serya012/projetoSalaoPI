@@ -14,19 +14,7 @@ if(count($_POST) > 0) {
     $valor = $_POST['valor'];
     $funcionario = $_POST['funcionario'];
 
-    if($_POST['tipo']!='cabelos' && $_POST['tipo']!='maquiagem' && $_POST['tipo']!='estetica' && $_POST['tipo']!='cilios e sobrancelhas' && $_POST['tipo']!='pes e maos' && $_POST['tipo']!='depilacao') {
-        $erro = "Insira um tipo de serviço válido";
-    } else if(empty($serv)) {
-        $erro = "Preencha o nome do serviço";
-    } else if(empty($descricao)) {
-        $erro = "Preencha a descrição do serviço";
-    } else if(empty($valor) || $valor<0) {
-        $erro = "Preencha a descrição do serviço";
-    }
-
-    if($erro) {
-        echo '<script>alert("'.$erro.'")</script>';
-    } else {
+   
         $servico = new \App\Model\Servico();
         $servico->setTipo($tipo);
         $servico->setServico($serv);
@@ -38,8 +26,8 @@ if(count($_POST) > 0) {
         unset($_POST);
         echo '<script>alert("servico salvo com sucesso!!")</script>';
        
-    }
 }
+
  
 ?>
 
@@ -72,37 +60,28 @@ if(count($_POST) > 0) {
         </p>
         <p class="lead">
             <label>Serviço:</label><br>
-            <input name="servico" type="text" size="40">
+            <input name="servico" type="text" size="40" required>
         </p>
         <p class="lead">
             <label>Descrição:</label><br>
-            <textarea name="descricao" rows="3" cols="40"></textarea>
+            <textarea name="descricao" rows="3" cols="40" required></textarea>
         </p>
         <p class="lead">
             <label>Valor:</label><br>
-            <input name="valor" type="number" size="20">
+            <input name="valor" type="number" size="20" required>
         </p>
         <p class="lead">
-                
-            <label for="funcionario">Quem está cadastrando?:</label><br>
-            <select id="funcionario" name='funcionario'>
-                <option value="">Selecione...</option>
             <?php 
-                    $pegarDados = new \App\Model\FuncionarioDao();
-                    $dados = $pegarDados->obterDados();
-                    
-                    if ($dados){
-                        foreach ($dados as $row) { ?>
-                <option value="<?php $row['id_funcionario'] ?>"><?php $row['nome_funcionario'] ?></option>;
-                    <?php    }
-                    } else { ?>
-                        <option value="">Nenhum item encontrado</option>
-                  <?php } ?>
-                ?>
+                $pegarDados = new \App\Model\FuncionarioDao();
+                $dados = $pegarDados->obterDados();
+            ?>
+            <select name="opcao" id="opcao">
+                <?php foreach ($dados as $row): ?>
+            <option value="<?php echo $row['id_funcionario']; ?>"><?php echo $row['nome_funcionario']; ?></option>
+                <?php endforeach; ?>
             </select>
         </p>
-        
-        
+        <p>
             <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
             <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
 
