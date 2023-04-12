@@ -14,16 +14,7 @@ if(count($_POST) > 0) {
     $valor = $_POST['valor'];
     $funcionario = $_POST['funcionario'];
 
-    if($_POST['tipo']!='cabelos' && $_POST['tipo']!='maquiagem' && $_POST['tipo']!='estetica' && $_POST['tipo']!='cilios e sobrancelhas' && $_POST['tipo']!='pes e maos' && $_POST['tipo']!='depilacao') {
-        $erro = "Insira um tipo de serviço válido";
-    } else if(empty($serv)) {
-        $erro = "Preencha o nome do serviço";
-    } else if(empty($descricao)) {
-        $erro = "Preencha a descrição do serviço";
-    } else if(empty($valor) || $valor<0) {
-        $erro = "Preencha a descrição do serviço";
-    }
-
+   
     if($erro) {
         echo '<script>alert("'.$erro.'")</script>';
     } else {
@@ -84,22 +75,19 @@ if(count($_POST) > 0) {
         </p>
         <p class="lead">
                 
-            <label for="funcionario">Quem está cadastrando?:</label><br>
-            <select id="funcionario" name='funcionario'>
-                <option value="">Selecione...</option>
-            <?php 
-                    $pegarDados = new \App\Model\FuncionarioDao();
-                    $dados = $pegarDados->obterDados();
-                    
-                    if ($dados){
-                        foreach ($dados as $row) { ?>
-                <option value="<?php $row['id_funcionario'] ?>"><?php $row['nome_funcionario'] ?></option>;
-                    <?php    }
-                    } else { ?>
-                        <option value="">Nenhum item encontrado</option>
-                  <?php } ?>
-                ?>
-            </select>
+        <?php 
+                $pdo = new PDO('mysql:host=localhost;dbname=salao', 'root', '');
+
+                $query = "SELECT id_funcionario, nome_funcionario FROM funcionario";
+                $stmt = $pdo->prepare($query);
+                $stmt->execute();
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+        <select name="funcionario" id="opcao">
+            <?php foreach ($result as $row): ?>
+        <option value="<?php echo $row['id_funcionario']; ?>"><?php echo $row['nome_funcionario']; ?></option>
+            <?php endforeach; ?>
+        </select>
         </p>
         
         
