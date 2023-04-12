@@ -6,6 +6,9 @@
 box-sizing: border-box;
 
 }
+html{
+  scroll-behavior: smooth;
+}
 .container1{
   width: 100%;
   height: 430vh;
@@ -13,7 +16,7 @@ box-sizing: border-box;
   
 
 }
-.header{
+#header{
   width: 100%;
   height: 10vh;
   background-color: #B67776;
@@ -21,7 +24,8 @@ box-sizing: border-box;
 display: flex;
 justify-content:space-between ;
 align-items: center;
-
+position: fixed;
+z-index: 1;
 }
 
 
@@ -386,7 +390,7 @@ padding: 5px;
   border-bottom: 2px solid #DFBDBC;
 
  }
- .fundo-rosa{
+ #fundo-rosa{
   background-color:#C68E8D ;
   width: 100%;
   height: 60vh;
@@ -443,7 +447,7 @@ float: right;
 margin-right: -280px;
 margin-top: -500px;
  }
- .contatos-relogio-loc{
+ #contatos-relogio-loc{
 
 
 
@@ -545,7 +549,7 @@ margin-top: -30vh;
   width: 100%;
   height: 3vh;
  background-color: #C68E8D;
- margin-top: 10vh;
+ margin-top: 20vh;
 
  }
  .text-footer{
