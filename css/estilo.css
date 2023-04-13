@@ -6,8 +6,15 @@
 box-sizing: border-box;
 
 }
+
+body{
+ overflow-x: hidden;
+ scroll-padding: var(--scroll-padding, 5rem);
+}
+
 html{
   scroll-behavior: smooth;
+  scroll-padding: 7vmax;
 }
 .container1{
   width: 100%;
@@ -44,6 +51,49 @@ margin-left:65px ;
   height: 25px;
 }
 
+ul{
+  font-family: 'Jost', sans-serif;
+  margin: 0px auto 0;
+  padding: 0;
+  list-style: none;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+li{
+  display: table-cell;
+  position: relative;
+  padding: 15px;
+}
+a{
+  color: #F9F2EC;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 40px;
+  position: relative;
+  white-space: nowrap;
+}
+a:after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50px;
+  position: absolute;
+  background: #F7C375;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0
+}
+a:hover::after{
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+
+/*
 .btn-group{
   display: flex;
   gap: 27px;
@@ -60,6 +110,7 @@ margin-left:65px ;
 .btn:hover{
  border-bottom: 2px solid #F7C375;
 }
+*/
 .ico-user-header{
   margin-right: 62px;
   
@@ -119,7 +170,7 @@ text-shadow: black  1px 2px;
 .btn-img-agendar{
   position: absolute;
   margin-top: 730px;
- 
+  transition: 0.4s;
   height: 6vh;
   width: 11%;
   background-color: transparent;
@@ -208,6 +259,7 @@ text-indent: 0;
   justify-content: center;
 }
 .btn-conheca{
+  transition: 0.4s;
   height: 6vh;
   width: 13%;
   margin-top: 40px;
@@ -540,6 +592,7 @@ margin-top: -30vh;
   font-family: 'Jost', sans-serif;
   font-size: 20px;
   cursor: pointer;
+  transition: 0.4s;
  }
  .btnfooter:hover{
     opacity: 0.5;
