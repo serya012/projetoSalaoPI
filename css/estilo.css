@@ -23,7 +23,7 @@ html{
   
 
 }
-#header{
+.header{
   width: 100%;
   height: 10vh;
   background-color: #B67776;
@@ -610,4 +610,9 @@ margin-top: -30vh;
   font-family: 'Jost', sans-serif;
   text-align: center;
   }
-media
+  @media screen and (max-width:1920){
+    .header{
+      width: 80%;
+      
+    }
+  }
