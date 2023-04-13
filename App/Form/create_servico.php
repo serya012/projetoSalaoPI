@@ -74,7 +74,7 @@ if(count($_POST) > 0) {
             <input name="valor" type="number" size="20">
         </p>
         <p class="lead">
-                
+        <option value="">Selecione...</option>
         <?php 
                 $pdo = new PDO('mysql:host=localhost;dbname=salao', 'root', '');
 

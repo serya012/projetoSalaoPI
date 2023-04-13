@@ -11,7 +11,6 @@
  
     if(count($_POST) > 0) {
 
-        $erro = false;
         $tipo = $_POST['tipo'];
         $serv = $_POST['servico'];
         $descricao = $_POST['descricao'];
@@ -44,14 +43,14 @@
 </head>
 <body>
     
-    <div class="container">
+<div class="container">
     
     <form method="POST" action="">
     <?php
        foreach ($servicoDao->readUpdate($id) as $servico): ?>
-         <p>
+        <p>
             <label >Tipo de Serviço:</label><br>
-            <select name="tipo" class="form-control">
+            <select name="tipo" class="form-control" required>
                 <option value='cabelos'>Cabelos</option>
                 <option value='maquiagem'>Maquiagem</option>
                 <option value='estetica'>Estética</option>
@@ -62,15 +61,15 @@
         </p>
         <p>
             <label>Serviço:</label><br>
-            <input name="servico" type="text" size="40">
+            <input name="servico" type="text" size="40" required>
         </p>
         <p>
             <label>Descrição:</label><br>
-            <textarea name="descricao" rows="3" cols="40"></textarea>
+            <textarea name="descricao" rows="3" cols="40" required></textarea>
         </p>
         <p class="lead">
             <label>Valor:</label><br>
-            <input name="valor" type="number" size="20">
+            <input name="valor" type="number" size="20" required>
         </p>
         <p class="lead">
                 
@@ -82,12 +81,14 @@
                     $stmt->execute();
                     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ?>
-            <select name="funcionario" id="opcao">
-                <?php foreach ($result as $row): ?>
-            <option value="<?php echo $row['id_funcionario']; ?>"><?php echo $row['nome_funcionario']; ?></option>
-                <?php endforeach; ?>
+            <select name="funcionario" id="opcao" required>
+                <option value="">Selecione...</option>
+                    <?php foreach ($result as $row): ?>
+                <option value="<?php echo $row['id_funcionario']; ?>"><?php echo $row['nome_funcionario']; ?></option>
+                    <?php endforeach; ?>
             </select>
         </p>
+
         <p>                
         <button type="submit" class="btn btn-light" title="Gravar atualização">Salvar Alterações</button>
         <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
@@ -95,6 +96,6 @@
         
        
     </form>
-    </div>
+</div>
 </body>
 </html>

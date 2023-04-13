@@ -13,7 +13,7 @@
     <div class="display-3">Tem certeza que deseja excluir este serviço?</div>
     
     <form action="" method="post">
-        <a href="read_servicos.php"><button type="button" class="btn btn-secondary" title="Não Excluir">Não</button></a>
+        <a href="read_servico.php"><button type="button" class="btn btn-secondary" title="Não Excluir">Não</button></a>
         <button type="submit" class="btn btn-danger"  title="Excluir Serviço" name="confirmar">Sim</button>
     </form>
     </div>
@@ -31,6 +31,6 @@ if(isset($_POST['confirmar'])) {
     $servico = new \App\Model\Servico();
     $servicoDao = new \App\Model\ServicoDao();
     $servicoDao->delete($id);
-    header('Location: message_delete.php');
+    header('Location: read_servico.php');
     }
 ?>

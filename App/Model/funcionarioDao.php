@@ -187,7 +187,7 @@ if($stmt->rowCount() == 1){  // se for encontrado
           echo "Erro ao obter dados da tabela: " . $e->getMessage();
           return null;
        }
-    }*/
+    
     public function obterDados(){
         $conn = Conexao::getConn(); // Obtém a instância da conexão PDO
         //$msg = "oi";
@@ -200,7 +200,7 @@ if($stmt->rowCount() == 1){  // se for encontrado
         
      }
  
-
+}*/
 }
 
 
