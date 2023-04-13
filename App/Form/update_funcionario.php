@@ -22,7 +22,7 @@
             $erro = "O telefone tem que ser válido.";
         } else if(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)) {
             $erro = "Por favor coloque um email válido para o nome de usuário.";
-        } else if(empty(trim($_POST["endereco"])) || strlen($_POST["endereco"])<15) {
+        } else if(empty(trim($_POST["endereco"])) || strlen($_POST["endereco"])<3) {
             $erro = "Insira um endereço válido";
         } else if(empty(trim($_POST["funcao"])) || strlen($_POST["funcao"])<3) {
             $erro = "Escreva a função";
@@ -62,7 +62,15 @@
     <form method="POST" action="">
     <?php
        foreach ($funcionarioDao->readUpdate($id) as $funcionario): ?>
-          <div class="form-group">
+            <div class="form-group">
+                <label>Nome Completo:</label>
+                <input type="text" name="nome" class="form-control" required>
+            </div>    
+            <div class="form-group">
+                <label>CPF:</label><br>
+                <input type="text" name="cpf" class="cpf" class="form-control " required>
+            </div>
+            <div class="form-group">
                 <label>Telefone:</label><br>
                 <input type="text" name="telefone" class="telefone" class="form-control">
                 
