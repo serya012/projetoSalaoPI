@@ -1,79 +1,46 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <title>Webleb</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../css/estiloLoginU.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/estiloLoginF.css">
+    <title>login</title>
 </head>
 <body>
-	<div class="section">
-		<div class="container">
-			<div class="row full-height justify-content-center">
-				<div class="col-12 text-center align-self-center py-5">
-					<div class="section pb-5 pt-5 pt-sm-2 text-center">
-						<h6 class="mb-0 pb-3"><span>Login </span><span>Cadastro</span></h6>
-			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-			          	<label for="reg-log"></label>
-						<div class="card-3d-wrap mx-auto">
-							<div class="card-3d-wrapper">
-								<div class="card-front">
-									<div class="center-wrap">
-										<div class="section text-center">
-											<h4 class="mb-4 pb-3">Log In</h4>
-											<div class="form-group">
-												<input type="email" name="email" class="form-style" placeholder="Email">
-												<i class="input-icon uil uil-at"></i>
-											</div>	
-											<div class="form-group mt-2">
-												<input type="password" name="senha" class="form-style" placeholder="Password">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-											<a href="" name="buscar" class="btn mt-4">Login</a>
-                      <p class="mb-0 mt-4 text-center"><a href="#" class="link">Forgot your password?</a></p>
-				      					</div>
-			      					</div>
-			      				</div>
-								<div class="card-back">
-									<div class="center-wrap">
-										<div class="section text-center">
-											<h4 class="mb-3 pb-3">Cadastro</h4>
-											<div class="form-group">
-												<input type="text" name="nome" class="form-style" placeholder="Nome Completo">
-												<i class="input-icon uil uil-user"></i>
-											</div>	
-                      <div class="form-group mt-2">
-												<input type="email" class="form-style" placeholder="Email">
-												<i class="input-icon uil uil-at"></i>
-											</div>
-                      <div class="form-group mt-2">
-												<input type="tel"  class="form-style" placeholder="Telefone">
-												<i class="input-icon uil uil-phone"></i>
-											</div>
-                      <div class="form-group mt-2">
-												<input type="text"  class="form-style" placeholder="CPF">
-												<i class=""></i>
-											</div>		
-											<div class="form-group mt-2">
-												<input type="password" class="form-style" placeholder="Senha">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>
-                      <div class="form-group mt-2">
-												<input type="password"  class="form-style" placeholder="Confirmar senha">
-												<i class="input-icon uil uil-lock-alt"></i>
-											</div>	
-											<a href="#" class="btn mt-4">Cadastrar</a>
-				      					</div>
-			      					</div>
-			      				</div>
-			      			</div>
-			      		</div>
-			      	</div>
-		      	</div>
-	      	</div>
-	    </div>
-	</div>
+    <div class="container">
+        <div class="form-image">
+          <img src="../../img/undraw_woman_ffrd (1).svg" alt="">
+        </div>
+        <div class="form">
+          <form action="">
+            
+            <div class="form-header">
+              <div class="tittle">
+                <h1>Login</h1>
+              </div>
+              <div class="login-button">
+                <button><a href="">Cadastrar-se</a></button>
+              </div>
+            </div>
+              <div class="input-box">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu E-mail" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
+                <span class="invalid-feedback"><?php echo $email_err; ?></span>
+              </div>
+    
+              <div class="input-box">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" class="form-control <?php echo (!empty($senha_err)) ? 'is-invalid' : ''; ?>">
+                <span class="invalid-feedback"><?php echo $senha_err; ?></span>
+              </div>
+    
+            <div class="continue-button">
+              <button><a href="">Continuar</a></button>
+            </div>
+        
+          </form>
+        </div>
+      </div>
 </body>
 </html>

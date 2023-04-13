@@ -40,35 +40,49 @@ if(isset($_POST['buscar'])){
 
 ?>
     
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Login</title>
+    <link rel="stylesheet" href="../../css/estiloLoginF.css">
+    <title>login</title>
 </head>
 <body>
-
-  <div class="container">
-        <h2>Logo</h2>      
-         <form action="" method="post">
-            <div class="form-group">
-                <label>Email: </label>
-                <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
-                <span class="invalid-feedback"><?php echo $email_err; ?></span>
-            </div>    
-            <div class="form-group">
-                <label>Senha:</label>
-                <input type="password" name="senha" class="form-control <?php echo (!empty($senha_err)) ? 'is-invalid' : ''; ?>">
-                <span class="invalid-feedback"><?php echo $senha_err; ?></span>
-            </div>
-            <p></p>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login" name="buscar">
-            </div>
+    <div class="container">
+        <div class="form-image">
+          <img src="../../img/undraw_woman_ffrd (1).svg" alt="">
+        </div>
+        <div class="form">
+          <form action="">
             
-        </form>
-    </div>    
+            <div class="form-header">
+              <div class="tittle">
+                <h1>Login</h1>
+              </div>
+              <div class="login-button">
+                <button><a href="">Cadastrar-se</a></button>
+              </div>
+            </div>
+              <div class="input-box">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu E-mail" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
+                <span class="invalid-feedback"><?php echo $email_err; ?></span>
+              </div>
+    
+              <div class="input-box">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" class="form-control <?php echo (!empty($senha_err)) ? 'is-invalid' : ''; ?>">
+                <span class="invalid-feedback"><?php echo $senha_err; ?></span>
+              </div>
+    
+            <div class="continue-button">
+              <button><a href="">Continuar</a></button>
+            </div>
+        
+          </form>
+        </div>
+      </div>
 </body>
 </html>
