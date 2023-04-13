@@ -67,6 +67,7 @@ class FuncionarioDao {
      $stmt->bindValue(6,$f->getSenhaF());
      $stmt->bindValue(7,$f->getEndereco());
      $stmt->bindValue(8,$f->getNivel());
+     $stmt->bindValue(9,$f->getIdF());
 
      $stmt->execute();
 

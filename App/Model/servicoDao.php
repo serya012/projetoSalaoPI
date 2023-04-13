@@ -60,7 +60,7 @@ class ServicoDao {
      $stmt->bindValue(3,$s->getServico());
      $stmt->bindValue(4,$s->getValor());
      $stmt->bindValue(5,$s->getIdFk());
-     
+     $stmt->bindValue(6,$s->getIdS());
 
      $stmt->execute();
 

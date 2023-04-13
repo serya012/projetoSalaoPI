@@ -5,8 +5,8 @@
     require_once '..\Model\servicoDao.php';
 
     $id = intval($_GET['id_servico']);
-    $servico = new \App\Model\servico();
-    $servicoDao = new \App\Model\servicoDao();
+    $servico = new \App\Model\Servico();
+    $servicoDao = new \App\Model\ServicoDao();
    
  
     if(count($_POST) > 0) {
@@ -16,20 +16,20 @@
         $descricao = $_POST['descricao'];
         $valor = $_POST['valor'];
         $funcionario = $_POST['funcionario'];
-        
-            $servico->setIdS($id);
-            $servico->setTipo($tipo);
-            $servico->setServico($serv);
-            $servico->setDescricao($descricao);
-            $servico->setValor($valor);
-            $servico->setIdFk($funcionario);
+      
+        $servico->setIdS($id);
+        $servico->setTipo($tipo);
+        $servico->setServico($serv);
+        $servico->setDescricao($descricao);
+        $servico->setValor($valor);
+        $servico->setIdFk($funcionario);
             
-            $servicoDao->update($servico);
+        $servicoDao->update($servico);
 
-            echo "<p><b>Serviço atualizado com sucesso!!!</b></p>";
+            echo "<p><b>Funcionário atualizado com sucesso!!!</b></p>";
             unset($_POST);
-    }
-
+        
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -42,60 +42,66 @@
     <title>Editar Serviço</title>
 </head>
 <body>
-    
-<div class="container">
-    
-    <form method="POST" action="">
-    <?php
-       foreach ($servicoDao->readUpdate($id) as $servico): ?>
-        <p>
-            <label >Tipo de Serviço:</label><br>
-            <select name="tipo" class="form-control" required>
-                <option value='cabelos'>Cabelos</option>
-                <option value='maquiagem'>Maquiagem</option>
-                <option value='estetica'>Estética</option>
-                <option value='cilios e sobrancelhas'>Cílios e Sobrancelhas</option>
-                <option value='pes e maos'>Pés e Mãos</option>
-                <option value='depilacao'>Depilação</option>
-            </select>
-        </p>
-        <p>
-            <label>Serviço:</label><br>
-            <input name="servico" type="text" size="40" required>
-        </p>
-        <p>
-            <label>Descrição:</label><br>
-            <textarea name="descricao" rows="3" cols="40" required></textarea>
-        </p>
-        <p class="lead">
-            <label>Valor:</label><br>
-            <input name="valor" type="number" size="20" required>
-        </p>
-        <p class="lead">
-                
-            <?php 
+    <div class="container">
+        <div class="display-3">Atualizar Serviço</div>
+
+        <form method="POST" action="">
+        <?php foreach ($servicoDao->readUpdate($id) as $servico); ?>
+            <p class="lead">
+                <label>Tipo de Serviço</label><br>
+                <select name="tipo" class="form-control">
+                    <option value="cabelos">Cabelos</option>
+                    <option value="maquiagem">Maquiagem</option>
+                    <option value="estetica">Estética</option>
+                    <option value="cilios e sobrancelhas">Cílios e Sobrancelhas</option>
+                    <option value="pes e maos">Pés e Mãos</option>
+                    <option value="depilacao">Depilação</option>
+                </select>
+            </p>
+            <p class="lead">
+                <label>Serviço</label>
+                <input name="servico" type="text" size="40">
+            </p>
+            <p class="lead">
+                <label>Descrição</label>
+                <textarea name="descricao" rows="3" cols="40"></textarea>
+            </p>
+            <p class="lead">
+                <label>Valor</label>
+                <input name="valor" type="text" size="20">
+            </p>
+            <p class="lead">
+                <?php 
                     $pdo = new PDO('mysql:host=localhost;dbname=salao', 'root', '');
-        
+
                     $query = "SELECT id_funcionario, nome_funcionario FROM funcionario";
                     $stmt = $pdo->prepare($query);
                     $stmt->execute();
-                    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            ?>
-            <select name="funcionario" id="opcao" required>
-                <option value="">Selecione...</option>
-                    <?php foreach ($result as $row): ?>
-                <option value="<?php echo $row['id_funcionario']; ?>"><?php echo $row['nome_funcionario']; ?></option>
-                    <?php endforeach; ?>
-            </select>
-        </p>
+                    $result = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+                ?>
 
-        <p>                
-        <button type="submit" class="btn btn-light" title="Gravar atualização">Salvar Alterações</button>
-        <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
-        </p>
-        
-       
-    </form>
-</div>
+                <select name="funcionario" class="form-control">
+                    <option value="">Selecione...</option>
+                        <?php foreach ($result as $row): ?>
+                    <option value="<?php echo $row['id_funcionario']; ?>"><?php echo $row['nome_funcionario']; ?></option>
+                        <?php endforeach; ?>
+                </select>  
+            </p>
+            <p>
+            <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
+            <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
+            </p>
+        </form>
+    </div>
+
+    
+
+    <script type= "text/javascript" src="../../js/jquery-3.6.4.js"></script>
+    <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            $('.telefone').mask('(00)00000-0000');
+       }); 
+    </script>
 </body>
 </html>
