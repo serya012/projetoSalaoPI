@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+
+}
+.header{
+    width: 100%;
+    height: 10vh;
+    background-color: #B67776;
+   
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  }
+  
+  
+  .logo-header{
+    width: 5%;
+    height: 10vh;
+    background-color: #F9F2EC;
+  margin-left:65px ;
+  
+  }
+  .logo-ico{
+    
+    margin-left: 22px;
+    margin-top: 15px;
+    width: 5%;
+    height: 25px;
+  }
+  
+  .lista ul{
+    font-family: 'Jost', sans-serif;
+    margin: 0px auto 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 600px;
+    text-align: center;
+  }
+  .lista li{
+    display: table-cell;
+    position: relative;
+    padding: 15px;
+
+  }
+  .lista a{
+    color: #F9F2EC;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 40px;
+    position: relative;
+    white-space: nowrap;
+  }
+  .lista a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50px;
+    position: absolute;
+    background: #F7C375;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0
+  }
+  .lista a:hover::after{
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  @media screen and (max-width: 1452px ){
+    .header{
+      font-size: 13.5px;
+    }
+  }
+  @media screen and (max-width: 1380px ){
+    .lista li{
+      display: table-cell;
+    position: relative;
+    padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1210px ){
+    .lista li{
+      display: table-cell;
+    position: relative;
+    padding: 7px;
+    }
+    .logo-header{
+      width: 7%;
+      height: 10vh;
+      background-color: #F9F2EC;
+    margin-left:65px ;
+    
+    }
+  }
+
+  @media screen and (max-width: 1166px ){
+    .lista li{
+      display: table-cell;
+    position: relative;
+    padding: 3px;
+    }
+    .logo-header{
+    margin-left:50px ;
+    
+    }
+    .ico-user-header{
+      margin-right: 22px;
+    }
+  }

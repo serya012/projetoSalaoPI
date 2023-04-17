@@ -4,13 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+.container1{
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d8a09f;
+  background: #F9F2EC;
   
 }
 
@@ -19,33 +19,7 @@ body{
   height: 80vh;
   display: flex;
   box-shadow: 5px 5px 10px rgba(0,0,0, .212);
-  
-}
-.header{
-  width: 100%;
-  height: 10vh;
-  background-color: #B67776;
- 
-display: flex;
-justify-content:space-between ;
-align-items: center;
-
-}
-
-
-.logo-header{
-  width: 5%;
-  height: 10vh;
-  background-color: #F9F2EC;
-margin-left:65px ;
-
-}
-.logo-ico{
-  
-  margin-left: 22px;
-  margin-top: 15px;
-  width: 5%;
-  height: 25px;
+  margin-top: 80px;
 }
 
 .btn-group{
