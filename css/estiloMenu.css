@@ -95,11 +95,12 @@ box-sizing: border-box;
     position: relative;
     padding: 7px;
     }
+   
     .logo-header{
       width: 7%;
       height: 10vh;
       background-color: #F9F2EC;
-    margin-left:65px ;
+    margin-left:50px ;
     
     }
   }
@@ -110,11 +111,43 @@ box-sizing: border-box;
     position: relative;
     padding: 3px;
     }
+    
+    .ico-user-header{
+      margin-right: 28px;
+      
+    }
+    .ico-img{
+      
+      height: 45px;
+      width: 85%;
+      padding-bottom: 5px;
+      margin-right: 10px;
+    }
+    .btn-login{
+      display: none;
+    }
     .logo-header{
-    margin-left:50px ;
+      margin-left: 28px;
     
     }
-    .ico-user-header{
-      margin-right: 22px;
+  }
+  @media screen and (max-width: 1166px ){
+    .lista a{
+      padding: 15px 30px;
+    }
+  }
+  @media screen and (max-width: 964px ){
+    .lista a{
+      padding: 15px 20px;
+    }
+  }
+  @media screen and (max-width: 822px ){
+    .lista a{
+      padding: 15px 15px;
+    }
+  }
+  @media screen and (max-width: 775px ){
+    .lista a{
+      padding: 15px 10px;
     }
   }
