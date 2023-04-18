@@ -1,4 +1,7 @@
 <?php
+    if (!isset($_SESSION)) session_start();
+    if (isset($_SESSION['id_usuario']))
+    $nome = $_SESSION['id_usuario'];
 
 require_once '..\Model\conexao.php';
 require_once '..\Model\agenda.php';
@@ -7,21 +10,23 @@ require_once '..\Model\agendaDao.php';
 
 if(count($_POST) > 0) {
     
-    $erro = false;
     $servico = $_POST['servico'];
     $data = $_POST['data'];
     $hora = $_POST['hora'];
+    $usuario = $nome;
     
+    echo $usuario;
     
-        $servico = new \App\Model\Servico();
-        $servico->setTipo($tipo);
-        $servico->setServico($serv);
-        $servico->setDescricao($descricao);
-        $servico->setValor($valor);
-        $servicoDao = new \App\Model\ServicoDao();
-        $servicoDao->create($servico);
+        $agenda = new \App\Model\Agenda();
+        $agenda->setServicoFk($servico);
+        $agenda->setDataA($data);
+        $agenda->setHora($hora);
+        $agenda->setUsuarioFk($usuario);
+
+        $agendaDao = new \App\Model\AgendaDao();
+        $agendaDao->create($agenda);
         unset($_POST);
-        echo '<script>alert("servico salvo com sucesso!!")</script>';
+        echo '<script>alert("agenda salvo com sucesso!!")</script>';
        
     
 }
@@ -45,9 +50,20 @@ if(count($_POST) > 0) {
         
         <form method="POST" action="">
         <p class="lead">
-            <label>Serviços:</label>
-            <select name="servico">
-                <option value=""></option>
+        <label>Serviços:</label>
+            <select name="servico" id="opcao">
+                <option value="">Selecione...</option>
+            <?php //Pra montar os options que interagem com o banco
+                $pdo = new PDO('mysql:host=localhost;dbname=salao', 'root', '');
+
+                $query = "SELECT id_servico, servico FROM servico";
+                $stmt = $pdo->prepare($query);
+                $stmt->execute();
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                ?>
+            <?php foreach ($result as $row): ?>
+                 <option value="<?php echo $row['id_servico']; ?>"><?php echo $row['servico']; ?></option>
+            <?php endforeach; ?>
             </select>
         </p>
         <p class="lead">
@@ -57,14 +73,25 @@ if(count($_POST) > 0) {
         <p class="lead">
             <label>Hora:</label>
             <select name="hora">
-                <option value=""></option>
+                <optgroup label="Manhã">
+                <option value="9h">9:00</option>
+                <option value="10h">10:00</option>
+                <option value="11h">11:00</option>
+                <optgroup label="Tarde">
+                <option value="13h">13:00</option>
+                <option value="14h">14:00</option>
+                <option value="15h">15:00</option>
+                <option value="16h">16:00</option>
+                <option value="17h">17:00</option>
+                <option value="18h">18:00</option>
+                <option value="19h">19:00</option>
             </select>
         </p>
         
         
         
             <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
-            <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
+            <a href="read_agenda.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
 
         </p>
         </form>

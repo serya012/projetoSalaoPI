@@ -30,7 +30,7 @@ class Agenda{
     $this->data_agenda = $dat;
     }
 
-    public function getUsuarioFkA(){
+    public function getUsuarioFk(){
     return $this->id_usuarioFk;
     }
         
@@ -39,11 +39,11 @@ class Agenda{
     }
 
     public function getServicoFk(){
-    return $this->$id_servicoFk;
+    return $this->id_servicoFk;
     }
     
     public function setServicoFk($sFk){
-    $this->$id_servicoFk = $sFk;
+    $this->id_servicoFk = $sFk;
     }
 }
 

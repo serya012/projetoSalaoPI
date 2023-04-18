@@ -14,13 +14,6 @@ $usuarioDao = new \App\Model\UsuarioDao();
    
 if(isset($_POST['buscar'])){
 
-    if(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
-        $email_err = "Por favor coloque um email válido!";
-        $email = $_POST["email"];
-    } elseif(empty(trim($_POST["senha"])) || strlen($_POST["senha"])<8){   
-        $email = $_POST["email"];
-        $senha_err = "Por favor coloque uma senha válida!";
-    } else { 
         $email = $_POST["email"];
         $senha = $_POST['senha'];
 
@@ -28,14 +21,18 @@ if(isset($_POST['buscar'])){
         $usuario->setSenhaU($senha);
         
         if ($usuarioDao->localizar($usuario)) {
+
             if(!isset($_SESSION)) session_start();
+
             $_SESSION['usuario'] = $usuario->getEmailU();
+            $_SESSION['id_usuario'] = $usuario->getIdU();
+            echo $_SESSION['id_usuario']; 
             $_SESSION['nivel'] = $usuarioDao->buscarNivel($usuario);
-            header('Location: ../Form/read_produtos.php'); 
+           //header('Location: ../Form/create_agenda.php'); 
         } else {
             $senha_err = "Email ou senha incorretos";
         }
-    }
+    
  }
 
 ?>
@@ -55,7 +52,7 @@ if(isset($_POST['buscar'])){
           <img src="../../img/undraw_woman_ffrd (1).svg" alt="">
         </div>
         <div class="form">
-          <form action="">
+          <form action="" method="POST">
             
             <div class="form-header">
               <div class="tittle">
@@ -78,7 +75,7 @@ if(isset($_POST['buscar'])){
               </div>
     
             <div class="continue-button">
-              <button><a href="">Continuar</a></button>
+              <button type="submit" name="buscar"><a>Continuar</a></button>
             </div>
         
           </form>

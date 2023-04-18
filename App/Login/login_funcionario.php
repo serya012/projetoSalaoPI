@@ -30,8 +30,9 @@ if(isset($_POST['buscar'])){
         if ($funcionarioDao->localizarF($funcionario)) {
             if(!isset($_SESSION)) session_start();
             $_SESSION['funcionario'] = $funcionario->getEmailF();
+            $_SESSION['id_funcionario'] = $funcionario->getIdF();
             $_SESSION['nivel'] = $funcionarioDao->buscarNivel($funcionario);
-            header('Location: ../Form/read_produtos.php'); 
+            header('Location: ../Form/read_agenda.php'); 
         } else {
             $senha_err = "Email ou senha incorretos";
         }
