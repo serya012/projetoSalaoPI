@@ -26,7 +26,7 @@
             
         $servicoDao->update($servico);
 
-            echo "<p><b>Funcionário atualizado com sucesso!!!</b></p>";
+            echo "<p><b>Serviço atualizado com sucesso!!!</b></p>";
             unset($_POST);
         
     } 

@@ -26,26 +26,22 @@
 <body>
  <div class="container">
     <div class="row h6 bg-secondary">
-        <div class="col-1">Nome</div>
-        <div class="col-1">Funcionário</div>
+        <div class="col-3">Nome</div>
         <div class="col-3">Serviço</div>
-        <div class="col-3">Hora</div>
+        <div class="col-1">Hora</div>
         <div class="col-3">Data</div>
-        <div class="col-3">Valor</div>
         <div class="col">Ações</div>
     </div>
     <?php
         foreach ($agendaDao->read() as $agenda):
             echo ('<div class="row">
-                    <div class="col-1">'.$agenda["id_usuario"].'</div>
-                    <div class="col-1">'.$agenda["id_funcionario"].'</div>
-                    <div class="col-3">'.$agenda["servico"].'</div>
-                    <div class="col-3">'.$agenda["hora_agenda"].'</div>
+                    <div class="col-3">'.$agenda["id_usuario"].'</div>
+                    <div class="col-3">'.$agenda["id_servico"].'</div>
+                    <div class="col-1">'.$agenda["hora_agenda"].'</div>
                     <div class="col-3">'.$agenda["data_agenda"].'</div>
-                    <div class="col-3">'.$agenda["valor"].'</div>
                     <div class="col">
-                        <a href="update_agenda.php?id_agenda='.$agenda["id_agenda"].'"><button type="button" class="btn btn-light" title="Editar agenda">Editar</button></a>
-                        <a href="delete_agenda.php?id_agenda='.$agenda["id_agenda"].'"><button type="button" class="btn btn-light" title="Excluir agenda">Desmarcar</button></a>
+                        <a href="update_agenda.php?cod_agenda='.$agenda["cod_agenda"].'"><button type="button" class="btn btn-light" title="Editar agenda">Editar</button></a>
+                        <a href="delete_agenda.php?cod_agenda='.$agenda["cod_agenda"].'"><button type="button" class="btn btn-light" title="Excluir agenda">Desmarcar</button></a>
                     </div>
                    </div>'
                 );          

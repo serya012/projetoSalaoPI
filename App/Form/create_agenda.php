@@ -12,21 +12,7 @@ if(count($_POST) > 0) {
     $data = $_POST['data'];
     $hora = $_POST['hora'];
     
-   
     
-    if($_POST['tipo']!='cabelos' && $_POST['tipo']!='maquiagem' && $_POST['tipo']!='estetica' && $_POST['tipo']!='cilios e sobrancelhas' && $_POST['tipo']!='pes e maos' && $_POST['tipo']!='depilacao') {
-        $erro = "Insira um tipo de serviço válido";
-    } else if(empty($serv)) {
-        $erro = "Preencha o nome do serviço";
-    } else if(empty($descricao)) {
-        $erro = "Preencha a descrição do serviço";
-    } else if(empty($valor) || $valor<0) {
-        $erro = "Preencha a descrição do serviço";
-    }
-
-    if($erro) {
-        echo '<script>alert("'.$erro.'")</script>';
-    } else {
         $servico = new \App\Model\Servico();
         $servico->setTipo($tipo);
         $servico->setServico($serv);
@@ -37,7 +23,7 @@ if(count($_POST) > 0) {
         unset($_POST);
         echo '<script>alert("servico salvo com sucesso!!")</script>';
        
-    }
+    
 }
  
 ?>

@@ -14,12 +14,13 @@ class AgendaDao {
    # função para criar um registro de produto
    public function create(Agenda $a){
        // não estamos inserindo o campo id abaixo, porque o mesmo é auto-incremento
-       $sql = 'INSERT INTO agenda (hora_agenda, data_agenda) VALUES (?,?)';
+       $sql = 'INSERT INTO agenda (hora_agenda, data_agenda, id_usuario, id_servico) VALUES (?,?,?,?)';
       
        $stmt = Conexao::getConn()->prepare($sql); //prepare é um método da classe PDO
        $stmt->bindValue(1, $a->getHora());
        $stmt->bindValue(2, $a->getDataA());
-       
+       $stmt->bindValue(3, $a->getUsuarioFk());
+       $stmt->bindValue(4, $a->getServicoFk());
 
        $stmt->execute();
    }
@@ -49,11 +50,14 @@ class AgendaDao {
    # função para atualizar (alterar)
    public function update(Agenda $a){
 
-     $sql = 'UPDATE agenda SET hora_agenda = ?, data_agenda WHERE cod_agenda = ?';
+     $sql = 'UPDATE agenda SET hora_agenda = ?, data_agenda = ?, id_usuario = ?, id_servico = ? WHERE cod_agenda = ?';
 
      $stmt = Conexao::getConn()->prepare($sql);
      $stmt->bindValue(1,$a->getHora());
      $stmt->bindValue(2,$a->getDataA());
+     $stmt->bindValue(3,$a->getUsuarioFk());
+     $stmt->bindValue(4,$a->getServicoFk());
+     $stmt->bindValue(5,$a->getCod());
      
 
      $stmt->execute();

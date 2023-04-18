@@ -18,31 +18,17 @@
         $funcao = $_POST['funcao'];
         
     
-        if(empty(trim($_POST["telefone"])) || strlen($_POST["telefone"])<11) {
-            $erro = "O telefone tem que ser válido.";
-        } else if(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)) {
-            $erro = "Por favor coloque um email válido para o nome de usuário.";
-        } else if(empty(trim($_POST["endereco"])) || strlen($_POST["endereco"])<15) {
-            $erro = "Insira um endereço válido";
-        } else if(empty(trim($_POST["funcao"])) || strlen($_POST["funcao"])<3) {
-            $erro = "Escreva a função";
-        }
+        $agenda->setIdF($id);
+        $agenda->setTelefoneF($telefone);
+        $agenda->setEmailF($email);
+        $agenda->setEndereco($endereco);
+        $agenda->setFuncao($funcao);
+        
+        $agendaDao->update($agenda);
 
-        if($erro) {
-            echo "<p><b>ERRO: $erro</b></p>";
-        } else {
-
-            $agenda->setIdF($id);
-            $agenda->setTelefoneF($telefone);
-            $agenda->setEmailF($email);
-            $agenda->setEndereco($endereco);
-            $agenda->setFuncao($funcao);
-            
-            $agendaDao->update($agenda);
-
-            echo "<p><b>Funcionário atualizado com sucesso!!!</b></p>";
-            unset($_POST);
-        }
+        echo "<p><b>Funcionário atualizado com sucesso!!!</b></p>";
+        unset($_POST);
+        
     } 
 ?>
 

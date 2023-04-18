@@ -4,7 +4,7 @@ namespace App\Model;
 
 class Agenda{
   
-    private $cod_agenda, $hora_agenda, $data_agenda;
+    private $cod_agenda, $hora_agenda, $data_agenda, $id_usuarioFk, $id_servicoFk;
  
     public function getCod(){
         return $this->cod_agenda;
@@ -28,6 +28,22 @@ class Agenda{
     
     public function setDataA($dat){
     $this->data_agenda = $dat;
+    }
+
+    public function getUsuarioFkA(){
+    return $this->id_usuarioFk;
+    }
+        
+    public function setUsuarioFk($uFk){
+    $this->id_usuarioFk = $uFk;
+    }
+
+    public function getServicoFk(){
+    return $this->$id_servicoFk;
+    }
+    
+    public function setServicoFk($sFk){
+    $this->$id_servicoFk = $sFk;
     }
 }
 
