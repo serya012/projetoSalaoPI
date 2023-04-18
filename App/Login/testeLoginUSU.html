@@ -1,58 +1,16 @@
-<?php
-
-require_once '..\Model\conexao.php';
-require_once '..\Model\funcionario.php';
-require_once '..\Model\funcionarioDao.php';
-
-$email = $senha =  "";
-$email_err = $senha_err =  "";
-
- 
-
-$funcionario = new \App\Model\Funcionario();
-$funcionarioDao = new \App\Model\FuncionarioDao();
-   
-if(isset($_POST['buscar'])){
-
-    if(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
-        $email_err = "Por favor coloque um email válido!";
-        $email = $_POST["email"];
-    } elseif(empty(trim($_POST["senha"])) || strlen($_POST["senha"])<8){   
-        $email = $_POST["email"];
-        $senha_err = "Por favor coloque uma senha válida!";
-    } else { 
-        $email = $_POST["email"];
-        $senha = $_POST['senha'];
-
-        $funcionario->setEmailF($email);
-        $funcionario->setSenhaF($senha);
-        
-        if ($funcionarioDao->localizarF($funcionario)) {
-            if(!isset($_SESSION)) session_start();
-            $_SESSION['funcionario'] = $funcionario->getEmailF();
-            $_SESSION['id_funcionario'] = $funcionario->getIdF();
-            $_SESSION['nivel'] = $funcionarioDao->buscarNivel($funcionario);
-            header('Location: ../Form/read_agenda.php'); 
-        } else {
-            $senha_err = "Email ou senha incorretos";
-        }
-    }
- }
-
-?>
-    
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estiloLoginF.css">
+    <link rel="stylesheet" href="../../css/estiloLoginU.css">
     <link rel="stylesheet" href="../../css/estiloMenu.css">
     <title>login</title>
 </head>
 <body>
-  <header class="header">
+
+<header class="header">
     <div class="logo-header">
    
     </div>
@@ -92,6 +50,7 @@ if(isset($_POST['buscar'])){
     
    
   </header>
+
   <div class="container1">
     <div class="container">
         <div class="form-image">
@@ -127,6 +86,6 @@ if(isset($_POST['buscar'])){
           </form>
         </div>
       </div>
-    </div>
+      </div>
 </body>
 </html>
