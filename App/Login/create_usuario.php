@@ -148,7 +148,7 @@ if (isset($_POST["gravar"])){
         </div>
 
         <div class="continue-button">
-          <button type="submit" name="gravar"><a href="">Continuar</a></button>
+          <button type="submit" name="gravar"><a href="">Cadastrar</a></button>
         </div>
       </form>
     </div>

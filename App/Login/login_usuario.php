@@ -119,7 +119,7 @@ if(isset($_POST['buscar'])){
               </div>
     
             <div class="continue-button">
-              <button type="submit" name="buscar"><a>Continuar</a></button>
+              <button type="submit" name="buscar"><a>Entrar</a></button>
             </div>
         
           </form>

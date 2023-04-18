@@ -121,7 +121,7 @@ if(isset($_POST['buscar'])){
               </div>
     
             <div class="continue-button">
-              <button><a href="">Continuar</a></button>
+              <button><a href="">Entrar</a></button>
             </div>
         
           </form>
