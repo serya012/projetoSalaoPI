@@ -1,7 +1,8 @@
 <?php
     session_start();
-    if (isset($_SESSION['id_usuario']))
+    if (isset($_SESSION['id_usuario'])){
     $nome = $_SESSION['id_usuario'];
+    
 
 require_once '..\..\Model\conexao.php';
 require_once '..\..\Model\agenda.php';
@@ -13,6 +14,7 @@ if(count($_POST) > 0) {
     $servico = $_POST['servico'];
     $data = $_POST['data'];
     $hora = $_POST['hora'];
+   // $nome = $_SESSION['id_usuario'];
     $usuario = $nome;
     
     echo $usuario;
@@ -30,7 +32,7 @@ if(count($_POST) > 0) {
        
     
 }
- 
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +47,11 @@ if(count($_POST) > 0) {
     <title>Agendar</title>
 </head>
 <body>
+    <?php
+    
+     $nome = $_SESSION['id_usuario'];
+echo 'teste: '.$nome; 
+?>
 <header class="header">
     <div class="logo-header">
    
