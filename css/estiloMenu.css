@@ -3,7 +3,7 @@
 *{
   margin: 0;
   padding: 0;
-box-sizing: border-box;
+  box-sizing: border-box;
 
 }
 .container1{
@@ -20,11 +20,11 @@ box-sizing: border-box;
     height: 10vh;
     background-color: #B67776;
    
-  display: flex;
-  justify-content:space-between ;
-  align-items: center;
-  position: fixed;
-  z-index: 1;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
   }
   
   
@@ -32,9 +32,9 @@ box-sizing: border-box;
     width: 5%;
     height: 10vh;
     background-color: #F9F2EC;
-  margin-left:65px ;
-  
+    margin-left:65px ;
   }
+
   .logo-ico{
     
     margin-left: 22px;
@@ -93,23 +93,23 @@ box-sizing: border-box;
   @media screen and (max-width: 1380px ){
     .lista li{
       display: table-cell;
-    position: relative;
-    padding: 10px;
+      position: relative;
+      padding: 10px;
     }
   }
 
   @media screen and (max-width: 1210px ){
     .lista li{
       display: table-cell;
-    position: relative;
-    padding: 7px;
+      position: relative;
+      padding: 7px;
     }
    
     .logo-header{
       width: 7%;
       height: 10vh;
       background-color: #F9F2EC;
-    margin-left:50px ;
+      margin-left:50px ;
     
     }
   }
@@ -117,8 +117,8 @@ box-sizing: border-box;
   @media screen and (max-width: 1166px ){
     .lista li{
       display: table-cell;
-    position: relative;
-    padding: 3px;
+      position: relative;
+      padding: 3px;
     }
     
     .ico-user-header{

@@ -28,7 +28,7 @@ if(isset($_POST['buscar'])){
             $_SESSION['id_usuario'] = $usuario->getIdU();
             echo $_SESSION['id_usuario']; 
             $_SESSION['nivel'] = $usuarioDao->buscarNivel($usuario);
-           //header('Location: ../Form/create_agenda.php'); 
+            header('Location: ../Form/Usuario/read_servico.php'); 
         } else {
             $senha_err = "Email ou senha incorretos";
         }
@@ -56,29 +56,15 @@ if(isset($_POST['buscar'])){
   
     <div class="lista">
       <ul>
-        <li><a href="#img-inicio">Inicio</a></li>
-        <li><a href="#sobre-nos">Sobre Nós</a></li>
-        <li><a href="#section3">Parceiros</a></li>
-        <li><a>Equipe</a></li>
-        <li><a>Serviços</a></li>
-        <li><a href="#contatos-relogio-loc">Contato</a></li>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../../index.html">Sobre Nós</a></li>
+        <li><a href="../../index.html">Parceiros</a></li>
+        <li><a href="../../paginas/equipe.html">Equipe</a></li>
+        <li><a href="../../paginas/servicos.html">Serviços</a></li>
+        <li><a href="../../index.html">Contato</a></li>
       </ul>
     </div>
   
-    <!--
-  
-      codigo ryan
-  
-    <div class="btn-group">
-      <a href="index.html">  <button class="btn btn1">Inicio</button></a>
-      <a href="#sobre-nos"> <button class="btn btn2">Sobre nós</button></a>
-    <a href="#fundo-rosa"><button class="btn btn3">Parceiros</button></a>
-    <button class="btn btn4">Equipe</button>
-    <button class="btn btn5">Serviços</button>
-    <a href="#contatos-relogio-loc"><button class="btn btn6">Contatos</button></a>
-    
-  </div>
-  -->
   <div class="ico-user-header">
     <img src="../../img/iconeLogin1.png" alt="ico-user" class="ico-img">
     
@@ -103,7 +89,7 @@ if(isset($_POST['buscar'])){
                 <h1>Login</h1>
               </div>
               <div class="login-button">
-                <button><a href="">Cadastrar-se</a></button>
+                <button><a href="create_usuario.php">Cadastrar-se</a></button>
               </div>
             </div>
               <div class="input-box">

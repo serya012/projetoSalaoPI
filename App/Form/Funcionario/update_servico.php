@@ -1,8 +1,8 @@
 <?php
 
-    require_once '..\Model\conexao.php';
-    require_once '..\Model\servico.php';
-    require_once '..\Model\servicoDao.php';
+    require_once '..\..\Model\conexao.php';
+    require_once '..\..\Model\servico.php';
+    require_once '..\..\Model\servicoDao.php';
 
     $id = intval($_GET['id_servico']);
     $servico = new \App\Model\Servico();

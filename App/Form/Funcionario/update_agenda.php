@@ -1,8 +1,8 @@
 <?php
 
-    require_once '..\Model\conexao.php';
-    require_once '..\Model\agenda.php';
-    require_once '..\Model\agendaDao.php';
+    require_once '..\..\Model\conexao.php';
+    require_once '..\..\Model\agenda.php';
+    require_once '..\..\Model\agendaDao.php';
 
     $id = intval($_GET['id_agenda']);
     $agenda = new \App\Model\Agenda();

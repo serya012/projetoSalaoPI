@@ -1,8 +1,8 @@
 <?php
    
-    require_once '..\Model\conexao.php';
-    require_once '..\Model\funcionario.php';
-    require_once '..\Model\funcionarioDao.php';
+    require_once '..\..\Model\conexao.php';
+    require_once '..\..\Model\funcionario.php';
+    require_once '..\..\Model\funcionarioDao.php';
 
     $funcionario = new \App\Model\funcionario();
     $funcionarioDao = new \App\Model\funcionarioDao();

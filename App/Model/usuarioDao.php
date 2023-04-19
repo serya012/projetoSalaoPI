@@ -6,11 +6,10 @@ class UsuarioDao {
 
     public function localizar(Usuario $u){
 
-        $sql = 'SELECT * FROM usuario WHERE email_usuario = ?, id_usuario = ?';
+        $sql = 'SELECT * FROM usuario WHERE email_usuario = ?';
     
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1,$u->getEmailU());
-        $stmt->bindValue(2,$u->getIdU());
     
         $stmt->execute();
     

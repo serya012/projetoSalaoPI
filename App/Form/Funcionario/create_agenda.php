@@ -3,9 +3,9 @@
     if (isset($_SESSION['id_usuario']))
     $nome = $_SESSION['id_usuario'];
 
-require_once '..\Model\conexao.php';
-require_once '..\Model\agenda.php';
-require_once '..\Model\agendaDao.php';
+require_once '..\..\Model\conexao.php';
+require_once '..\..\Model\agenda.php';
+require_once '..\..\Model\agendaDao.php';
 
 
 if(count($_POST) > 0) {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="stylesheet" href="../../../css/estilo.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
@@ -27,28 +27,28 @@
       <li><a href="#img-inicio">Inicio</a></li>
       <li><a href="#sobre-nos">Sobre Nós</a></li>
       <li><a href="#section3">Parceiros</a></li>
-      <li><a href="paginas/equipe.html">Equipe</a></li>
-      <li><a href="paginas/serviços.html">Serviços</a></li>
+      <li><a href="../../../paginas/equipe.html">Equipe</a></li>
+      <li><a href="../../../paginas/servicos.html">Serviços</a></li>
       <li><a href="#contatos-relogio-loc">Contato</a></li>
     </ul>
   </div>
 
  <div class="ico-user-header">
-  <img src="img/iconeLogin1.png" alt="ico-user" class="ico-img">
+    <?php echo "Olá, ".$email ?>
   
- <div><button class="btn-login"><a href="App/Login/login_usuario.php">Login</a></button></div>
+ <div><button class="btn-login"><a href="../../Login/logout_usuario.php">Deslogar</a></button></div>
 
 </header>
 
   <section class="-main-section">
     <div class="img-content" id="img-inicio">
-    <img src="img/Roby_Salao_Beleza-3774.png" alt="" class="img-top">
+    <img src="../../../img/Roby_Salao_Beleza-3774.png" alt="" class="img-top">
 
     <h1 class="text-edit">"Transforme sua beleza em uma obra-prima única e<br> deslumbrante em nosso salão de beleza com nossos serviços de <br>alta qualidade e equipe especializada!"</h1>
-<button class="btn-img-agendar"><a href="App/Form/Usuario/read_servico.php">Agendar Agora</a></button>
+<button class="btn-img-agendar"><a href="read_servico.php">Agendar Agora</a></button>
     </div>
     <section id="sobre-nos">
-<img src="img/Design_sem_nome__3_-removebg-preview.png" alt="" class="flor1">
+<img src="../../../img/Design_sem_nome__3_-removebg-preview.png" alt="" class="flor1">
 
     </section>
     <section class="text-sob-nos">
@@ -59,7 +59,7 @@
 
 
     </section>
-    <div class="flor2"> <img src="img/Design_sem_nome__1_-removebg-preview.png" alt=""></div>
+    <div class="flor2"> <img src="../../../img/Design_sem_nome__1_-removebg-preview.png" alt=""></div>
      
     <div class="text-sobre-nos">
       <p>    Há alguns anos atrás, quatro mulheres se conheceram em um curso de cabeleireiras no Senac. Elas rapidamente perceberam que tinham muitas coisas em comum, incluindo a paixão pela beleza e o desejo de construir algo próprio. Depois de se formarem no curso, as quatro mulheres, chamadas Juliana, Gilda, Natália e Prisciane, começaram a trabalhar em salões de beleza diferentes. No entanto, elas mantiveram contato e continuaram a conversar sobre suas ambições de abrir um negócio próprio. <br><br>
@@ -89,7 +89,7 @@
               <div id="slider">
                 <div class="slide">
                   <div class="card">
-                  <div class="img-card"><img src="img/icone-de-menina-com-cabelos-longos-ondulados-cuidados-com-o-cabelo-gradiente-rosa-e-cabeleireiro-feminino_542399-666-removebg-preview (1).png" alt="" class="img-card-edit"></div>
+                  <div class="img-card"><img src="../../../img/icone-de-menina-com-cabelos-longos-ondulados-cuidados-com-o-cabelo-gradiente-rosa-e-cabeleireiro-feminino_542399-666-removebg-preview (1).png" alt="" class="img-card-edit"></div>
                   <h1 class="text-h1-card">Cabelos</h1><br>
                   <h3 class="text-h3-card">Transforme seu visual com nossos serviços de cabelo personalizados.</h3>
           <br><br>
@@ -98,35 +98,35 @@
               </div>
 
                 <div class="slide"> <div class="card">
-                  <div class="img-card"><img src="img/maquiagem.png" alt="" class="img-card-edit"></div>
+                  <div class="img-card"><img src="../../../img/maquiagem.png" alt="" class="img-card-edit"></div>
                   <h1 class="text-h1-card">Maquiagem</h1><br>
                   <h3 class="text-h3-card">Deixe sua beleza brilhar com nossos serviços de maquiagem exclusivos.</h3>
           <br><br>
           <div class="saiba-mais"> <a href=""class="acapulco">Saiba mais...</a></div>
                  </div></div>
                 <div class="slide"> <div class="card">
-                  <div class="img-card"><img src="img/estetica.png" class="img-card-edit img1"></div>
+                  <div class="img-card"><img src="../../../img/estetica.png" class="img-card-edit img1"></div>
                   <h1 class="text-h1-card">Estética</h1><br>
                   <h3 class="text-h3-card">Relaxe e revitalize sua pele com nossos serviços de estética.</h3>
           <br><br>
           <div class="saiba-mais"> <a href=""class="acapulco">Saiba mais...</a></div>
                  </div></div>
                 <div class="slide"> <div class="card">
-                  <div class="img-card"><img src="img/icones-de-depilacao-feminina-1024x243.png" alt="" class="img-card-edit"></div>
+                  <div class="img-card"><img src="../../../img/icones-de-depilacao-feminina-1024x243.png" alt="" class="img-card-edit"></div>
                   <h1 class="text-h1-card">Depilação</h1><br>
                   <h3 class="text-h3-card">Tenha uma pele suave e sedosa com nossos serviços de depilação.</h3>
           <br><br>
           <div class="saiba-mais"> <a href=""class="acapulco">Saiba mais...</a></div>
                  </div></div>
                 <div class="slide"> <div class="card">
-                  <div class="img-card"><img src="img/icone-de-menina-com-cabelos-longos-ondulados-cuidados-com-o-cabelo-gradiente-rosa-e-cabeleireiro-feminino_542399-666-removebg-preview (1).png" alt="" class="img-card-edit"></div>
+                  <div class="img-card"><img src="../../../img/icone-de-menina-com-cabelos-longos-ondulados-cuidados-com-o-cabelo-gradiente-rosa-e-cabeleireiro-feminino_542399-666-removebg-preview (1).png" alt="" class="img-card-edit"></div>
                   <h1 class="text-h1-card">Cabelos</h1><br>
                   <h3 class="text-h3-card">Transforme seu visual com nossos serviços de cabelo personalizados.</h3>
           <br><br>
           <div class="saiba-mais"> <a href=""class="acapulco">Saiba mais...</a></div>
                  </div></div>
                 <div class="slide"> <div class="card">
-                  <div class="img-card"><img src="img/icone-de-menina-com-cabelos-longos-ondulados-cuidados-com-o-cabelo-gradiente-rosa-e-cabeleireiro-feminino_542399-666-removebg-preview (1).png" alt="" class="img-card-edit"></div>
+                  <div class="img-card"><img src="../../../img/icone-de-menina-com-cabelos-longos-ondulados-cuidados-com-o-cabelo-gradiente-rosa-e-cabeleireiro-feminino_542399-666-removebg-preview (1).png" alt="" class="img-card-edit"></div>
                   <h1 class="text-h1-card">Cabelos</h1><br>
                   <h3 class="text-h3-card">Transforme seu visual com nossos serviços de cabelo personalizados.</h3>
           <br><br>
@@ -230,7 +230,7 @@
   <footer class="footer">
     <section id="fundo-rosa">
       <div class="flor-1">
-        <img src="img/Design_sem_nome__3_-removebg-preview.png" alt="" class="flor-1-parcerias">
+        <img src="../../../img/Design_sem_nome__3_-removebg-preview.png" alt="" class="flor-1-parcerias">
       </div>
       <div class="text-parceria">
         
@@ -238,24 +238,24 @@
         <div class="sublinhado3"></div>
       </div>
 <div class="imgs-parceria">
- <img src="img/aVON.png" alt="" class="img-avon">
- <img src="img/natura-novo_logo1.png" alt="" class="img-natura">
- <img src="img/logo-pantene-512.png" alt="" class="img-pantene">
+ <img src="../../../img/aVON.png" alt="" class="img-avon">
+ <img src="../../../img/natura-novo_logo1.png" alt="" class="img-natura">
+ <img src="../../../img/logo-pantene-512.png" alt="" class="img-pantene">
 </div>
-<div class="flor-2-parcerias"><img src="img/flor4.png" alt=""></div>
+<div class="flor-2-parcerias"><img src="../../../img/flor4.png" alt=""></div>
     </section>
   
   <br><br><br>
 <section id="contatos-relogio-loc">
   <div class="contatos">
-    <img src="img/contatos.png" alt="" class="contatos-img">
+    <img src="../../../img/contatos.png" alt="" class="contatos-img">
     <br><br>
     <p class="text-contato1">Contato:</p>
     <p class="text-contato2">Tel.: (21 9999 9999)</p>
   </div>
  
 <div class="relogio"></div>
-<img src="img/relogio.png" alt="" class="relogio-img">
+<img src="../../../img/relogio.png" alt="" class="relogio-img">
 <p class="text-relogio1">Horário de funcionamento</p>
 <p class="text-relogio2">Segunda a Sábado</p>
 <p class="text-relogio3">9:00h às 19:00h</p>

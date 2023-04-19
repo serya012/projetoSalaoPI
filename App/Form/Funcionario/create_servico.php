@@ -1,9 +1,9 @@
 <?php
 
-require_once '..\Model\conexao.php';
-require_once '..\Model\servico.php';
-require_once '..\Model\servicoDao.php';
-require_once '..\Model\funcionarioDao.php';
+require_once '..\..\Model\conexao.php';
+require_once '..\..\Model\servico.php';
+require_once '..\..\Model\servicoDao.php';
+require_once '..\..\Model\funcionarioDao.php';
 
 if(count($_POST) > 0) {
     
