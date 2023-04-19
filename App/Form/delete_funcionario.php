@@ -11,7 +11,7 @@
 
     <div class="container">
     <div class="display-3">Tem certeza que deseja excluir este funcionário?</div>
-    
+    <link rel="stylesheet" href="../../css/estiloMenu.css">
     <form action="" method="post">
         <a href="read_funcionario.php"><button type="button" class="btn btn-secondary" title="Não Excluir">Não</button></a>
         <button type="submit" class="btn btn-danger"  title="Excluir Funcionário" name="confirmar">Sim</button>

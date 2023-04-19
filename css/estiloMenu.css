@@ -140,7 +140,7 @@ box-sizing: border-box;
     
     }
   }
-  @media screen and (max-width: 1166px ){
+  @media screen and (max-width: 1058px ){
     .lista a{
       padding: 15px 30px;
     }
