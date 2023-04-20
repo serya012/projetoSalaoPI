@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
 }
 
 body {
@@ -57,10 +58,20 @@ body {
     justify-content: center;
 }
 .textlocal1{
-    width: 500px;
+    width: 800px;
     height: 500px;
     display: flex;
     justify-content: center;
-    
+    padding-top: 50px;
 }
 
+.textlocal1 p{
+    font-size: 25px;
+    color: #9B6D41;
+}
+
+.servicos1{
+    background-color: #C68E8D;
+    height: 50vh;
+    width: 100%;
+}
