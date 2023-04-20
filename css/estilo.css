@@ -7,6 +7,7 @@
 
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -20,6 +21,7 @@ body {
     max-width: 100%;
     height: auto;
     padding-top: 40px;
+    display: block;
 }
 
 .content1 button {
@@ -44,10 +46,9 @@ body {
     opacity: 0.5;
 }
 
-.content2{
-    background-color: #C68E8D;
-    height: 20vh;
-    width: 100%;
+.img1content2{
+    max-width: 100%;
+    height: auto;
+    padding-top: 40px;
 }
-
 
