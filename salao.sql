@@ -81,12 +81,13 @@ CREATE TABLE `servico` (
 CREATE TABLE `usuario` (
   `id_usuario` int(10) NOT NULL,
   `nome_usuario` varchar(100) NOT NULL,
-  `cpf_usuario` varchar(14) NOT NULL,
   `telefone_usuario` varchar(14) NOT NULL,
   `email_usuario` varchar(100) NOT NULL,
   `senha_usuario` varchar(255) NOT NULL,
   `nivel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+alter table usuario add cpf_usuario varchar(14) unique not null
 
 --
 -- Índices para tabelas despejadas

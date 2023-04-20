@@ -16,11 +16,20 @@ class UsuarioDao {
         if($stmt->rowCount() == 1){  // se for encontrado
     
             if($row = $stmt->fetch()){
-               
+            
+                $id_usuario = $row["id_usuario"];
+                $cpf_usuario = $row["cpf_usuario"];
+                $nome_usuario = $row["nome_usuario"];
+                $telefone_usuario = $row["telefone_usuario"];
+                $email_usuario = $row["email_usuario"];
+
+                $usuario_result = new Usuario();
+                $usuario_result->setIdU($id_usuario);
+                
                 $hashed_password = $row["senha_usuario"]; // pega a senha criptografada da tabela
                 if(password_verify($u->getSenhaU(), $hashed_password)){ // testa se é igual a digitada pelo usuario
-                    $resultado = "ok";
-                    return $resultado;
+                   //$resultado = "ok";
+                    return $usuario_result;
                 }
             }
         }

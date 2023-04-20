@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if (isset($_SESSION['id_usuario'])){
-    $nome = $_SESSION['id_usuario'];
+    if (isset($_SESSION['usuario'])){
+    $nome = $_SESSION['usuario'];
     
 
 require_once '..\..\Model\conexao.php';
@@ -49,7 +49,7 @@ if(count($_POST) > 0) {
 <body>
     <?php
     
-     $nome = $_SESSION['id_usuario'];
+     $nome = $_SESSION['usuario'];
 echo 'teste: '.$nome; 
 ?>
     <header>

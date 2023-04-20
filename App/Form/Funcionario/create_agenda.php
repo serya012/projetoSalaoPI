@@ -41,50 +41,30 @@ if(count($_POST) > 0) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">    
-    <link rel="stylesheet" href="../../css/estiloMenu.css">
+    <link rel="stylesheet" href="../../../css/estiloMenu.css">
     <title>Agendar</title>
 </head>
 <body>
-<header class="header">
-    <div class="logo-header">
-   
-    </div>
-  
-    <div class="lista">
-      <ul>
-        <li><a href="#img-inicio">Inicio</a></li>
-        <li><a href="#sobre-nos">Sobre Nós</a></li>
-        <li><a href="#section3">Parceiros</a></li>
-        <li><a>Equipe</a></li>
-        <li><a>Serviços</a></li>
-        <li><a href="#contatos-relogio-loc">Contato</a></li>
+<header>
+    <nav>
+      <img class="logo" src="../../../img/logo.png" alt="logo" >
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a class="a1" href="indexlogado.php">Início</a></li>
+        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
+        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
+        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
+        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
+        <li><a class="a1" href="indexlogado.php">Contato</a></li>
+        <li><a class="a1" href="../../Login/logout_usuario.php">Sair</a></li>
       </ul>
-    </div>
-  
-    <!--
-  
-      codigo ryan
-  
-    <div class="btn-group">
-      <a href="index.html">  <button class="btn btn1">Inicio</button></a>
-      <a href="#sobre-nos"> <button class="btn btn2">Sobre nós</button></a>
-    <a href="#fundo-rosa"><button class="btn btn3">Parceiros</button></a>
-    <button class="btn btn4">Equipe</button>
-    <button class="btn btn5">Serviços</button>
-    <a href="#contatos-relogio-loc"><button class="btn btn6">Contatos</button></a>
-    
-  </div>
-  -->
-  <div class="ico-user-header">
-    <img src="../../img/iconeLogin1.png" alt="ico-user" class="ico-img">
-    
-  <div> <button class="btn-login">Login</button></div>
-</div>
-  
-  
-    
-   
+    </nav>
   </header>
+  
     <div class="container1">
     <div class="container">
         <div class="display-3">Agendamento</div>

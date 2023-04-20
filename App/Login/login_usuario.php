@@ -13,7 +13,7 @@ $usuario = new \App\Model\Usuario();
 $usuarioDao = new \App\Model\UsuarioDao();
    
 if(isset($_POST['buscar'])){
-
+    
         $email = $_POST["email"];
         $senha = $_POST['senha'];
 
@@ -23,10 +23,8 @@ if(isset($_POST['buscar'])){
         if ($usuarioDao->localizar($usuario)) {
 
             if(!isset($_SESSION)) session_start();
-
-            $_SESSION['usuario'] = $usuario->getEmailU();
             $_SESSION['id_usuario'] = $usuario->getIdU();
-            echo $_SESSION['id_usuario']; 
+            $_SESSION['usuario'] = $usuario->getEmailU(); 
             $_SESSION['nivel'] = $usuarioDao->buscarNivel($usuario);
             header('Location: ../Form/Usuario/read_servico.php'); 
         } else {

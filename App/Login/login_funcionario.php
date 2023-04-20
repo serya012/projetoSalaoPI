@@ -14,13 +14,6 @@ $funcionarioDao = new \App\Model\FuncionarioDao();
    
 if(isset($_POST['buscar'])){
 
-    if(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
-        $email_err = "Por favor coloque um email válido!";
-        $email = $_POST["email"];
-    } elseif(empty(trim($_POST["senha"])) || strlen($_POST["senha"])<8){   
-        $email = $_POST["email"];
-        $senha_err = "Por favor coloque uma senha válida!";
-    } else { 
         $email = $_POST["email"];
         $senha = $_POST['senha'];
 
@@ -30,13 +23,12 @@ if(isset($_POST['buscar'])){
         if ($funcionarioDao->localizarF($funcionario)) {
             if(!isset($_SESSION)) session_start();
             $_SESSION['funcionario'] = $funcionario->getEmailF();
-            $_SESSION['id_funcionario'] = $funcionario->getIdF();
             $_SESSION['nivel'] = $funcionarioDao->buscarNivel($funcionario);
             header('Location: ../Form/read_agenda.php'); 
         } else {
             $senha_err = "Email ou senha incorretos";
         }
-    }
+    
  }
 
 ?>
@@ -79,7 +71,7 @@ if(isset($_POST['buscar'])){
           <img src="../../img/undraw_woman_ffrd (1).svg" alt="">
         </div>
         <div class="form">
-          <form action="">
+          <form action="" method="POST">
             
             <div class="form-header">
               <div class="tittle">
@@ -102,7 +94,7 @@ if(isset($_POST['buscar'])){
               </div>
     
             <div class="continue-button">
-              <button><a href="">Entrar</a></button>
+              <button type="submit" name="buscar"><a>Entrar</a></button>
             </div>
         
           </form>

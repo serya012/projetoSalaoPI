@@ -11,7 +11,7 @@
 
     <div class="container">
     <div class="display-3">Tem certeza que deseja excluir este serviço?</div>
-    <link rel="stylesheet" href="../../css/estiloMenu.css">
+    <link rel="stylesheet" href="../../../css/estiloMenu.css">
     <form action="" method="post">
         <a href="read_servico.php"><button type="button" class="btn btn-secondary" title="Não Excluir">Não</button></a>
         <button type="submit" class="btn btn-danger"  title="Excluir Serviço" name="confirmar">Sim</button>
