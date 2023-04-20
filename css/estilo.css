@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,8 +11,6 @@ body {
     scroll-behavior: smooth;
     background: #F9F2EC;
 }
-
-
 
 .content1 {
     z-index: -1;
@@ -52,12 +51,16 @@ body {
     height: auto;
     display: block;
 }
-
-.textlocal1{
-    width: 80vh;
+.contentText{
     display: flex;
-    height: 50%;
+    flex-direction: row;
     justify-content: center;
-    background-color: aqua;
+}
+.textlocal1{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    
 }
 
