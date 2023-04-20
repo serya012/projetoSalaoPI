@@ -169,7 +169,7 @@ li {
 
 
 
-@media screen and (max-width: 1428px;) {
+@media screen and (max-width: 1428px) {
   .nav-list{
     font-family: 'Jost', sans-serif;
     margin: 0px auto 0;
