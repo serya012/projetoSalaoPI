@@ -38,22 +38,17 @@ nav {
   width: 100%;
 }
 
-main {
-  background: url("bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 91vh;
-}
-
 .nav-list {
   list-style: none;
   display: flex;
   justify-content: center;
+  
 
 }
 
 .nav-list li {
   letter-spacing: 3px;
-  margin-left: 32px;
+  margin-left: 15px;
 }
 
 .mobile-menu {
@@ -69,7 +64,7 @@ main {
   transition: 0.3s;
 }
 
-ul {
+ul{
   font-family: 'Jost', sans-serif;
   margin: 0px auto 0;
   padding: 0;
@@ -114,7 +109,100 @@ li {
   right: 0;
 }
 
-@media (max-width: 845px) {
+.ico-login{
+  margin-top: 20px;
+  margin-right: 5vh;
+}
+.ico-login img{
+  width: 50px;
+  height: 50px;
+}
+.btn-login{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.btn-login a{
+  text-decoration: none;
+  color: #fff;
+}
+.btn-login button{
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+
+
+
+@media screen and (max-width: 1428px) {
+  .a1{
+    padding: 15px 30px;
+  }
+  }
+
+  @media screen and (max-width: 1350px) {
+    .a1{
+      padding: 15px 20px;
+    }
+    }
+
+    @media screen and (max-width: 1218px) {
+      .a1{
+        padding: 15px 10px;
+      }
+      }
+
+      @media screen and (max-width: 1122px) {
+        .a1{
+          padding: 15px 10px;
+        }
+        .nav-list li {
+          letter-spacing: 0px;
+          
+        }
+        }
+
+        @media screen and (max-width: 995px) {
+          .a1{
+            padding: 15px 1px;
+          }
+          .nav-list li{
+            font-size: 13px;
+          }
+          }
+        
+
+@media screen and (max-width: 800px) {
   body {
       overflow-x: hidden;
   }
@@ -142,33 +230,7 @@ li {
   .mobile-menu {
       display: block;
   }
-
+.ico-login{
+  display: none;
 }
-
-.nav-list.active {
-  transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-  from {
-      opacity: 0;
-      transform: translateX(50px);
-  }
-
-  to {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
 }

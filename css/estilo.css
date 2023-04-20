@@ -56,6 +56,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 120vh;
 }
 .textlocal1{
     width: 800px;
@@ -72,6 +73,22 @@ body {
 
 .servicos1{
     background-color: #C68E8D;
-    height: 50vh;
+    height: 70vh;
     width: 100%;
+    
+}
+
+.servicosdesc{
+    align-items: center;
+}
+
+.servicosdesc h1{
+    color: #F7C375;
+    font-size: 50px;
+    text-align: center;
+}
+.sublinhado-servi{
+    width: 100%;
+    height: 3vh;
+    background-color: #F7C375;
 }
