@@ -38,16 +38,13 @@ nav {
   width: 100%;
 }
 
-main {
-  background: url("bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 91vh;
-}
+
 
 .nav-list {
   list-style: none;
   display: flex;
   justify-content: center;
+  
 
 }
 
@@ -170,19 +167,44 @@ li {
 
 
 @media screen and (max-width: 1428px) {
-  .nav-list{
-    font-family: 'Jost', sans-serif;
-    margin: 0px auto 0;
-    padding: 0;
-    list-style: none;
-    display: table;
-    width: 600px;
-    text-align: center;
+  .a1{
+    padding: 15px 30px;
   }
   }
 
+  @media screen and (max-width: 1350px) {
+    .a1{
+      padding: 15px 20px;
+    }
+    }
 
-@media screen and (max-width: 845px) {
+    @media screen and (max-width: 1218px) {
+      .a1{
+        padding: 15px 10px;
+      }
+      }
+
+      @media screen and (max-width: 1122px) {
+        .a1{
+          padding: 15px 10px;
+        }
+        .nav-list li {
+          letter-spacing: 0px;
+          
+        }
+        }
+
+        @media screen and (max-width: 995px) {
+          .a1{
+            padding: 15px 1px;
+          }
+          .nav-list li{
+            font-size: 13px;
+          }
+          }
+        
+
+@media screen and (max-width: 800px) {
   body {
       overflow-x: hidden;
   }
