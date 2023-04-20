@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/estilo.css">
   <link rel="stylesheet" href="./css/estiloMenu.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/estiloserv.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,11 +76,91 @@
     </div>
   </div>
   <div class="servicos1">
+    <div class="servicosdesc">
+      <h1>Serviços</h1>
+    </div>
+    <div class="servicos1baixo">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+  
+          <div class="card swiper-slide">
+            <div class="card__image">
+              <img src="/images/user1.jpg" alt="card image">
+            </div>
+    
+            <div class="card__content">
+              <span class="card__title">Cabelos</span>
+              <span class="card__name"></span>
+              <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore provident non tempora odio est sunt, ipsum</p>
+              <button class="card__btn">View More</button>
+            </div>
+          </div>
+    
+          <div class="card swiper-slide">
+            <div class="card__image">
+              <img src="/images/user2.jpg" alt="card image">
+            </div>
+    
+            <div class="card__content">
+              <span class="card__title">Maquiagem</span>
+              <span class="card__name"></span>
+              <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore provident non tempora odio est sunt, ipsum</p>
+              <button class="card__btn">View More</button>
+            </div>
+          </div>
+    
+          <div class="card swiper-slide">
+            <div class="card__image">
+              <img src="/images/user3.jpg" alt="card image">
+            </div>
+    
+            <div class="card__content">
+              <span class="card__title">Estética</span>
+              <span class="card__name"></span>
+              <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore provident non tempora odio est sunt, ipsum</p>
+              <button class="card__btn">View More</button>
+            </div>
+          </div>
+    
+          <div class="card swiper-slide">
+            <div class="card__image">
+              <img src="/images/user4.jpg" alt="card image">
+            </div>
+    
+            <div class="card__content">
+              <span class="card__title">Cílios e Sombrancelhas</span>
+              <span class="card__name"></span>
+              <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore provident non tempora odio est sunt, ipsum</p>
+              <button class="card__btn">View More</button>
+            </div>  
 
+          </div>
+    
+        </div>
+      </div>
+    </div>
   </div>
   </main>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="js/mobilenavbar.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 
 </html>
