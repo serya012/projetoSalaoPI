@@ -114,7 +114,7 @@ li {
   right: 0;
 }
 
-@media (max-width: 1565px) {
+@media (max-width: 845px) {
   body {
       overflow-x: hidden;
   }
