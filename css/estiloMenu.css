@@ -7,6 +7,7 @@
 
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 
@@ -32,7 +33,7 @@ nav {
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #B67776;
-  height: 8vh;
+  height: 9vh;
   position: fixed;
   width: 100%;
 }
@@ -40,7 +41,7 @@ nav {
 main {
   background: url("bg.jpg") no-repeat center center;
   background-size: cover;
-  height: 92vh;
+  height: 91vh;
 }
 
 .nav-list {
@@ -113,7 +114,7 @@ li {
   right: 0;
 }
 
-@media (max-width: 1565px) {
+@media (max-width: 845px) {
   body {
       overflow-x: hidden;
   }

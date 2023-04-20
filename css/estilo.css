@@ -3,13 +3,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #F9F2EC;
 }
-
-
 
 .content1 {
     z-index: -1;
@@ -20,6 +21,7 @@ body {
     max-width: 100%;
     height: auto;
     padding-top: 40px;
+    display: block;
 }
 
 .content1 button {
@@ -44,10 +46,21 @@ body {
     opacity: 0.5;
 }
 
-.content2{
-    background-color: #C68E8D;
-    height: 20vh;
-    width: 100%;
+.img1content2 img{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-
+.contentText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.textlocal1{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    
+}
 
