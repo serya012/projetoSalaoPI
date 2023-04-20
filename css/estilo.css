@@ -78,3 +78,13 @@ body {
     
 }
 
+.servicosdesc{
+    align-items: center;
+}
+
+.servicosdesc h1{
+    color: #F7C375;
+    font-size: 50px;
+    text-align: center;
+}
+
