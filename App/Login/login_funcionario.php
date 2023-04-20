@@ -52,46 +52,27 @@ if(isset($_POST['buscar'])){
     <title>login</title>
 </head>
 <body>
-  <header class="header">
-    <div class="logo-header">
-   
-    </div>
   
-    <div class="lista">
-      <ul>
-        <li><a href="#img-inicio">Inicio</a></li>
-        <li><a href="#sobre-nos">Sobre Nós</a></li>
-        <li><a href="#section3">Parceiros</a></li>
-        <li><a>Equipe</a></li>
-        <li><a>Serviços</a></li>
-        <li><a href="#contatos-relogio-loc">Contato</a></li>
+<header>
+    <nav>
+      <img class="logo" src="../../img/logo.png" alt="logo" >
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a class="a1" href="../../index.php">Início</a></li>
+        <li><a class="a1" href="../../index.php">Sobre nós</a></li>
+        <li><a class="a1" href="paginas/servicos.html">Serviços</a></li>
+        <li><a class="a1" href="../../index.php">Parceiros</a></li>
+        <li><a class="a1" href="paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="../../index.php">Contato</a></li>
+        <li><a class="a1" href="login_funcionario.php">Login</a></li>
       </ul>
-    </div>
-  
-    <!--
-  
-      codigo ryan
-  
-    <div class="btn-group">
-      <a href="index.html">  <button class="btn btn1">Inicio</button></a>
-      <a href="#sobre-nos"> <button class="btn btn2">Sobre nós</button></a>
-    <a href="#fundo-rosa"><button class="btn btn3">Parceiros</button></a>
-    <button class="btn btn4">Equipe</button>
-    <button class="btn btn5">Serviços</button>
-    <a href="#contatos-relogio-loc"><button class="btn btn6">Contatos</button></a>
-    
-  </div>
-  -->
-  <div class="ico-user-header">
-    <img src="../../img/iconeLogin1.png" alt="ico-user" class="ico-img">
-    
-  <div> <button class="btn-login">Login</button></div>
-</div>
-  
-  
-    
-   
+    </nav>
   </header>
+
   <div class="container1">
     <div class="container">
         <div class="form-image">
@@ -105,7 +86,7 @@ if(isset($_POST['buscar'])){
                 <h1>Login</h1>
               </div>
               <div class="login-button">
-                <button><a href="">Cadastrar-se</a></button>
+                <button><a href="create_funcionario.php">Cadastrar-se</a></button>
               </div>
             </div>
               <div class="input-box">

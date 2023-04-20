@@ -17,28 +17,25 @@
 
   <div class="container1">
 
-<header class="header">
-  <div class="logo-header">
- 
-  </div>
-
-  <div>
-    <ul>
-      <li><a href="#img-inicio">Inicio</a></li>
-      <li><a href="#sobre-nos">Sobre Nós</a></li>
-      <li><a href="#section3">Parceiros</a></li>
-      <li><a href="../../../paginas/equipe.html">Equipe</a></li>
-      <li><a href="../../../paginas/servicos.html">Serviços</a></li>
-      <li><a href="#contatos-relogio-loc">Contato</a></li>
-    </ul>
-  </div>
-
- <div class="ico-user-header">
-    <?php echo "Olá, ".$email ?>
-  
- <div><button class="btn-login"><a href="../../Login/logout_usuario.php">Deslogar</a></button></div>
-
-</header>
+  <header>
+    <nav>
+      <img class="logo" src="../../../img/logo.png" alt="logo" >
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+      <li><a class="a1" href="indexlogado.php">Início</a></li>
+        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
+        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
+        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
+        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
+        <li><a class="a1" href="indexlogado.php">Contato</a></li>
+        <li><a class="a1" href="../../Login/logout_usuario.php">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <section class="-main-section">
     <div class="img-content" id="img-inicio">

@@ -52,28 +52,25 @@ if(count($_POST) > 0) {
      $nome = $_SESSION['id_usuario'];
 echo 'teste: '.$nome; 
 ?>
-<header class="header">
-    <div class="logo-header">
-   
-    </div>
-  
-    <div class="lista">
-      <ul>
-        <li><a href="#img-inicio">Inicio</a></li>
-        <li><a href="#sobre-nos">Sobre Nós</a></li>
-        <li><a href="#section3">Parceiros</a></li>
-        <li><a>Equipe</a></li>
-        <li><a>Serviços</a></li>
-        <li><a href="#contatos-relogio-loc">Contato</a></li>
+    <header>
+    <nav>
+      <img class="logo" src="../../../img/logo.png" alt="logo" >
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a class="a1" href="indexlogado.php">Início</a></li>
+        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
+        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
+        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
+        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
+        <li><a class="a1" href="indexlogado.php">Contato</a></li>
+        <li><a class="a1" href="../../Login/logout_usuario.php">Sair</a></li>
       </ul>
-    </div>
-
-  <div class="ico-user-header">
-    <img src="../../../img/iconeLogin1.png" alt="ico-user" class="ico-img">
-    
-  <div> <button class="btn-login">Login</button></div>
-</div>
-</header>
+    </nav>
+  </header>
 
     <div class="container1">
     <div class="container">
