@@ -38,11 +38,6 @@ nav {
   width: 100%;
 }
 
-main {
-  background: url("bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: 91vh;
-}
 
 .nav-list {
   list-style: none;
