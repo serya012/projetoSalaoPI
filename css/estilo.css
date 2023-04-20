@@ -46,9 +46,9 @@ body {
     opacity: 0.5;
 }
 
-.img1content2{
+.img1content2 img{
     max-width: 100%;
     height: auto;
-    padding-top: 40px;
+    display: block;
 }
 
