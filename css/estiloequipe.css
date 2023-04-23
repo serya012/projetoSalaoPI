@@ -127,3 +127,90 @@ gap: 15px;
 width: 40px;
 height: 40px;
 }
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 1980px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -80vh;
+  }
+}
+
+@media screen and (max-width: 1769px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -110vh;
+}
+}
+@media screen and (max-width: 1670px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -100vh;
+}
+}
+@media screen and (max-width: 1533px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -90vh;
+}
+}
+@media screen and (max-width: 1429px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -80vh;
+}
+}
+@media screen and (max-width: 1326px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -100vh;
+}
+}
+
+@media screen and (max-width: 1226px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -80vh;
+}
+}
+@media screen and (max-width: 1054px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -70vh;
+}
+}
+
+@media screen and (max-width: 994px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -60vh;
+}
+}
+
+
+@media screen and (max-width: 828px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -50vh;
+
+}
+}
+
+@media screen and (max-width: 780px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -0vh;
+}
+}
