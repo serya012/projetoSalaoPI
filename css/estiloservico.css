@@ -45,17 +45,20 @@ color:#DFBDBC
 }
 
 .collapsible {
+  display: flex;
+  justify-content: right;
+  align-items: center;
     background-color: #B67776;
      color: white;
      cursor: pointer;
    padding-right: 0.6vh;
-   padding-top: -0.6vh;
+   padding-top: -0.9vh;
      width: 50%;
      height:2vh;
      border: none;
      text-align: left;
      outline: none;
-     font-size: 15px;
+     font-size: 20px;
      border-radius: 1vh;  
 }
 .active, .collapsible:hover {
@@ -126,4 +129,92 @@ gap: 15px;
 .icons-redesocial{
 width: 40px;
 height: 40px;
+}
+
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 1980px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -80vh;
+  }
+}
+
+@media screen and (max-width: 1769px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -110vh;
+}
+}
+@media screen and (max-width: 1670px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -100vh;
+}
+}
+@media screen and (max-width: 1533px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -90vh;
+}
+}
+@media screen and (max-width: 1429px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -80vh;
+}
+}
+@media screen and (max-width: 1326px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -100vh;
+}
+}
+
+@media screen and (max-width: 1226px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -80vh;
+}
+}
+@media screen and (max-width: 1054px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -70vh;
+}
+}
+
+@media screen and (max-width: 994px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -60vh;
+}
+}
+
+
+@media screen and (max-width: 828px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -50vh;
+
+}
+}
+
+@media screen and (max-width: 780px) {
+  .texthighcolapse{
+    color: #B67776;
+    font-size: 30px;
+    margin-left: -0vh;
+}
 }
