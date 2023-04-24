@@ -47,7 +47,7 @@ CREATE TABLE `funcionario` (
   `cpf_funcionario` varchar(14) UNIQUE NOT NULL,
   `data_nascimento_funcionario` date NOT NULL,
   `telefone_funcionario` varchar(14) NOT NULL,
-  `email_funcionario` varchar(100) NOT NULL,
+  `email_funcionario` varchar(100) UNIQUE NOT NULL,
   `senha_funcionario` varchar(255) NOT NULL,
   `endereco` varchar(100) NOT NULL,
   `funcao` varchar(50) NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE `usuario` (
   `nome_usuario` varchar(100) NOT NULL,
   `cpf_usuario` varchar(100) UNIQUE NOT NULL,
   `telefone_usuario` varchar(14) NOT NULL,
-  `email_usuario` varchar(100) NOT NULL,
+  `email_usuario` varchar(100) UNIQUE NOT NULL,
   `senha_usuario` varchar(255) NOT NULL,
   `nivel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
