@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+.container1{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F9F2EC;
+  
+}
 .container{
   width: 80%;
   height: 80vh;
@@ -12,6 +21,7 @@
   box-shadow: 5px 5px 10px rgba(0,0,0, .212);
   margin-top: 80px;
 }
+
 
 .btn-group{
   display: flex;

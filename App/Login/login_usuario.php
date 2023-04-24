@@ -47,24 +47,37 @@ if(isset($_POST['buscar'])){
 </head>
 <body>
 
-<header>
+  <header>
     <nav>
-      <img class="logo" src="../../img/logo.png" alt="logo" >
+      <img class="logo" src="../../img/logo.png" alt="logo">
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
-        <li><a class="a1" href="../../index.php">Início</a></li>
-        <li><a class="a1" href="../../index.php">Sobre nós</a></li>
-        <li><a class="a1" href="../../paginas/servicos.html">Serviços</a></li>
-        <li><a class="a1" href="../../index.php">Parceiros</a></li>
-        <li><a class="a1" href="../../paginas/equipe.html">Equipe</a></li>
-        <li><a class="a1" href="../../index.php">Contato</a></li>
-        <li><a class="a1" href="login_usuario.php">Login</a></li>
+        <li><a class="a1" href="#">Início</a></li>
+        <li><a class="a1" href="#">Sobre nós</a></li>
+        <li><a class="a1" href="paginas/servicos.html">Serviços</a></li>
+        <li><a class="a1" href="#">Parceiros</a></li>
+        <li><a class="a1" href="paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="#">Contato</a></li>
+
       </ul>
+
+      <div class="ico-login">
+        <a href="App/Login/login_usuario.php"><img src="../../img/iconeLogin1.png" alt=""></a>
+
+
+        <div class="btn-login">
+          <button><a href="App/Login/login_usuario.php">Login</a></button>
+
+        </div>
+      </div>
+
+
     </nav>
+
   </header>
 
   <div class="container1">
