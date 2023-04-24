@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/estiloCreateAge.css">
+    <link rel="stylesheet" href="../../../css/estiloMenu.css">
+    <title>login</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <img class="logo" src="../../../img/logo.png" alt="logo">
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a class="a1" href="#">Início</a></li>
+        <li><a class="a1" href="#">Sobre nós</a></li>
+        <li><a class="a1" href="paginas/servicos.html">Serviços</a></li>
+        <li><a class="a1" href="#">Parceiros</a></li>
+        <li><a class="a1" href="paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="#">Contato</a></li>
+
+      </ul>
+
+      <div class="ico-login">
+        <a href="App/Login/login_usuario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
+
+
+        <div class="btn-login">
+          <button><a href="App/Login/login_usuario.php">Login</a></button>
+
+        </div>
+      </div>
+
+
+    </nav>
+
+  </header>
+
+  <div class="container1">
+    <div class="container">
+        
+        <div class="form">
+          <form action="" method="POST">
+            
+            <div class="form-header">
+              <div class="tittle">
+                <h1>Login</h1>
+              </div>
+              
+                <div class="input-box">
+                <label>Serviços:</label>
+                    <select name="servico" id="opcao">
+                        <option value="">Selecione...</option>
+                    <?php //Pra montar os options que interagem com o banco
+                        $pdo = new PDO('mysql:host=localhost;dbname=salao', 'root', '');
+        
+                        $query = "SELECT id_servico, servico FROM servico";
+                        $stmt = $pdo->prepare($query);
+                        $stmt->execute();
+                        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        ?>
+                    <?php foreach ($result as $row): ?>
+                         <option value="<?php echo $row['id_servico']; ?>"><?php echo $row['servico']; ?></option>
+                    <?php endforeach; ?>
+                    </select>
+                  </div>
+                <div class="input-box">
+                    <label>Data:</label>
+                    <input type="date" name="data">
+                </div>
+                <div class="input-box">
+                    <label>Hora:</label>
+                    <select name="hora">
+                        <optgroup label="Manhã">
+                        <option value="9h">9:00</option>
+                        <option value="10h">10:00</option>
+                        <option value="11h">11:00</option>
+                        <optgroup label="Tarde">
+                        <option value="13h">13:00</option>
+                        <option value="14h">14:00</option>
+                        <option value="15h">15:00</option>
+                        <option value="16h">16:00</option>
+                        <option value="17h">17:00</option>
+                        <option value="18h">18:00</option>
+                        <option value="19h">19:00</option>
+                    </select>
+                </div>
+    
+            <div class="continue-button">
+              <button type="submit" name="buscar"><a>Entrar</a></button>
+            </div>
+        
+          </form>
+        </div>
+      </div>
+      </div>
+</body>
+</html>
