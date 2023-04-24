@@ -157,10 +157,10 @@ public function createF(Funcionario $f){
 
 public function buscarNivel(Funcionario $f){
 
-$sql = 'SELECT * FROM funcionario WHERE cpf_funcionario = ?';
+$sql = 'SELECT * FROM funcionario WHERE email_funcionario = ?';
 
 $stmt = Conexao::getConn()->prepare($sql);
-$stmt->bindValue(1,$f->getCpfF());
+$stmt->bindValue(1,$f->getEmailF());
 
 $stmt->execute();
 
