@@ -70,7 +70,53 @@ body {
     font-size: 25px;
     color: #9B6D41;
 }
+.conhecaEquipe{
 
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-bottom: 20px;
+    /*position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vh;
+    padding: 30px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border: 2px solid #F9F2EC;
+    background: transparent;
+    color: #F9F2EC;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+    font-size: 20px;*/
+}
+.conhecaEquipe button{
+
+    background-color: transparent;
+    border: 2px solid #F7C375;;
+    cursor: pointer;
+    font-size: 20px;
+    color: #F7C375;
+    width: 25vh;
+    height: 5vh;    
+    /*position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vh;
+    padding: 30px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border: 2px solid #F9F2EC;
+    background: transparent;
+    color: #F9F2EC;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+    font-size: 20px;*/
+}
 .servicos1{
     background-color: #C68E8D;
     height: 70vh;
