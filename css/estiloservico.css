@@ -174,7 +174,7 @@ height: 40px;
   .texthighcolapse{
     color: #B67776;
     font-size: 30px;
-    margin-left: -100vh;
+    margin-left: -70vh;
 }
 }
 
@@ -182,14 +182,14 @@ height: 40px;
   .texthighcolapse{
     color: #B67776;
     font-size: 30px;
-    margin-left: -80vh;
+    margin-left: -60vh;
 }
 }
 @media screen and (max-width: 1054px) {
   .texthighcolapse{
     color: #B67776;
     font-size: 30px;
-    margin-left: -70vh;
+    margin-left: -55vh;
 }
 }
 
@@ -197,7 +197,7 @@ height: 40px;
   .texthighcolapse{
     color: #B67776;
     font-size: 30px;
-    margin-left: -60vh;
+    margin-left: -50vh;
 }
 }
 
@@ -206,7 +206,7 @@ height: 40px;
   .texthighcolapse{
     color: #B67776;
     font-size: 30px;
-    margin-left: -50vh;
+    margin-left: -45vh;
 
 }
 }
