@@ -1,15 +1,7 @@
 <?php
      if (!isset($_SESSION)) session_start();
      $logado = $_SESSION['funcionario'];
-     if (!isset($logado)){
-      die('Você não está logado. <a href="../../Login/login_funcionario.php">Clique aqui</a> para logar');
-     }
-       
-     if ($_SESSION['nivel'] != '2'){
-      die('Você não tem permissão. <a href="javascript:history.back()">Clique aqui</a> para voltar');
-     }
-    
-      echo $logado;
+      
 
     require_once '..\..\Model\conexao.php';
     require_once '..\..\Model\agenda.php';
@@ -66,7 +58,7 @@
 
  <div class="container">
     <br><br><br>
-    <div class="row h6 bg-secondary">
+    <div class="row h6" style="margin-top:9vh; padding:20px; background-color:#f7c375;">
         <div class="col-3">Nome</div>
         <div class="col-3">Serviço</div>
         <div class="col-1">Hora</div>
@@ -75,7 +67,7 @@
     </div>
     <?php
         foreach ($agendaDao->read() as $agenda):
-            echo ('<div class="row">
+            echo ('<div class="row"> 
                     <div class="col-3">'.$agenda["id_usuario"].'</div>
                     <div class="col-3">'.$agenda["id_servico"].'</div>
                     <div class="col-1">'.$agenda["hora_agenda"].'</div>

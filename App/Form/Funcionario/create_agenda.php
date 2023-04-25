@@ -1,9 +1,6 @@
 <?php
     if (!isset($_SESSION)) session_start();
-    if (!isset($_SESSION['id_funcionario']))
-      die('Você não está logado. <a href="../../Login/login_funcionario.php">Clique aqui</a> para logar');
-    if ($_SESSION['nivel'] != '2')
-     die('Você não tem permissão. <a href="javascript:history.back()">Clique aqui</a> para voltar');
+    
     
 
 require_once '..\..\Model\conexao.php';
@@ -77,7 +74,7 @@ if(count($_POST) > 0) {
     <div class="container">
         <div class="display-3">Agendamento</div>
         
-        <form method="POST" action="">
+        <form method="POST" action="" style="margin-top:9vh;">
         <p class="lead">
         <label>Serviços:</label>
             <select name="servico" id="opcao">
