@@ -5,8 +5,7 @@
     $email = $_SESSION['usuario'];
     $id = $_SESSION['id_usuario'];
   
-  echo $email;
-  echo $id;
+  
   
     require_once '..\..\Model\conexao.php';
     require_once '..\..\Model\servico.php';

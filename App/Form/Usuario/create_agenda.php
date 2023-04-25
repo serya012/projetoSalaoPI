@@ -1,8 +1,8 @@
 <?php
     session_start();
     if (isset($_SESSION['usuario'])){
-    $nome = $_SESSION['usuario'];
-    
+    $nome = $_SESSION['id_usuario'];
+
 
 require_once '..\..\Model\conexao.php';
 require_once '..\..\Model\agenda.php';
@@ -15,8 +15,6 @@ if(count($_POST) > 0) {
     $data = $_POST['data'];
     $hora = $_POST['hora'];
     $usuario = $nome;
-    
-    echo $usuario;
     
         $agenda = new \App\Model\Agenda();
         $agenda->setServicoFk($servico);

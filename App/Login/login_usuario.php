@@ -20,10 +20,10 @@ if(isset($_POST['buscar'])){
         $usuario->setEmailU($email);
         $usuario->setSenhaU($senha);
         
-        if ($usuarioDao->localizar($usuario)) {
-
+        $id_usuario = $usuarioDao->localizar($usuario);
+        if ($id_usuario) {
             if(!isset($_SESSION)) session_start();
-            $_SESSION['id_usuario'] = $usuario->getIdU();
+            $_SESSION['id_usuario'] = $id_usuario;
             $_SESSION['usuario'] = $usuario->getEmailU(); 
             $_SESSION['nivel'] = $usuarioDao->buscarNivel($usuario);
             header('Location: ../Form/Usuario/read_servico.php'); 

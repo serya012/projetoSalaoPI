@@ -28,8 +28,7 @@ class UsuarioDao {
                 
                 $hashed_password = $row["senha_usuario"]; // pega a senha criptografada da tabela
                 if(password_verify($u->getSenhaU(), $hashed_password)){ // testa se é igual a digitada pelo usuario
-                   //$resultado = "ok";
-                    return $usuario_result;
+                    return $id_usuario;
                 }
             }
         }

@@ -27,7 +27,7 @@ if(count($_POST) > 0) {
         $servicoDao = new \App\Model\ServicoDao();
         $servicoDao->create($servico);
         unset($_POST);
-        echo '<script>alert("servico salvo com sucesso!!")</script>';
+        echo '<script>alert("Serviço salvo com sucesso!!")</script>';
        
     }
 }

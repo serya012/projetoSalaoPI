@@ -15,8 +15,6 @@ if(count($_POST) > 0) {
     $hora = $_POST['hora'];
     $usuario = $nome;
     
-    echo $usuario;
-    
         $agenda = new \App\Model\Agenda();
         $agenda->setServicoFk($servico);
         $agenda->setDataA($data);
