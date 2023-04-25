@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (isset($_SESSION['id_usuario']))
-    $nome = $_SESSION['id_usuario'];
+    
 
 require_once '..\..\Model\conexao.php';
 require_once '..\..\Model\agenda.php';
@@ -13,7 +13,7 @@ if(count($_POST) > 0) {
     $servico = $_POST['servico'];
     $data = $_POST['data'];
     $hora = $_POST['hora'];
-    $usuario = $nome;
+    $usuario = $_POST['usuario'];
     
         $agenda = new \App\Model\Agenda();
         $agenda->setServicoFk($servico);
@@ -24,7 +24,7 @@ if(count($_POST) > 0) {
         $agendaDao = new \App\Model\AgendaDao();
         $agendaDao->create($agenda);
         unset($_POST);
-        echo '<script>alert("agenda salvo com sucesso!!")</script>';
+        echo '<script>alert("Agenda salva com sucesso!!")</script>';
        
     
 }
@@ -92,19 +92,37 @@ if(count($_POST) > 0) {
         <p class="lead">
             <label>Hora:</label>
             <select name="hora">
-                <optgroup label="Manhã">
-                <option value="9h">9:00</option>
-                <option value="10h">10:00</option>
-                <option value="11h">11:00</option>
+            <optgroup label="Manhã">
+                <option value="09:00:00">9:00</option>
+                <option value="10:00:00">10:00</option>
+                <option value="11:00:00">11:00</option>
                 <optgroup label="Tarde">
-                <option value="13h">13:00</option>
-                <option value="14h">14:00</option>
-                <option value="15h">15:00</option>
-                <option value="16h">16:00</option>
-                <option value="17h">17:00</option>
-                <option value="18h">18:00</option>
-                <option value="19h">19:00</option>
+                <option value="13:00:00">13:00</option>
+                <option value="14:00:00">14:00</option>
+                <option value="15:00:00">15:00</option>
+                <option value="16:00:00">16:00</option>
+                <option value="17:00:00">17:00</option>
+                <option value="18:00:00">18:00</option>
+                <option value="19:00:00">19:00</option>
             </select>
+        </p>
+        <p class="lead">
+            <label>Cliente:</label>
+                
+                <?php   
+                $user = "SELECT id_usuario, nome_usuario FROM usuario";
+                $stmt = $pdo->prepare($user);
+                $stmt->execute();
+                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+                ?>
+
+            <select name="usuario">
+                <option value="">Selecione...</option>
+                    <?php foreach ($resultado as $row): ?>
+                 <option value="<?php echo $row['id_usuario']; ?>"><?php echo $row['nome_usuario']; ?></option>
+                    <?php endforeach; ?>
+            </select>
+
         </p>
         
         

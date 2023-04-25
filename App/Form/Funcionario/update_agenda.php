@@ -4,29 +4,28 @@
     require_once '..\..\Model\agenda.php';
     require_once '..\..\Model\agendaDao.php';
 
-    $id = intval($_GET['id_agenda']);
+    $id = intval($_GET['cod_agenda']);
     $agenda = new \App\Model\Agenda();
     $agendaDao = new \App\Model\AgendaDao();
    
  
     if(count($_POST) > 0) {
 
-        $erro = false;
-        $telefone = $_POST['telefone'];
-        $email = $_POST['email'];
-        $endereco = $_POST['endereco'];
-        $funcao = $_POST['funcao'];
+        $servico = $_POST['servico'];
+        $data = $_POST['data'];
+        $hora = $_POST['hora'];
+        
         
     
-        $agenda->setIdF($id);
-        $agenda->setTelefoneF($telefone);
-        $agenda->setEmailF($email);
-        $agenda->setEndereco($endereco);
-        $agenda->setFuncao($funcao);
+        $agenda->setCod($id);
+        $agenda->setServicoFk($servico);
+        $agenda->setDataA($data);
+        $agenda->setHora($hora);
+       
         
         $agendaDao->update($agenda);
 
-        echo "<p><b>Funcionário atualizado com sucesso!!!</b></p>";
+        echo "<p><b>Agenda atualizado com sucesso!!!</b></p>";
         unset($_POST);
         
     } 
@@ -50,9 +49,20 @@
     <?php
        foreach ($agendaDao->readUpdate($id) as $agenda): ?>
         <p class="lead">
+                    <?php //Pra montar os options que interagem com o banco
+                    $pdo = new PDO('mysql:host=localhost;dbname=salao', 'root', '');
+
+                    $query = "SELECT id_servico, servico FROM servico";
+                    $stmt = $pdo->prepare($query);
+                    $stmt->execute();
+                    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    ?>
             <label>Serviços:</label>
             <select name="servico">
-                <option value=""></option>
+                <option value=""><?php echo $agenda['id_servico']?></option>
+                <?php foreach ($result as $row): ?>
+                 <option value="<?php echo $row['id_servico']; ?>"><?php echo $row['servico']; ?></option>
+                <?php endforeach; ?>
             </select>
         </p>
         <p class="lead">
@@ -62,7 +72,19 @@
         <p class="lead">
             <label>Hora:</label>
             <select name="hora">
-                <option value=""></option>
+                <optgroup label="Manhã">
+                <option value="<?php echo $agenda['hora_agenda']?>"><?php echo $agenda['hora_agenda']?></option>
+                <option value="09:00:00">9:00</option>
+                <option value="10:00:00">10:00</option>
+                <option value="11:00:00">11:00</option>
+                <optgroup label="Tarde">
+                <option value="13:00:00">13:00</option>
+                <option value="14:00:00">14:00</option>
+                <option value="15:00:00">15:00</option>
+                <option value="16:00:00">16:00</option>
+                <option value="17:00:00">17:00</option>
+                <option value="18:00:00">18:00</option>
+                <option value="19:00:00">19:00</option>
             </select>
         </p>
         

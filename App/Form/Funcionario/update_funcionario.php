@@ -11,28 +11,18 @@
  
     if(count($_POST) > 0) {
 
-        $erro = false;
+        
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
         $telefone = $_POST['telefone'];
         $email = $_POST['email'];
         $endereco = $_POST['endereco'];
         $funcao = $_POST['funcao'];
         
     
-        if(empty(trim($_POST["telefone"])) || strlen($_POST["telefone"])<11) {
-            $erro = "O telefone tem que ser válido.";
-        } else if(empty(trim($_POST["email"])) || !filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)) {
-            $erro = "Por favor coloque um email válido para o nome de usuário.";
-        } else if(empty(trim($_POST["endereco"])) || strlen($_POST["endereco"])<3) {
-            $erro = "Insira um endereço válido";
-        } else if(empty(trim($_POST["funcao"])) || strlen($_POST["funcao"])<3) {
-            $erro = "Escreva a função";
-        }
-
-        if($erro) {
-            echo "<p><b>ERRO: $erro</b></p>";
-        } else {
-
             $funcionario->setIdF($id);
+            $funcionario->setNomeF($nome);
+            $funcionario->setCpfF($cpf);
             $funcionario->setTelefoneF($telefone);
             $funcionario->setEmailF($email);
             $funcionario->setEndereco($endereco);
@@ -43,7 +33,6 @@
             echo "<p><b>Funcionário atualizado com sucesso!!!</b></p>";
             unset($_POST);
         }
-    } 
 ?>
 
 <!DOCTYPE html>
@@ -62,31 +51,31 @@
     
     <form method="POST" action="">
     <?php
-       foreach ($funcionarioDao->readUpdate($id) as $funcionario): ?>
+       foreach ($funcionarioDao->readUpdate($id) as $funci): ?>
             <div class="form-group">
                 <label>Nome Completo:</label>
-                <input type="text" name="nome" class="form-control" required>
+                <input value="<?php echo $funci['nome_funcionario']; ?>" type="text" name="nome" class="form-control" required>
             </div>    
             <div class="form-group">
                 <label>CPF:</label><br>
-                <input type="text" name="cpf" class="cpf" class="form-control " required>
+                <input class="cpf" value="<?php echo $funci['cpf_funcionario']; ?>" type="text" name="cpf" class="cpf" class="form-control " required>
             </div>
             <div class="form-group">
                 <label>Telefone:</label><br>
-                <input type="text" name="telefone" class="telefone" class="form-control">
+                <input class="telefone" value="<?php echo $funci['telefone_funcionario']; ?>" type="text" name="telefone" class="telefone" class="form-control">
                 
             </div>
             <div class="form-group">
                 <label>Email:</label>
-                <input type="text" name="email" class="form-control">
+                <input value="<?php echo $funci['email_funcionario']; ?>" type="text" name="email" class="form-control">
             </div>
             <div class="form-group">
                 <label>Endereço:</label>
-                <input type="text" name="endereco" class="form-control">
+                <input value="<?php echo $funci['endereco']; ?>" type="text" name="endereco" class="form-control">
 
             <div class="form-group">
                 <label>Função:</label>
-                <input type="text" name="funcao" class="form-control">
+                <input value="<?php echo $funci['funcao']; ?>" type="text" name="funcao" class="form-control">
             </div>
     <?php
         endforeach;
@@ -99,12 +88,15 @@
     </form>
     </div>
 
-    <script type= "text/javascript" src="../../js/jquery-3.6.4.js"></script>
-    <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
+    <script type= "text/javascript" src="../../../js/jquery-3.6.4.js"></script>
+    <script type= "text/javascript" src="../../../js/jquery.mask.js"></script>
     <script type="text/javascript">
        $(document).ready(function(){
             $('.telefone').mask('(00)00000-0000');
+            $('.cpf').mask('000.000.000-00');
        }); 
+    </script>
+    
     </script>
 </body>
 </html>

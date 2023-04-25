@@ -1,6 +1,6 @@
 <?php
     session_start();
-        $logado = $_SESSION['funcionario'];
+        $logado = $_SESSION['usuario'];
 
     require_once '..\..\Model\conexao.php';
     require_once '..\..\Model\agenda.php';
@@ -43,7 +43,6 @@
                     <div class="col-1">'.$agenda["hora_agenda"].'</div>
                     <div class="col-3">'.$agenda["data_agenda"].'</div>
                     <div class="col">
-                        <a href="update_agenda.php?cod_agenda='.$agenda["cod_agenda"].'"><button type="button" class="btn btn-light" title="Editar agenda">Editar</button></a>
                         <a href="delete_agenda.php?cod_agenda='.$agenda["cod_agenda"].'"><button type="button" class="btn btn-light" title="Excluir agenda">Desmarcar</button></a>
                     </div>
                    </div>'

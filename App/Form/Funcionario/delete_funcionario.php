@@ -31,6 +31,6 @@ if(isset($_POST['confirmar'])) {
     $funcionario = new \App\Model\funcionario();
     $funcionarioDao = new \App\Model\funcionarioDao();
     $funcionarioDao->delete($id);
-    header('Location: message_delete.php');
+    header('Location: read_funcionario.php');
     }
 ?>
