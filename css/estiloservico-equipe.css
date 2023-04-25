@@ -38,10 +38,25 @@ color:#DFBDBC
 
 }
 
-.texthighcolapse{
+.texthighcolapse-cabelo{
   color: #B67776;
   font-size: 30px;
   margin-left: -80vh;
+}
+.texthighcolapse-cilios{
+  color: #B67776;
+  font-size: 30px;
+  margin-left: -63vh;
+}
+.texthighcolapse-maqui{
+  color: #B67776;
+  font-size: 30px;
+  margin-left: -75vh;
+}
+.texthighcolapse-pesemaos{
+  color: #B67776;
+  font-size: 30px;
+  margin-left: -76vh;
 }
 
 .collapsible {
@@ -88,9 +103,10 @@ color:#DFBDBC
   height: 90vh;
 }
 .description{
-  width: 65%; 
+  width: 100%; 
  float: right;
 
+ text-align: center;
 }
 
 .description-func{
@@ -98,7 +114,7 @@ color:#DFBDBC
   padding-top: 5px;
   padding: 15px;
 color: #C68E8D; 
-text-align: justify;
+
 }
 .img-func{
 width: 32%;
