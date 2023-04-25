@@ -35,6 +35,7 @@ nav {
   height: 9vh;
   position: fixed;
   width: 100%;
+  z-index: 99;
 }
 
 .nav-list {
