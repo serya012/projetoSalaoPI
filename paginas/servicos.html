@@ -1,195 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/estiloMenu.css" />
-    <link rel="stylesheet" href="../css/estiloServico.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <title>SódelasStudio</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/estiloMenu.css" />
+  <link rel="stylesheet" href="../css/estiloServico-equipe.css" />
 
-  <body>
-    <header>
-      <nav>
-        <img class="logo" src="../img/logo.png" alt="logo" />
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet" />
+  <title>SódelasStudio</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="../img/logo.png" alt="logo" />
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a class="a1" href="#">Início</a></li>
+        <li><a class="a1" href="#">Sobre nós</a></li>
+        <li><a class="a1" href="paginas/servicos.html">Serviços</a></li>
+        <li><a class="a1" href="#">Parceiros</a></li>
+        <li><a class="a1" href="paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="#">Contato</a></li>
+      </ul>
+
+      <div class="ico-login">
+        <img src="../img/iconeLogin1.png" alt="" />
+
+        <div class="btn-login">
+          <button><a href="#">Login</a></button>
         </div>
-        <ul class="nav-list">
-          <li><a class="a1" href="#">Início</a></li>
-          <li><a class="a1" href="#">Sobre nós</a></li>
-          <li><a class="a1" href="paginas/servicos.html">Serviços</a></li>
-          <li><a class="a1" href="#">Parceiros</a></li>
-          <li><a class="a1" href="paginas/equipe.html">Equipe</a></li>
-          <li><a class="a1" href="#">Contato</a></li>
-        </ul>
+      </div>
+    </nav>
+  </header>
 
-        <div class="ico-login">
-          <img src="../img/iconeLogin1.png" alt="" />
+  <main>
+    <div class="preenchimento"></div>
+    <h1 class="text-h1-func">Serviços</h1>
+    <br />
+    <h3 class="text-h3-func">
+      Descubra nossos serviços de beleza personalizados para realçar sua
+      beleza natural
+    </h3>
+    <br /><br />
 
-          <div class="btn-login">
-            <button><a href="#">Login</a></button>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div class="colapse-section">
+      <p class="texthighcolapse-cabelo">Cabelos</p>
 
-    <main>
-      <div class="preenchimento"></div>
-      <h1 class="text-h1-func">Serviços</h1>
-      <br />
-      <h3 class="text-h3-func">
-        Descubra nossos serviços de beleza personalizados para realçar sua
-        beleza natural
-      </h3>
-      <br /><br />
-
-      <div class="colapse-section">
-        <p class="texthighcolapse">Cabelos</p>
-
-        <button class="collapsible"></button>
-        <div class="content">
-          <br />
-          <div class="description">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p class="description-func">
-              Coloração | Balayage | Escovas modeladas | Terapias Capilares |
-              Tratamentos capilares | Cortes | Penteados soltos e presos |
-              Alisamento | Relaxamento | Alongamento dos fios | Extensões
-            </p>
-          </div>
-
-          <div class="img-func">
-            <img
-              src="../img/cabelo.jfif"
-              alt=""
-              class="img-colapse-func"
-            />
-            <div class="text-name">
-              <p class="name-func">Cabelos</p>
-            </div>
-          </div>
-        </div>
-        <p>&nbsp;</p>
-
-        <p class="texthighcolapse">Maquiagem</p>
-
-        <button
-          class="collapsible"
-          onclick="changeColor('transparent')"
-        ></button>
-        <div class="content">
-          <br />
-          <div class="description">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p class="description-func">
-              Olá! Meu nome é Gilda e eu trabalho em um salão de beleza. Eu sou
-              uma mulher com cerca de 50 anos de idade. No salão, sou
-              especializada em cuidados com os cabelos e adoro ajudar minhas
-              clientes a se sentirem bonitas e confiantes. Eu acredito que
-              quando você se sente bem consigo mesma, você pode conquistar
-              qualquer coisa que desejar. Além disso, sou bastante comunicativa
-              e adoro conversar com minhas clientes enquanto as atendo. Isso me
-              ajuda a conhecê-las melhor e oferecer um atendimento mais
-              personalizado.
-            </p>
-          </div>
-
-          <div class="img-func">
-            <img
-              src="../img/mulher-maquiada.avif"
-              alt=""
-              class="img-colapse-func"
-            />
-            <div class="text-name">
-              <p class="name-func">Maquiagem</p>
-            </div>
-          </div>
-        </div>
-        <p>&nbsp;</p>
-
-        <p class="texthighcolapse">Prisciane</p>
-
-        <button class="collapsible"></button>
-        <div class="content">
-          <br />
-          <div class="description">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p class="description-func">
-              Olá! Meu nome é Gilda e eu trabalho em um salão de beleza. Eu sou
-              uma mulher com cerca de 50 anos de idade. No salão, sou
-              especializada em cuidados com os cabelos e adoro ajudar minhas
-              clientes a se sentirem bonitas e confiantes. Eu acredito que
-              quando você se sente bem consigo mesma, você pode conquistar
-              qualquer coisa que desejar. Além disso, sou bastante comunicativa
-              e adoro conversar com minhas clientes enquanto as atendo. Isso me
-              ajuda a conhecê-las melhor e oferecer um atendimento mais
-              personalizado.
-            </p>
-          </div>
-
-          <div class="img-func">
-            <img
-              src="../img/exemplodefuncionaria.jpg"
-              alt=""
-              class="img-colapse-func"
-            />
-            <div class="text-name">
-              <p class="name-func">Prisciane</p>
-            </div>
-          </div>
+      <button class="collapsible"></button>
+      <div class="content">
+        <br />
+        <div class="description">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p class="description-func">
+            Coloração | Balayage | Escovas modeladas | Terapias Capilares |
+            Tratamentos capilares | Cortes | Penteados soltos e presos |
+            Alisamento | Relaxamento | Alongamento dos fios | Extensões
+          </p>
         </div>
 
-        <p>&nbsp;</p>
+        <div class="img-func">
 
-        <p class="texthighcolapse">Juliana</p>
+          <div class="text-name">
 
-        <button class="collapsible"></button>
-        <div class="content">
-          <br />
-          <div class="description">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p class="description-func">
-              Olá! Meu nome é Gilda e eu trabalho em um salão de beleza. Eu sou
-              uma mulher com cerca de 50 anos de idade. No salão, sou
-              especializada em cuidados com os cabelos e adoro ajudar minhas
-              clientes a se sentirem bonitas e confiantes. Eu acredito que
-              quando você se sente bem consigo mesma, você pode conquistar
-              qualquer coisa que desejar. Além disso, sou bastante comunicativa
-              e adoro conversar com minhas clientes enquanto as atendo. Isso me
-              ajuda a conhecê-las melhor e oferecer um atendimento mais
-              personalizado.
-            </p>
-          </div>
-
-          <div class="img-func">
-            <img
-              src="../img/exemplodefuncionaria.jpg"
-              alt=""
-              class="img-colapse-func"
-            />
-            <div class="text-name">
-              <p class="name-func">Juliana</p>
-            </div>
           </div>
         </div>
       </div>
-    </main>
+      <p>&nbsp;</p>
 
-    <script src="../js/servicos-equipe.js"></script>
-  </body>
+      <p class="texthighcolapse-maqui">Maquiagem</p>
+
+      <button class="collapsible" onclick="changeColor('transparent')"></button>
+      <div class="content">
+        <br />
+        <div class="description">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p class="description-func">
+            Maquiagem | Colocação de cílios
+          </p>
+        </div>
+
+        <div class="img-func">
+
+          <div class="text-name">
+
+          </div>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+
+      <p class="texthighcolapse">Estética</p>
+
+      <button class="collapsible"></button>
+      <div class="content">
+        <br />
+        <div class="description">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p class="description-func">
+            Limpeza de pele | Peelings | Drenagem facial e corporal | Tratamento anti-aging | Tonificação muscular |
+            Massagens relaxantes | Banho de lua | Relaxamento | Esfoliação corporal | Regeneração facial | Revitalização
+            | Hidratação | Depilação a laser | Micropigmentação | Microblanding
+          </p>
+        </div>
+
+
+        <div class="text-name">
+
+        </div>
+
+      </div>
+
+      <p>&nbsp;</p>
+
+      <p class="texthighcolapse-cilios">Cílios e Sobrancelhas</p>
+
+      <button class="collapsible"></button>
+      <div class="content">
+        <br />
+        <div class="description">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p class="description-func">
+            Design de Sobrancelha tradicional | Design de Sobrancelha com linha | Tintura de Sobrancelha com tinta alemã
+            | Tintura de | Sobrancelha com Henna | Tintura de Cílios | Micropigmentação | Microblanding
+          </p>
+        </div>
+
+        <div class="img-func">
+
+          <div class="text-name">
+
+          </div>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+
+      <p class="texthighcolapse-pesemaos">Pés e Mãos</p>
+
+      <button class="collapsible"></button>
+      <div class="content">
+        <br />
+        <div class="description">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p class="description-func">
+            Manicure | Pedicure | Esmaltação | Unhas Artísticas | Esfoliação | Reflexologia | Podologia
+          </p>
+        </div>
+
+        <div class="img-func">
+
+          <div class="text-name">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../js/servicos-equipe.js"></script>
+</body>
+
 </html>
