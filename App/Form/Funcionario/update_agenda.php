@@ -44,9 +44,35 @@
     <title>Editar Funcionário</title>
 </head>
 <body>
-    
+<header>
+    <nav>
+      <img class="logo" src="../../../img/logo.png" alt="logo">
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <ul class="nav-list">
+        <li><a class="a1" href="indexlogado.php">Início</a></li>
+        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
+        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
+        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
+        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
+        <li><a class="a1" href="indexlogado.php">Contato</a></li>
+      </ul>
+
+      <div class="ico-login">
+        <a href="../../Login/logout_funcionario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
+        <div class="btn-login">
+          <button><a href="../../Login/login_funcionario.php">Logout</a></button>
+        </div>
+      </div>
+    </nav>
+  </header>    
+
+  <br><br><br>
     <div class="container">
-    
     <form method="POST" action="">
     <?php
        foreach ($agendaDao->readUpdate($id) as $agenda): ?>
@@ -89,6 +115,7 @@
                 <option value="19:00:00">19:00</option>
             </select>
             <p class="lead">
+                <label>Usuário</label>
                 <?php 
                     
                     $user = "SELECT id_usuario, nome_usuario FROM usuario";

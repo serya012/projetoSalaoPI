@@ -45,12 +45,13 @@ if(count($_POST) > 0) {
 <body>
 <header>
     <nav>
-      <img class="logo" src="../../../img/logo.png" alt="logo" >
+      <img class="logo" src="../../../img/logo.png" alt="logo">
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
+
       <ul class="nav-list">
         <li><a class="a1" href="indexlogado.php">Início</a></li>
         <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
@@ -58,8 +59,14 @@ if(count($_POST) > 0) {
         <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
         <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
         <li><a class="a1" href="indexlogado.php">Contato</a></li>
-        <li><a class="a1" href="../../Login/logout_funcionario.php">Sair</a></li>
       </ul>
+
+      <div class="ico-login">
+        <a href="../../Login/logout_funcionario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
+        <div class="btn-login">
+          <button><a href="../../Login/login_funcionario.php">Logout</a></button>
+        </div>
+      </div>
     </nav>
   </header>
   
