@@ -165,25 +165,123 @@ body {
 .rodape{
 width: 100%;
 }
+
+
 .espacamentoRoda{
     height: 10vh;
 }
-.imgRoda{
-    display: flex;
-    justify-content: center;
-    
-    
+
+#contatos-relogio-loc{
+
+
+
+
 }
-.imgRoda img{
-    width: 100%
+.contatos{
+}
+.contatos-img{
+margin-left: 10vh;  
+height: 150px;
+margin-top: 0vh;
+
+}
+.text-contato1{
+ font-family: 'Jost', sans-serif;
+ color: #9B6D41;
+ font-size: 20px;
+ margin-left: 210px;
+}
+.text-contato2{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+ margin-left: 150px;
+}
+.relogio{
+ margin-top: -6.5vh;
 }
 
-.real-rodape{
-    width: 100%;
-    height: 50vh;
-    justify-content: space-around;
+.relogio-img{
+margin-left: 82.5vh;
+margin-top: -30vh;
 }
+.text-relogio1{
+ font-family: 'Jost', sans-serif;
+ color: #9B6D41;
+ font-size: 20px;
+ text-align: center;
+}
+.text-relogio2{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+ text-align: center;
+}
+.text-relogio3{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+ text-align: center;
+}
+.mapa{
+float: right;
+margin-top: -27vh;
+margin-right: 10vh;
+}
+.text-mapa1{
+ font-family: 'Jost', sans-serif;
+ color: #9B6D41;
+ font-size: 25px;
+text-align: center;
+ 
 
+ 
+}
+.text-mapa2{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+}
+.text-mapa3{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+ text-align: center;
+ 
+}
+.btn-agendar-footer{
+ display: flex;
+ justify-content: center;
+ width: 100%;
+}
+.btnfooter{
+ height: 6vh;
+ width: 13%;
+ margin-top: 40px;
+ background-color: transparent;
+ border: 3px solid #E8A525;
+ color: #E8A525;
+ font-family: 'Jost', sans-serif;
+ font-size: 20px;
+ cursor: pointer;
+ transition: 0.4s;
+}
+.btnfooter:hover{
+   opacity: 0.5;
+  
+}
+.rodape{
+ width: 100%;
+ height: 3vh;
+background-color: #C68E8D;
+margin-top: 20vh;
+
+}
+.text-footer{
+ color: #F9F2EC;
+ font-family: 'Jost', sans-serif;
+ text-align: center;
+ }
 
 
 /*RESPONSIVIDADE*/
