@@ -43,7 +43,7 @@ if(isset($_POST['buscar'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/estiloLoginU.css">
     <link rel="stylesheet" href="../../css/estiloMenu.css">
-    <title>login</title>
+    <title>Login</title>
 </head>
 <body>
 
@@ -56,21 +56,21 @@ if(isset($_POST['buscar'])){
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
-        <li><a class="a1" href="#">Início</a></li>
-        <li><a class="a1" href="#">Sobre nós</a></li>
-        <li><a class="a1" href="paginas/servicos.html">Serviços</a></li>
-        <li><a class="a1" href="#">Parceiros</a></li>
-        <li><a class="a1" href="paginas/equipe.html">Equipe</a></li>
-        <li><a class="a1" href="#">Contato</a></li>
+        <li><a class="a1" href="../../index.html">Início</a></li>
+        <li><a class="a1" href="../../index.html">Sobre nós</a></li>
+        <li><a class="a1" href="../paginas/servicos.html">Serviços</a></li>
+        <li><a class="a1" href="../../index.html">Parceiros</a></li>
+        <li><a class="a1" href="../paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="../../index.html">Contato</a></li>
 
       </ul>
 
       <div class="ico-login">
-        <a href="App/Login/login_usuario.php"><img src="../../img/iconeLogin1.png" alt=""></a>
+        <a href="login_usuario.php"><img src="../../img/iconeLogin1.png" alt=""></a>
 
 
         <div class="btn-login">
-          <button><a href="App/Login/login_usuario.php">Login</a></button>
+          <button><a href="login_usuario.php">Login</a></button>
 
         </div>
       </div>
