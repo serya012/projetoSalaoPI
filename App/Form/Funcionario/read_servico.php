@@ -59,7 +59,7 @@
 
     <a href="create_servico.php"><button>Criar</button></a>
  <div class="container">
-    <div class="row h6 bg-secondary">
+    <div class="row h6 " style="margin-top:9vh; padding:20px; background-color:#f7c375;">
         <div class="col-1">Tipo</div>
         <div class="col-3">Serviço</div>
         <div class="col-3">Descrição</div>

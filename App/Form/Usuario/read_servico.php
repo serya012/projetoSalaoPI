@@ -29,7 +29,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">  
     <link rel="stylesheet" href="../../../css/estiloMenu.css">
-    <link rel="stylesheet" href="../../../css/estiloServ.css">  
+    <link rel="stylesheet" href="../../../css/estiloReadSerU.css">  
     
     <title>Serviços</title>
 </head>
@@ -60,9 +60,9 @@
       </div>
     </nav>
   </header>
-<br><br><br>
+<div class="espacamento"></div>
  <div class="container">
-    <div class="row h6 bg-secondary">
+    <div class="row h6" style="margin-top:9vh; padding:20px; background-color:#f7c375;">
         <div class="col-1">Tipo</div>
         <div class="col-3">Serviço</div>
         <div class="col-3">Descrição</div>
