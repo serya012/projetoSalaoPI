@@ -33,10 +33,10 @@ if (isset($_POST["gravar"])){
         $funcionario->setFuncao($funcao); 
         $funcionario->setNivel($nivel); 
         $funcionarioDao = new \App\Model\FuncionarioDao();
-        if ($funcionarioDao->create($funcionario)){
+        if ($funcionarioDao->createF($funcionario)){
             $cpf_err = "CPF já cadastrado no sistema.";
         } else{
-            echo '<script>alert("Usuário cadastrado com sucesso!")</script>';
+            echo '<script>alert("Funcionário cadastrado com sucesso!")</script>';
             $nome = $cpf = $data = $telefone = $email = $senha = $endereco = $funcao = "";
         }
 }

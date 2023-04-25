@@ -14,7 +14,6 @@ if(count($_POST) > 0) {
     $servico = $_POST['servico'];
     $data = $_POST['data'];
     $hora = $_POST['hora'];
-   // $nome = $_SESSION['id_usuario'];
     $usuario = $nome;
     
     echo $usuario;
@@ -28,7 +27,7 @@ if(count($_POST) > 0) {
         $agendaDao = new \App\Model\AgendaDao();
         $agendaDao->create($agenda);
         unset($_POST);
-        echo '<script>alert("agenda salvo com sucesso!!")</script>';
+        echo '<script>alert("Agenda salvo com sucesso!!")</script>';
        
     
 }
@@ -47,11 +46,6 @@ if(count($_POST) > 0) {
     <title>Agendar</title>
 </head>
 <body>
-    <?php
-    
-     $nome = $_SESSION['usuario'];
-echo 'teste: '.$nome; 
-?>
     <header>
     <nav>
       <img class="logo" src="../../../img/logo.png" alt="logo" >
