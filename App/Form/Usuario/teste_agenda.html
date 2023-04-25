@@ -55,8 +55,10 @@ echo 'teste: '.$nome;
         <div class="display-3"> <strong> Agendamento</strong></div>
         
         <form class="form" method="POST" action="">
+          <div class="inputs">
         <p class="lead">
         <label>Serviços:</label>
+        <br>
             <select name="servico" id="opcao">
                 <option value="">Selecione...</option>
             <?php //Pra montar os options que interagem com o banco
@@ -74,10 +76,12 @@ echo 'teste: '.$nome;
         </p>
         <p class="lead">
             <label>Data:</label>
+            <br>
             <input type="date" name="data">
         </p>
         <p class="lead">
             <label>Hora:</label>
+            <br>
             <select name="hora">
                 <optgroup label="Manhã">
                 <option value="9h">9:00</option>
@@ -93,7 +97,7 @@ echo 'teste: '.$nome;
                 <option value="19h">19:00</option>
             </select>
         </p>
-        
+      </div>
         <div class="area-btn">
         <div class="area-btn1">
             <button class="btn1" type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>

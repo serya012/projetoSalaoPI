@@ -44,6 +44,7 @@ if(count($_POST) > 0) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">    
     <link rel="stylesheet" href="../../../css/estiloMenu.css">
+    <link rel="stylesheet" href="../../../css/estiloCreateAgeU.css">
     <title>Agendar</title>
 </head>
 <body>
@@ -52,33 +53,49 @@ if(count($_POST) > 0) {
      $nome = $_SESSION['usuario'];
 echo 'teste: '.$nome; 
 ?>
-    <header>
-    <nav>
-      <img class="logo" src="../../../img/logo.png" alt="logo" >
-      <div class="mobile-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <ul class="nav-list">
-        <li><a class="a1" href="indexlogado.php">Início</a></li>
-        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
-        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
-        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
-        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
-        <li><a class="a1" href="indexlogado.php">Contato</a></li>
-        <li><a class="a1" href="../../Login/logout_usuario.php">Sair</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <img class="logo" src="../../../img/logo.png" alt="logo">
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a class="a1" href="#">Início</a></li>
+      <li><a class="a1" href="#">Sobre nós</a></li>
+      <li><a class="a1" href="paginas/servicos.html">Serviços</a></li>
+      <li><a class="a1" href="#">Parceiros</a></li>
+      <li><a class="a1" href="paginas/equipe.html">Equipe</a></li>
+      <li><a class="a1" href="#">Contato</a></li>
 
+    </ul>
+
+    <div class="ico-login">
+      <a href="App/Login/login_usuario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
+
+
+      <div class="btn-login">
+        <button><a href="App/Login/login_usuario.php">Login</a></button>
+
+      </div>
+    </div>
+
+
+  </nav>
+
+</header>
+<div class="espacamento-header"></div>
     <div class="container1">
+      <div class="caixa">
     <div class="container">
-        <div class="display-3">Agendamento</div>
+        <div class="display-3"> <strong> Agendamento</strong></div>
         
-        <form method="POST" action="">
+        <form class="form" method="POST" action="">
+          <div class="inputs">
         <p class="lead">
         <label>Serviços:</label>
+        <br>
             <select name="servico" id="opcao">
                 <option value="">Selecione...</option>
             <?php //Pra montar os options que interagem com o banco
@@ -96,10 +113,12 @@ echo 'teste: '.$nome;
         </p>
         <p class="lead">
             <label>Data:</label>
+            <br>
             <input type="date" name="data">
         </p>
         <p class="lead">
             <label>Hora:</label>
+            <br>
             <select name="hora">
                 <optgroup label="Manhã">
                 <option value="9h">9:00</option>
@@ -115,15 +134,19 @@ echo 'teste: '.$nome;
                 <option value="19h">19:00</option>
             </select>
         </p>
-        
-        
-        
-            <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
-            <a href="read_agenda.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
-
+      </div>
+        <div class="area-btn">
+        <div class="area-btn1">
+            <button class="btn1" type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
+          </div>
+          <div class="area-btn2">
+            <a href="read_agenda.php"><button class="btn2" type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
+          </div>
+        </div>
         </p>
         </form>
     </div>
+  </div>
     </div>
 </body>
 </html>
