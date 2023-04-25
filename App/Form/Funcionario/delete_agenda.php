@@ -10,10 +10,10 @@
 <body>
 
     <div class="container">
-    <div class="display-3">Tem certeza que deseja excluir este funcionário?</div>
+    <div class="display-3">Tem certeza que deseja excluir este agendamento?</div>
     <link rel="stylesheet" href="../../../css/estiloMenu.css">
     <form action="" method="post">
-        <a href="read_funcionario.php"><button type="button" class="btn btn-secondary" title="Não Excluir">Não</button></a>
+        <a href="read_agenda.php"><button type="button" class="btn btn-secondary" title="Não Excluir">Não</button></a>
         <button type="submit" class="btn btn-danger"  title="Excluir Funcionário" name="confirmar">Sim</button>
     </form>
     </div>
@@ -24,13 +24,13 @@
 if(isset($_POST['confirmar'])) {
 
     require_once '..\..\Model\conexao.php';
-    require_once '..\..\Model\funcionario.php';
-    require_once '..\..\Model\funcionarioDao.php';
+    require_once '..\..\Model\agenda.php';
+    require_once '..\..\Model\agendaDao.php';
 
-    $id = intval($_GET['id_funcionario']);
-    $funcionario = new \App\Model\funcionario();
-    $funcionarioDao = new \App\Model\funcionarioDao();
-    $funcionarioDao->delete($id);
-    header('Location: message_delete.php');
+    $id = intval($_GET['cod_agenda']);
+    $funcionario = new \App\Model\agenda();
+    $agendaDao = new \App\Model\agendaDao();
+    $agendaDao->delete($id);
+    header('Location: read_agenda.php');
     }
 ?>

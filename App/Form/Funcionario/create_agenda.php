@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (isset($_SESSION['id_usuario']))
+    if (isset($_SESSION['id_funcionario']))
     
 
 require_once '..\..\Model\conexao.php';
@@ -58,7 +58,7 @@ if(count($_POST) > 0) {
         <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
         <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
         <li><a class="a1" href="indexlogado.php">Contato</a></li>
-        <li><a class="a1" href="../../Login/logout_usuario.php">Sair</a></li>
+        <li><a class="a1" href="../../Login/logout_funcionario.php">Sair</a></li>
       </ul>
     </nav>
   </header>
@@ -107,7 +107,7 @@ if(count($_POST) > 0) {
             </select>
         </p>
         <p class="lead">
-            <label>Cliente:</label>
+            
                 
                 <?php   
                 $user = "SELECT id_usuario, nome_usuario FROM usuario";
@@ -116,6 +116,7 @@ if(count($_POST) > 0) {
                 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC); 
                 ?>
 
+            <label>Cliente</label>
             <select name="usuario">
                 <option value="">Selecione...</option>
                     <?php foreach ($resultado as $row): ?>
@@ -124,12 +125,9 @@ if(count($_POST) > 0) {
             </select>
 
         </p>
-        
-        
-        
+        <p>
             <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
             <a href="read_agenda.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
-
         </p>
         </form>
     </div>

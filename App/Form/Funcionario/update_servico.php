@@ -51,6 +51,7 @@
             <p class="lead">
                 <label>Tipo de Serviço</label><br>
                 <select name="tipo" class="form-control">
+                    <option value="<?php echo $servico['tipo_de_servico'] ?>"><?php echo $servico['tipo_de_servico'] ?></option>
                     <option value="cabelos">Cabelos</option>
                     <option value="maquiagem">Maquiagem</option>
                     <option value="estetica">Estética</option>
@@ -61,7 +62,7 @@
             </p>
             <p class="lead">
                 <label>Serviço</label>
-                <input name="servico" type="text" size="40">
+                <input value="<?php echo $servico['servico'] ?>" name="servico" type="text" size="40">
             </p>
             <p class="lead">
                 <label>Descrição</label>
@@ -69,7 +70,7 @@
             </p>
             <p class="lead">
                 <label>Valor</label>
-                <input name="valor" type="text" size="20">
+                <input value="<?php echo $servico['valor'] ?>" name="valor" type="text" size="20">
             </p>
             <p class="lead">
                 <?php 

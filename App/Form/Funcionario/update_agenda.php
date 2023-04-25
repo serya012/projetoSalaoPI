@@ -14,6 +14,7 @@
         $servico = $_POST['servico'];
         $data = $_POST['data'];
         $hora = $_POST['hora'];
+        $usuario = $_POST['usuario'];
         
         
     
@@ -21,6 +22,7 @@
         $agenda->setServicoFk($servico);
         $agenda->setDataA($data);
         $agenda->setHora($hora);
+        $agenda->setUsuarioFk($usuario);
        
         
         $agendaDao->update($agenda);
@@ -59,7 +61,7 @@
                     ?>
             <label>Serviços:</label>
             <select name="servico">
-                <option value=""><?php echo $agenda['id_servico']?></option>
+                <option value="<?php echo $agenda['id_servico']?>"><?php echo $agenda['id_servico']?></option>
                 <?php foreach ($result as $row): ?>
                  <option value="<?php echo $row['id_servico']; ?>"><?php echo $row['servico']; ?></option>
                 <?php endforeach; ?>
@@ -86,23 +88,33 @@
                 <option value="18:00:00">18:00</option>
                 <option value="19:00:00">19:00</option>
             </select>
+            <p class="lead">
+                <?php 
+                    
+                    $user = "SELECT id_usuario, nome_usuario FROM usuario";
+                    $stmt = $pdo->prepare($user);
+                    $stmt->execute();
+                    $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+                ?>
+
+                <select name="usuario" class="form-control">
+                    <option value="<?php echo $agenda['id_usuario']?>"><?php echo $agenda['id_usuario']?></option>
+                        <?php foreach ($resultado as $row): ?>
+                    <option value="<?php echo $row['id_usuario']; ?>"><?php echo $row['nome_usuario']; ?></option>
+                        <?php endforeach; ?>
+                </select>  
+            </p>
         </p>
-        
-        
-        
-            <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
-            <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
+    
+            <button type="submit" class="btn btn-light" title="Gravar">Salvar Alterações</button>
+            <a href="read_agenda.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
 
         </p>
         </form>
     <?php
         endforeach;
     ?>
-        <button type="submit" class="btn btn-light" title="Gravar atualização">Salvar Alterações</button>
-        <a href="read_agenda.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
-        </p>
-        
-       
+    
     </form>
     </div>
 
