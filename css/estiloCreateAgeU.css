@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.espacamento-header{
+  height: 1vh;
+  
+}
+
+.container1{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
+}
+.caixa{
+  width: 40%;
+  height: 60vh;
+  background-color: #ece3db;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.623);
+
+}
+
+.container{
+ text-align: left;
+ margin-top: 20px;
+}
+
+.display-3{
+  text-align: center;
+  
+
+}
+
+.form p{
+  padding-top: 15px;
+  padding: 10px;
+}
+.area-btn{
+  margin-top: 5px;
+}
+
+.area-btn1{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+.area-btn2{
+  display: flex;
+  justify-content: center;
+}
+.area-btn1 .btn1{
+  width: 250px;
+  height: 30px;
+  border: none;
+  background-color:#B67776 ;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  
+}
+
+.area-btn button:hover{
+  background-image: linear-gradient(to left, #e79e9c, #c56e6c);
+
+}
+.area-btn2 .btn2{
+  width: 250px;
+  height: 30px;
+  border: none;
+  background-color:#B67776 ;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
