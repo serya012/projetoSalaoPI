@@ -58,9 +58,9 @@ if(isset($_POST['buscar'])){
       <ul class="nav-list">
         <li><a class="a1" href="../../index.html">Início</a></li>
         <li><a class="a1" href="../../index.html">Sobre nós</a></li>
-        <li><a class="a1" href="../paginas/servicos.html">Serviços</a></li>
+        <li><a class="a1" href="../../paginas/servicos.html">Serviços</a></li>
         <li><a class="a1" href="../../index.html">Parceiros</a></li>
-        <li><a class="a1" href="../paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="../../paginas/equipe.html">Equipe</a></li>
         <li><a class="a1" href="../../index.html">Contato</a></li>
 
       </ul>

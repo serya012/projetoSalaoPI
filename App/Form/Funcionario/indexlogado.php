@@ -33,22 +33,16 @@
         <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
         <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
         <li><a class="a1" href="indexlogado.php">Contato</a></li>
-
       </ul>
 
       <div class="ico-login">
         <a href="../../Login/logout_usuario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
 
-
         <div class="btn-login">
           <button><a href="../../Login/logout_usuario.php">Logout</a></button>
-
         </div>
       </div>
-
-
     </nav>
-
   </header>
 
   <main>

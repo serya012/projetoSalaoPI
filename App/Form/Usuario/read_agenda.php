@@ -27,15 +27,45 @@
     <title>Consultar Serviços</title>
 </head>
 <body>
+
+<header>
+    <nav>
+      <img class="logo" src="../../../img/logo.png" alt="logo">
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <ul class="nav-list">
+        <li><a class="a1" href="indexlogado.php">Início</a></li>
+        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
+        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
+        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
+        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
+        <li><a class="a1" href="indexlogado.php">Contato</a></li>
+      </ul>
+
+      <div class="ico-login">
+        <a href="../../Login/logout_usuario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
+        <div class="btn-login">
+          <button><a href="../../Login/login_usuario.php">Logout</a></button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
  <div class="container">
+ <br><br><br>
     <div class="row h6 bg-secondary">
-        <div class="col-3">Nome</div>
-        <div class="col-3">Serviço</div>
+        <div class="col-3">Código Usuario</div>
+        <div class="col-3">Id Serviço</div>
         <div class="col-1">Hora</div>
         <div class="col-3">Data</div>
         <div class="col">Ações</div>
     </div>
-    <?php
+    <?php //Precisa fazer mostrar apenas os agendamentos referentes ao Usuário
         foreach ($agendaDao->read() as $agenda):
             echo ('<div class="row">
                     <div class="col-3">'.$agenda["id_usuario"].'</div>
