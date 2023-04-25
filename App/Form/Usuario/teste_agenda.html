@@ -1,39 +1,3 @@
-<?php
-    session_start();
-    if (isset($_SESSION['usuario'])){
-    $nome = $_SESSION['usuario'];
-    
-
-require_once '..\..\Model\conexao.php';
-require_once '..\..\Model\agenda.php';
-require_once '..\..\Model\agendaDao.php';
-
-
-if(count($_POST) > 0) {
-    
-    $servico = $_POST['servico'];
-    $data = $_POST['data'];
-    $hora = $_POST['hora'];
-    $usuario = $nome;
-    
-    echo $usuario;
-    
-        $agenda = new \App\Model\Agenda();
-        $agenda->setServicoFk($servico);
-        $agenda->setDataA($data);
-        $agenda->setHora($hora);
-        $agenda->setUsuarioFk($usuario);
-
-        $agendaDao = new \App\Model\AgendaDao();
-        $agendaDao->create($agenda);
-        unset($_POST);
-        echo '<script>alert("Agenda salvo com sucesso!!")</script>';
-       
-    
-}
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -47,25 +11,26 @@ if(count($_POST) > 0) {
     <title>Agendar</title>
 </head>
 <body>
-    <header>
-    <nav>
-      <img class="logo" src="../../../img/logo.png" alt="logo" >
-      <div class="mobile-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <ul class="nav-list">
-        <li><a class="a1" href="indexlogado.php">Início</a></li>
-        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
-        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
-        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
-        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
-        <li><a class="a1" href="indexlogado.php">Contato</a></li>
-        <li><a class="a1" href="../../Login/logout_usuario.php">Sair</a></li>
-      </ul>
-    </nav>
-  </header>
+    <?php
+    
+     $nome = $_SESSION['usuario'];
+echo 'teste: '.$nome; 
+?>
+<header>
+  <nav>
+    <img class="logo" src="../../../img/logo.png" alt="logo">
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
+      <li><a class="a1" href="#">Início</a></li>
+      <li><a class="a1" href="#">Sobre nós</a></li>
+      <li><a class="a1" href="paginas/servicos.html">Serviços</a></li>
+      <li><a class="a1" href="#">Parceiros</a></li>
+      <li><a class="a1" href="paginas/equipe.html">Equipe</a></li>
+      <li><a class="a1" href="#">Contato</a></li>
 
     </ul>
 
