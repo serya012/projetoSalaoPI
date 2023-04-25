@@ -1,6 +1,8 @@
 <?php
-    session_start();
+    if (!isset($_SESSION)) session_start();
     if (isset($_SESSION['usuario'])){
+      if (!isset($_SESSION['usuario']))
+   die('Você não está logado. <a href="../Login/login.php">Clique aqui</a> para logar');
     $nome = $_SESSION['id_usuario'];
 
 

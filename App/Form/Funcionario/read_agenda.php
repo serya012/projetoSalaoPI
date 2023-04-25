@@ -1,6 +1,15 @@
 <?php
-    session_start();
-        $logado = $_SESSION['funcionario'];
+     if (!isset($_SESSION)) session_start();
+     $logado = $_SESSION['funcionario'];
+     if (!isset($logado)){
+      die('Você não está logado. <a href="../../Login/login_funcionario.php">Clique aqui</a> para logar');
+     }
+       
+     if ($_SESSION['nivel'] != '2'){
+      die('Você não tem permissão. <a href="javascript:history.back()">Clique aqui</a> para voltar');
+     }
+    
+      echo $logado;
 
     require_once '..\..\Model\conexao.php';
     require_once '..\..\Model\agenda.php';
