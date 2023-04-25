@@ -57,7 +57,7 @@
     </nav>
   </header>    
 
-    <a href="create_servico.php"><button>Criar</button></a>
+    
  <div class="container">
     <div class="row h6 " style="margin-top:9vh; padding:20px; background-color:#f7c375;">
         <div class="col-1">Tipo</div>
@@ -81,6 +81,7 @@
                 );          
         endforeach;
     ?>
+    <a href="create_servico.php"><button>Criar</button></a>
  </div>                
 </body>
 </html>

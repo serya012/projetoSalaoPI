@@ -80,6 +80,7 @@
                 );          
         endforeach;
     ?>
+    <a href="create_agenda.php"><button>Agendar</button></a>
  </div>                
 </body>
 </html>
