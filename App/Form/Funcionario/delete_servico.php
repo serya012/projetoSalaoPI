@@ -19,9 +19,9 @@
       </div>
 
       <ul class="nav-list">
-        <li><a class="a1" href="indexlogado.php">Agenda</a></li>
-        <li><a class="a1" href="indexlogado.php">Funcionários</a></li>
-        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
+        <li><a class="a1" href="read_agenda.php">Agenda</a></li>
+        <li><a class="a1" href="read_funcionario.php">Funcionários</a></li>
+        <li><a class="a1" href="read_servico.php">Serviços</a></li>
       </ul>
 
       <div class="ico-login">
