@@ -32,24 +32,24 @@
 <body>
 <header class="header">
     <nav>
-      <img class="logo" src="img/logo.png" alt="logo">
+      <img class="logo" src="../../../img/logo.png" alt="logo">
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
-        <li><a class="a1" href="index.html">Início</a></li>
+        <li><a class="a1" href="indexlogado.php">Início</a></li>
         <li><a class="a1" href="#sobre-nos">Sobre nós</a></li>
-        <li><a class="a1" href="./paginas/servicos.html">Serviços</a></li>
+        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
         <li><a class="a1" href="#pcr">Parceiros</a></li>
-        <li><a class="a1" href="./paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
         <li><a class="a1" href="#">Contato</a></li>
       </ul>
       <div class="ico-login">
-        <a href="App/Login/login_usuario.php"><img src="./img/iconeLogin1.png" alt=""></a>
+        <a href="read_agenda.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
         <div class="btn-login">
-          <button><a href="App/Login/login_usuario.php">Login</a></button>
+          <button><a href="../../Login/logout_usuario.php">Logout</a></button>
         </div>
       </div>
     </nav>
@@ -57,8 +57,8 @@
   <section class="subHeader">
     <div class="caixaSubHeader">
     <ul>
-      <li><a href="">Agendar</a></li>
-      <li><a href="">Serviços</a></li>
+      <li><a href="read_agenda.php">Agendar</a></li>
+      <li><a href="read_servico.php">Serviços</a></li>
     </ul>
   </div>
   </section>

@@ -38,7 +38,7 @@
       </ul>
 
       <div class="ico-login">
-        <a href="../../Login/logout_usuario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
+        <a href="../../Form/Usuario/read_agenda.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
 
 
         <div class="btn-login">
