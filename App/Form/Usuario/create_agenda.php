@@ -44,35 +44,43 @@ if(count($_POST) > 0) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">    
     <link rel="stylesheet" href="../../../css/estiloMenu.css">
     <link rel="stylesheet" href="../../../css/estiloCreateAgeU.css">
+    
+<link rel="stylesheet" href="../../../css/estiloMenuUsu.css">
     <title>Agendar</title>
 </head>
 <body>
-<header>
+<header class="header">
     <nav>
-      <img class="logo" src="../../../img/logo.png" alt="logo">
+      <img class="logo" src="img/logo.png" alt="logo">
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
-
       <ul class="nav-list">
-        <li><a class="a1" href="indexlogado.php">Início</a></li>
-        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
-        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
-        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
-        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
-        <li><a class="a1" href="indexlogado.php">Contato</a></li>
+        <li><a class="a1" href="index.html">Início</a></li>
+        <li><a class="a1" href="#sobre-nos">Sobre nós</a></li>
+        <li><a class="a1" href="./paginas/servicos.html">Serviços</a></li>
+        <li><a class="a1" href="#pcr">Parceiros</a></li>
+        <li><a class="a1" href="./paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="#">Contato</a></li>
       </ul>
-
       <div class="ico-login">
-        <a href="../../Login/logout_usuario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
+        <a href="App/Login/login_usuario.php"><img src="./img/iconeLogin1.png" alt=""></a>
         <div class="btn-login">
-          <button><a href="../../Login/login_usuario.php">Logout</a></button>
+          <button><a href="App/Login/login_usuario.php">Login</a></button>
         </div>
       </div>
     </nav>
   </header>
+  <section class="subHeader">
+    <div class="caixaSubHeader">
+    <ul>
+      <li><a href="">Agendar</a></li>
+      <li><a href="">Serviços</a></li>
+    </ul>
+  </div>
+  </section>
 
 <div class="espacamento-header"></div>
     <div class="container1">

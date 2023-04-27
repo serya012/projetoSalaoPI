@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.caixaSubHeader{
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+}
+.subHeader{
+  padding-top: 9vh;
+  background-color: #DFBDBC;
+  display: flex;
+  justify-content: center;
+}
+.subHeader ul{
+  display: flex;
+  justify-content: center;
+}
+.subHeader a{
+ text-decoration: none;
+ color: #fff;
+}
