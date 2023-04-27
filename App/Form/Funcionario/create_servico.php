@@ -29,6 +29,11 @@ if(count($_POST) > 0) {
         $servicoDao->create($servico);
         unset($_POST);
         
+        echo "Serviço salvo com sucesso!!";
+       
+            }
+        } 
+        
 ?>
 
 <!DOCTYPE html>
@@ -43,35 +48,35 @@ if(count($_POST) > 0) {
     <title>Cadastrar Produto</title>
 </head>
 <body>
-<header>
-    <nav>
-      <img class="logo" src="../../../img/logo.png" alt="logo">
-      <div class="mobile-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
+    <header>
+        <nav>
+            <img class="logo" src="../../../img/logo.png" alt="logo">
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
 
-      <ul class="nav-list">
-        <li><a class="a1" href="indexlogado.php">Início</a></li>
-        <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
-        <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
-        <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
-        <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
-        <li><a class="a1" href="indexlogado.php">Contato</a></li>
-      </ul>
+            <ul class="nav-list">
+              <li><a class="a1" href="indexlogado.php">Início</a></li>
+              <li><a class="a1" href="indexlogado.php">Sobre nós</a></li>
+              <li><a class="a1" href="../../../paginas/servicos_logado.html">Serviços</a></li>
+              <li><a class="a1" href="indexlogado.php">Parceiros</a></li>
+              <li><a class="a1" href="../../../paginas/equipe_logado.html">Equipe</a></li>
+              <li><a class="a1" href="indexlogado.php">Contato</a></li>
+            </ul>
 
-      <div class="ico-login">
-        <a href="../../Login/logout_funcionario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
-        <div class="btn-login">
-          <button><a href="../../Login/login_funcionario.php">Logout</a></button>
-        </div>
-      </div>
-    </nav>
-  </header>    
+            <div class="ico-login">
+              <a href="../../Login/logout_funcionario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
+              <div class="btn-login">
+                <button><a href="../../Login/login_funcionario.php">Logout</a></button>
+              </div>
+            </div>
+        </nav>
+    </header>    
 
   <br><br><br>
-<div class="container1">
+    <div class="container1">
     <div class="container">
         <div class="display-3">Cadastro de Serviços</div>
         
@@ -114,15 +119,12 @@ if(count($_POST) > 0) {
         <option value="<?php echo $row['id_funcionario']; ?>"><?php echo $row['nome_funcionario']; ?></option>
             <?php endforeach; ?>
         </select>
-        <p><?php echo "Serviço salvo com sucesso!!";
-       
-            }
-        } ?>
+        <p>
         </p>
+        
         </p>
             <button type="submit" class="btn btn-light" title="Gravar">Salvar Serviço</button>
             <a href="read_servico.php"><button type="button" class="btn btn-light" title="Produtos">Voltar</button></a>
-
         </p>
         </form>
     </div>
