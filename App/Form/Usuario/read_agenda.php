@@ -65,20 +65,20 @@
   <br><br><br>
 <div class="espacamento"></div>
  <div class="container">
-    <div class="row h6 bg-secondary">
-        <div class="col-1">Tipo</div>
+    <div class="row h6" style="padding:20px; background-color:#f7c375;">
+        <div class="col-1">Cliente</div>
         <div class="col-3">Serviço</div>
-        <div class="col-3">Descrição</div>
-        <div class="col-3">Valor</div>
+        <div class="col-3">Hora</div>
+        <div class="col-3">Data</div>
         <div class="col">Ações</div>
     </div>
     <?php
-        foreach ($servicoDao->read() as $servico):
+        foreach ($agendaDao->read() as $agenda):
             echo ('<div class="row">
-                    <div class="col-1">'.$servico["tipo_de_servico"].'</div>
-                    <div class="col-3">'.$servico["servico"].'</div>
-                    <div class="col-3">'.$servico["descricao"].'</div>
-                    <div class="col-3">'.$servico["valor"].'</div>
+                    <div class="col-1">'.$agenda["id_usuario"].'</div>
+                    <div class="col-3">'.$agenda["id_servico"].'</div>
+                    <div class="col-3">'.$agenda["hora_agenda"].'</div>
+                    <div class="col-3">'.$agenda["data_agenda"].'</div>
                     <div class="col">
                         <a href="create_agenda.php"><button type="button" class="btn btn-light" title="Agendar">Agendar</button></a>
                     </div>
