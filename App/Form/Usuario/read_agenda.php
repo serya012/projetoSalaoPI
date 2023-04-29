@@ -57,7 +57,7 @@
   <section class="subHeader">
     <div class="caixaSubHeader">
     <ul>
-      <li><a href="read_agenda.php">Agendar</a></li>
+      <li><a href="read_agenda.php">Agenda</a></li>
       <li><a href="read_servico.php">Serviços</a></li>
     </ul>
   </div>

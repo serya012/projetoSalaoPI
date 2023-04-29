@@ -37,7 +37,7 @@
   <section class="subHeader">
     <div class="caixaSubHeader">
     <ul>
-      <li><a href="">Agendar</a></li>
+      <li><a href="">Agenda</a></li>
       <li><a href="">Serviços</a></li>
     </ul>
   </div>

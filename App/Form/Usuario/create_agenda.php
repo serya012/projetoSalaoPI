@@ -51,22 +51,22 @@ if(count($_POST) > 0) {
 <body>
 <header class="header">
     <nav>
-      <img class="logo" src="img/logo.png" alt="logo">
+      <img class="logo" src="../../../img/logo.png" alt="logo">
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
-        <li><a class="a1" href="index.html">Início</a></li>
-        <li><a class="a1" href="#sobre-nos">Sobre nós</a></li>
-        <li><a class="a1" href="./paginas/servicos.html">Serviços</a></li>
-        <li><a class="a1" href="#pcr">Parceiros</a></li>
-        <li><a class="a1" href="./paginas/equipe.html">Equipe</a></li>
-        <li><a class="a1" href="#">Contato</a></li>
+        <li><a class="a1" href="../../../index.html">Início</a></li>
+        <li><a class="a1" href="../../../index.html">Sobre nós</a></li>
+        <li><a class="a1" href="../../../paginas/servico.html">Serviços</a></li>
+        <li><a class="a1" href="../../../index.html">Parceiros</a></li>
+        <li><a class="a1" href="../../../paginas/equipe.html">Equipe</a></li>
+        <li><a class="a1" href="../../../index.html">Contato</a></li>
       </ul>
       <div class="ico-login">
-        <a href="App/Login/login_usuario.php"><img src="./img/iconeLogin1.png" alt=""></a>
+        <a href="App/Login/login_usuario.php"><img src="../../../img/iconeLogin1.png" alt=""></a>
         <div class="btn-login">
           <button><a href="App/Login/login_usuario.php">Login</a></button>
         </div>
@@ -76,8 +76,8 @@ if(count($_POST) > 0) {
   <section class="subHeader">
     <div class="caixaSubHeader">
     <ul>
-      <li><a href="">Agendar</a></li>
-      <li><a href="">Serviços</a></li>
+      <li><a href="read_agenda.php">Agenda</a></li>
+      <li><a href="read_servico.php">Serviços</a></li>
     </ul>
   </div>
   </section>
