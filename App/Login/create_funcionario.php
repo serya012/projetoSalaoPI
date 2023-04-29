@@ -96,7 +96,7 @@ if (isset($_POST["gravar"])){
                 <h1>Cadastrar Funcionário</h1>
               </div>
               <div class="login-button">
-                <button><a href="login_funcionario.php">Entrar</a></button>
+                <button><a href="../Form/Funcionario/read_funcionario.php">Voltar</a></button>
               </div>
             </div>
     

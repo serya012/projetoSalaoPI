@@ -91,7 +91,7 @@ if(isset($_POST['buscar'])){
                 <h1>Login</h1>
               </div>
               <div class="login-button">
-                <button><a href="create_funcionario.php">Cadastrar-se</a></button>
+                <button><a href="../../index.html">Voltar</a></button>
               </div>
             </div>
               <div class="input-box">

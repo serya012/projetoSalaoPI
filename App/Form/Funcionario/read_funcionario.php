@@ -72,6 +72,7 @@
                 );          
         endforeach;
     ?>
+    <a href="../../Login/create_funcionario.php"><button>Cadastrar Funcionário</button></a>
  </div>                
 </body>
 </html>
