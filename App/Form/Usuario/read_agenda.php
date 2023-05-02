@@ -66,21 +66,21 @@
 <div class="espacamento"></div>
  <div class="container">
     <div class="row h6" style="padding:20px; background-color:#f7c375;">
-        <div class="col-1">Cliente</div>
+        <div class="col-3">Cliente</div>
         <div class="col-3">Serviço</div>
         <div class="col-3">Hora</div>
-        <div class="col-3">Data</div>
+        <div class="col-1">Data</div>
         <div class="col">Ações</div>
     </div>
     <?php
         foreach ($agendaDao->read() as $agenda):
             echo ('<div class="row">
-                    <div class="col-1">'.$agenda["id_usuario"].'</div>
-                    <div class="col-3">'.$agenda["id_servico"].'</div>
+                    <div class="col-3">'.$agenda["nome_usuario"].'</div>
+                    <div class="col-3">'.$agenda["servico"].'</div>
                     <div class="col-3">'.$agenda["hora_agenda"].'</div>
-                    <div class="col-3">'.$agenda["data_agenda"].'</div>
+                    <div class="col-1">'.$agenda["data_agenda"].'</div>
                     <div class="col">
-                        <a href="create_agenda.php"><button type="button" class="btn btn-light" title="Agendar">Agendar</button></a>
+                        <a href="delete_agenda.php"><button type="button" class="btn btn-light" title="Agendar">Agendar</button></a>
                     </div>
                    </div>'
                 );          

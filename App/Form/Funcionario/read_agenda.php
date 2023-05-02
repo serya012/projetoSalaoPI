@@ -65,8 +65,8 @@
     <?php
         foreach ($agendaDao->read() as $agenda):
             echo ('<div class="row"> 
-                    <div class="col-3">'.$agenda["id_usuario"].'</div>
-                    <div class="col-3">'.$agenda["id_servico"].'</div>
+                    <div class="col-3">'.$agenda["nome_usuario"].'</div>
+                    <div class="col-3">'.$agenda["servico"].'</div>
                     <div class="col-1">'.$agenda["hora_agenda"].'</div>
                     <div class="col-3">'.$agenda["data_agenda"].'</div>
                     <div class="col">

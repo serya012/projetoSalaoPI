@@ -147,7 +147,7 @@ if (isset($_POST["gravar"])){
   </div>
   </div>
   <script type= "text/javascript" src="../../js/jquery-3.6.4.js"></script>
-    <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
+  <script type= "text/javascript" src="../../js/jquery.mask.js"></script>
     <script type="text/javascript">
        $(document).ready(function(){
             $('#telefone').mask('(00)00000-0000');
