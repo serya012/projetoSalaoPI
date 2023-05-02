@@ -1,108 +1,466 @@
-:root{
-    /* FONT */
-    --font: 'Poppins', sans-serif;
-  
-    /* COLORS */
-    --color: #9176FF;
-    --bg-color: #f4f4f4;
-  }
-  
-  /* ------------ BASE ------------ */
-  *{
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body{
-    font-family: var(--font);
+    font-family: 'Jost', sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px;
+}
+
+body {
+    overflow-x: hidden;
+ 
+    background: #F9F2EC;
+    width: 100%;
+}
+
+
+
+.content1 img {
+    max-width: 100%;
+    height: auto;
+    padding-top: 40px;
+    display: block;
+}
+
+.content1 button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vh;
+    padding: 30px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border: 2px solid #F9F2EC;
+    background: transparent;
+    color: #F9F2EC;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+    font-size: 20px;
+}
+
+.content1 button:hover {
+    opacity: 0.5;
+}
+
+.img1content2 img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.contentText{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 135vh;
+}
+.textlocal1{
+    width: 800px;
+    height: 500px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-  
-    background-color: var(--bg-color);
-  }
-  
-  /* ----------- SLIDER ------------ */
-  .swiper{
-    width: 100%;
-  }
-  
-  .swiper-wrapper{
-    width: 100%;
-    height: 35em;
+    padding-top: 50px;
+}
+
+.textlocal1 p{
+    font-size: 25px;
+    color: #9B6D41;
+}
+.conhecaEquipe{
+
     display: flex;
-    align-items: center;
-  }
-  
-  .card{
-    width: 20em;
-    height: 90%;
-    background-color: #fff;
-    border-radius: 2em;
-    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
-    padding: 2em 1em;
-  
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  
-    margin: 0 2em;
-  }
-  
-  .swiper-slide:not(.swiper-slide-active){
-    filter: blur(1px);
-  }
-  
-  .card__image{
-    width: 10em;
-    height: 10em;
-    border-radius: 50%;
-    border: 5px solid var(--color);
-    padding: 3px;
-    margin-bottom: 2em;
-  }
-  
-  .card__image img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .card__content{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .card__title{
-    font-size: 1.5rem;
-    font-weight: 500;
-    position: relative;
-    top: .2em;
-  }
-  
-  .card__name{
-    color: var(--color);
-  }
-  
-  .card__text{
+    justify-content: center;
+    text-decoration: none;
+    padding-bottom: 20px;
+    /*position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vh;
+    padding: 30px 0;
     text-align: center;
-    font-size: 1.1rem;
-    margin: 1em 0;
-  }
-  
-  .card__btn{
-    background-color: var(--color);
-    color: #fff;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    padding: .5em;
-    border-radius: .5em;
-    margin-top: .5em;
+    margin: 20px 10px;
+    border: 2px solid #F9F2EC;
+    background: transparent;
+    color: #F9F2EC;
     cursor: pointer;
-  }
+    overflow: hidden;
+    transition: 0.4s;
+    font-size: 20px;*/
+}
+.conhecaEquipe button{
+
+    background-color: transparent;
+    border: 2px solid #F7C375;;
+    cursor: pointer;
+    font-size: 20px;
+    color: #F7C375;
+    width: 25vh;
+    height: 5vh;    
+    /*position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vh;
+    padding: 30px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border: 2px solid #F9F2EC;
+    background: transparent;
+    color: #F9F2EC;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+    font-size: 20px;*/
+}
+.servicos1{
+    background-color: #C68E8D;
+    height: 70vh;
+    width: 100%;
+    
+}
+
+.servicosdesc{
+    align-items: center;
+}
+
+.servicosdesc h1{
+    color: #F7C375;
+    font-size: 50px;
+    text-align: center;
+}
+.sublinhado-servi{
+    width: 100%;
+    height: 3vh;
+    background-color: #F7C375;
+}
+
+.btn-agende{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30vh;
+    padding: 30px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border: 2px solid #F7C375;
+    background: transparent;
+    color: #F7C375;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.4s;
+    font-size: 20px;
+    z-index: -1;
+}
+
+.btn-agende:hover{
+    opacity: 0.5;
+}
+
+.rodape{
+width: 100%;
+}
+.rodaImg{
+  width: 100%;
+}
+
+
+
+.espacamentoRoda{
+    height: 10vh;
+}
+
+#contatos-relogio-loc{
+
+
+
+
+}
+.contatos{
+}
+.contatos-img{
+margin-left: 10vh;  
+height: 150px;
+margin-top: 0vh;
+
+}
+.text-contato1{
+ font-family: 'Jost', sans-serif;
+ color: #9B6D41;
+ font-size: 20px;
+ margin-left: 210px;
+}
+.text-contato2{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+ margin-left: 150px;
+}
+.relogio{
+ margin-top: -6.5vh;
+}
+
+.relogio-img{
+margin-left: 48.5vh;
+margin-top: -30vh;
+}
+.text-relogio1{
+ font-family: 'Jost', sans-serif;
+ color: #9B6D41;
+ font-size: 20px;
+ text-align: center;
+}
+.text-relogio2{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+ text-align: center;
+}
+.text-relogio3{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+ text-align: center;
+}
+.mapa{
+float: right;
+margin-top: -27vh;
+margin-right: 10vh;
+}
+.text-mapa1{
+ font-family: 'Jost', sans-serif;
+ color: #9B6D41;
+ font-size: 25px;
+text-align: center;
+ 
+
+ 
+}
+.text-mapa2{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+}
+.text-mapa3{
+ font-family: 'Jost', sans-serif;
+ color: #F7C375;
+ font-size: 20px;
+ text-align: center;
+ 
+}
+.btn-agendar-footer{
+ display: flex;
+ justify-content: center;
+ width: 100%;
+}
+.btnfooter{
+ height: 6vh;
+ width: 13%;
+ margin-top: 40px;
+ background-color: transparent;
+ border: 3px solid #E8A525;
+ color: #E8A525;
+ font-family: 'Jost', sans-serif;
+ font-size: 20px;
+ cursor: pointer;
+ transition: 0.4s;
+}
+.btnfooter:hover{
+   opacity: 0.5;
+  
+}
+.rodape-txt{
+ width: 100%;
+ height: 3vh;
+background-color: #C68E8D;
+margin-top: 15vh;
+
+}
+.text-footer{
+ color: #F9F2EC;
+ font-family: 'Jost', sans-serif;
+ text-align: center;
+ }
+
+ .btn-adm-class{
+    display: flex;
+    justify-content: center;
+    
+    
+ }
+ .btn-adm-class button{
+    text-align: center;
+    height: 6vh;
+    width: 13%;
+    margin-top: 40px;
+    background-color: transparent;
+    border: 3px solid #E8A525;
+    color: #E8A525;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.4s;
+    width: 120%;
+    height: 25px;
+ }
+
+
+/*RESPONSIVIDADE*/
+
+/*Height*/
+@media screen and (max-height: 994px){
+    .textlocal1{
+        width: 800px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    .textlocal1 p{
+       font-size: 28px;
+    }
+}
+
+@media screen and (max-height: 662px){
+    .textlocal1{
+        width: 800px;
+        height: 330px;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    .textlocal1 p{
+       font-size: 22px;
+    }
+}
+
+@media screen and (max-height: 497px){
+    .textlocal1{
+        width: 800px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    .textlocal1 p{
+       font-size: 17px;
+    }
+}
+
+/*Width*/
+
+@media screen and (max-width: 1300px){
+    .content1 button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 35vh;
+        padding: 30px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border: 2px solid #F9F2EC;
+        background: transparent;
+        color: #F9F2EC;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.4s;
+        font-size: 20px;
+        height: 10vh;
+    }
+}
+@media screen and (max-width: 506px){
+    .content1 button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40vh;
+        padding: 30px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border: 2px solid #F9F2EC;
+        background: transparent;
+        color: #F9F2EC;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.4s;
+        font-size: 18px;
+        height: 5vh;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 800px){
+    .textlocal1{
+        width: 600px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        padding-top: 25px;
+    }
+    .textlocal1 p{
+       font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 646px){
+    .textlocal1{
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .textlocal1 p{
+       font-size: 14px;
+       
+    }
+}
+
+@media screen and (max-width: 400px){
+    .textlocal1{
+        width: 360px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        padding-top: 5px;
+    }
+    .textlocal1 p{
+       font-size: 14px;
+       
+    }
+}
+
+@media screen and (max-width: 365px){
+    .textlocal1{
+        width: 350px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        padding-top: 0px;
+    }
+    .textlocal1 p{
+       font-size: 13px;
+       
+    }
+}
+
+
+
+
+
+
