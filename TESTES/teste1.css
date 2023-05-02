@@ -5,54 +5,83 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
-    scroll-behavior: smooth;
-    scroll-padding-top: 76px;
-}
 
-body {
-    overflow-x: hidden;
- 
-    background: #F9F2EC;
+}
+body{
     width: 100%;
 }
-
-
-
-.content1 img {
-    max-width: 100%;
-    height: auto;
-    padding-top: 40px;
-    display: block;
+.espacamento{
+    
 }
-
-.content1 button {
+.content1 {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .content1 img {
+    width: 100%;
+    height: 100vh;
+  }
+.content1 a{
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35vh;
-    padding: 30px 0;
+    top: 735px;
+    color: white;
+  }
+  .content1 p{
+    position: absolute;
+    top: 200px;
+    font-size: 40px;
+    color: white;
     text-align: center;
-    margin: 20px 10px;
-    border: 2px solid #F9F2EC;
-    background: transparent;
-    color: #F9F2EC;
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.4s;
-    font-size: 20px;
-}
-
-.content1 button:hover {
+    
+  }
+  .content1 button{
+   width: 25vh;
+   height: 8vh;
+   text-align: center;
+   border: 3px solid #f9ecec;
+   background: transparent;
+   color: #F9F2EC;
+   cursor: pointer;
+   font-size: 25px;
+  }
+  .content1 button:hover {
     opacity: 0.5;
-}
-
-.img1content2 img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-.contentText{
+  }
+  .content2{
+    width: 100%;
+    height: 30vh;
+    background-color: #C68E8D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .florE img{
+    height: 300px;
+    padding-bottom: 10px;
+  }
+  .florD img{
+    height: 300px;
+    padding-bottom: 10px;
+  }
+  .txtContent2 {
+    
+    text-align: center;
+  }
+  .txtContent2 .MaiorC{
+    color: white;
+    font-size: 80px;
+    font-weight: 700;
+  }
+ 
+  .txtContent2 .MenorC{
+    color: #F7C375;
+    font-size: 60px;
+    
+  }
+  .contentText{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -64,6 +93,7 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    height: 130vh;
 }
 
 .textlocal1 p{
@@ -76,21 +106,6 @@ body {
     justify-content: center;
     text-decoration: none;
     padding-bottom: 20px;
-    /*position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35vh;
-    padding: 30px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border: 2px solid #F9F2EC;
-    background: transparent;
-    color: #F9F2EC;
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.4s;
-    font-size: 20px;*/
 }
 .conhecaEquipe button{
 
@@ -101,22 +116,8 @@ body {
     color: #F7C375;
     width: 25vh;
     height: 5vh;    
-    /*position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 35vh;
-    padding: 30px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border: 2px solid #F9F2EC;
-    background: transparent;
-    color: #F9F2EC;
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.4s;
-    font-size: 20px;*/
 }
+
 .servicos1{
     background-color: #C68E8D;
     height: 70vh;
@@ -138,327 +139,98 @@ body {
     height: 3vh;
     background-color: #F7C375;
 }
-
-.btn-agende{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30vh;
-    padding: 30px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border: 2px solid #F7C375;
-    background: transparent;
-    color: #F7C375;
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.4s;
-    font-size: 20px;
-    z-index: -1;
+  /*Responsividade*/
+  @media screen and (max-width: 1742px){
+    .txtContent2 .MaiorC{
+        color: white;
+        font-size: 70px;
+        font-weight: 700;
+      }
+     
+      .txtContent2 .MenorC{
+        color: #F7C375;
+        font-size: 50px;
+        
+      }
+}
+@media screen and (max-width: 1366px){
+    .florE img{
+        height: 200px;
+        padding-bottom: 10px;
+      }
+      .florD img{
+        height: 200px;
+        padding-bottom: 10px;
+      }
+}
+@media screen and (max-width: 1170px){
+    .txtContent2 .MaiorC{
+        color: white;
+        font-size: 60px;
+        font-weight: 700;
+      }
+     
+      .txtContent2 .MenorC{
+        color: #F7C375;
+        font-size: 40px;
+        
+      }
 }
 
-.btn-agende:hover{
-    opacity: 0.5;
+@media screen and (max-width: 866px){
+    .florE img{
+        height: 150px;
+        padding-bottom: 10px;
+      }
+      .florD img{
+        height: 150px;
+        padding-bottom: 10px;
+      }
+      .txtContent2 .MaiorC{
+        color: white;
+        font-size: 55px;
+        font-weight: 700;
+      }
+     
+      .txtContent2 .MenorC{
+        color: #F7C375;
+        font-size: 35px;
+        
+      }
 }
 
-.rodape{
-width: 100%;
+@media screen and (max-width: 700px){
+    .florE img{
+        height: 150px;
+        padding-bottom: 10px;
+      }
+      .florD img{
+        height: 150px;
+        padding-bottom: 10px;
+      }
+      .txtContent2 .MaiorC{
+        color: white;
+        font-size: 40px;
+        
+      }
+     
+      .txtContent2 .MenorC{
+        color: #F7C375;
+        font-size: 25px;
+        
+      }
 }
-.rodaImg{
-  width: 100%;
+@media screen and (max-width: 650px){
+    .florE img{
+        display: none;
+      }
+      .florD img{
+        display: none;
+      }
+     
 }
-
-
-
-.espacamentoRoda{
-    height: 10vh;
-}
-
-#contatos-relogio-loc{
-
-
-
-
-}
-.contatos{
-}
-.contatos-img{
-margin-left: 10vh;  
-height: 150px;
-margin-top: 0vh;
-
-}
-.text-contato1{
- font-family: 'Jost', sans-serif;
- color: #9B6D41;
- font-size: 20px;
- margin-left: 210px;
-}
-.text-contato2{
- font-family: 'Jost', sans-serif;
- color: #F7C375;
- font-size: 20px;
- margin-left: 150px;
-}
-.relogio{
- margin-top: -6.5vh;
-}
-
-.relogio-img{
-margin-left: 48.5vh;
-margin-top: -30vh;
-}
-.text-relogio1{
- font-family: 'Jost', sans-serif;
- color: #9B6D41;
- font-size: 20px;
- text-align: center;
-}
-.text-relogio2{
- font-family: 'Jost', sans-serif;
- color: #F7C375;
- font-size: 20px;
- text-align: center;
-}
-.text-relogio3{
- font-family: 'Jost', sans-serif;
- color: #F7C375;
- font-size: 20px;
- text-align: center;
-}
-.mapa{
-float: right;
-margin-top: -27vh;
-margin-right: 10vh;
-}
-.text-mapa1{
- font-family: 'Jost', sans-serif;
- color: #9B6D41;
- font-size: 25px;
-text-align: center;
- 
 
  
-}
-.text-mapa2{
- font-family: 'Jost', sans-serif;
- color: #F7C375;
- font-size: 20px;
-}
-.text-mapa3{
- font-family: 'Jost', sans-serif;
- color: #F7C375;
- font-size: 20px;
- text-align: center;
- 
-}
-.btn-agendar-footer{
- display: flex;
- justify-content: center;
- width: 100%;
-}
-.btnfooter{
- height: 6vh;
- width: 13%;
- margin-top: 40px;
- background-color: transparent;
- border: 3px solid #E8A525;
- color: #E8A525;
- font-family: 'Jost', sans-serif;
- font-size: 20px;
- cursor: pointer;
- transition: 0.4s;
-}
-.btnfooter:hover{
-   opacity: 0.5;
-  
-}
-.rodape-txt{
- width: 100%;
- height: 3vh;
-background-color: #C68E8D;
-margin-top: 15vh;
-
-}
-.text-footer{
- color: #F9F2EC;
- font-family: 'Jost', sans-serif;
- text-align: center;
- }
-
- .btn-adm-class{
-    display: flex;
-    justify-content: center;
-    
-    
- }
- .btn-adm-class button{
-    text-align: center;
-    height: 6vh;
-    width: 13%;
-    margin-top: 40px;
-    background-color: transparent;
-    border: 3px solid #E8A525;
-    color: #E8A525;
-    font-family: 'Jost', sans-serif;
-    font-size: 13px;
-    cursor: pointer;
-    transition: 0.4s;
-    width: 120%;
-    height: 25px;
- }
-
-
-/*RESPONSIVIDADE*/
-
-/*Height*/
-@media screen and (max-height: 994px){
-    .textlocal1{
-        width: 800px;
-        height: 500px;
-        display: flex;
-        justify-content: center;
-        padding-top: 50px;
-    }
-    .textlocal1 p{
-       font-size: 28px;
-    }
-}
-
-@media screen and (max-height: 662px){
-    .textlocal1{
-        width: 800px;
-        height: 330px;
-        display: flex;
-        justify-content: center;
-        padding-top: 50px;
-    }
-    .textlocal1 p{
-       font-size: 22px;
-    }
-}
-
-@media screen and (max-height: 497px){
-    .textlocal1{
-        width: 800px;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        padding-top: 50px;
-    }
-    .textlocal1 p{
-       font-size: 17px;
-    }
-}
-
-/*Width*/
-
-@media screen and (max-width: 1300px){
-    .content1 button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 35vh;
-        padding: 30px 0;
-        text-align: center;
-        margin: 20px 10px;
-        border: 2px solid #F9F2EC;
-        background: transparent;
-        color: #F9F2EC;
-        cursor: pointer;
-        overflow: hidden;
-        transition: 0.4s;
-        font-size: 20px;
-        height: 10vh;
-    }
-}
-@media screen and (max-width: 506px){
-    .content1 button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40vh;
-        padding: 30px 0;
-        text-align: center;
-        margin: 20px 10px;
-        border: 2px solid #F9F2EC;
-        background: transparent;
-        color: #F9F2EC;
-        cursor: pointer;
-        overflow: hidden;
-        transition: 0.4s;
-        font-size: 18px;
-        height: 5vh;
-    }
-    
-}
-
-
-
-@media screen and (max-width: 800px){
-    .textlocal1{
-        width: 600px;
-        height: 500px;
-        display: flex;
-        justify-content: center;
-        padding-top: 25px;
-    }
-    .textlocal1 p{
-       font-size: 17px;
-    }
-}
-
-@media screen and (max-width: 646px){
-    .textlocal1{
-        width: 400px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        padding-top: 20px;
-    }
-    .textlocal1 p{
-       font-size: 14px;
-       
-    }
-}
-
-@media screen and (max-width: 400px){
-    .textlocal1{
-        width: 360px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        padding-top: 5px;
-    }
-    .textlocal1 p{
-       font-size: 14px;
-       
-    }
-}
-
-@media screen and (max-width: 365px){
-    .textlocal1{
-        width: 350px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        padding-top: 0px;
-    }
-    .textlocal1 p{
-       font-size: 13px;
-       
-    }
-}
-
 
 
 
