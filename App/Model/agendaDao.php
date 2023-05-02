@@ -29,7 +29,7 @@ class AgendaDao {
    # função para ler os registros
    public function read(){
    
-        $sql = 'SELECT * FROM agenda';
+        $sql = 'SELECT agenda.*, usuario.nome_usuario, servico.servico FROM agenda INNER JOIN usuario ON agenda.id_usuario = usuario.id_usuario INNER JOIN servico ON agenda.id_servico = servico.id_servico';
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->execute();
 
@@ -108,7 +108,13 @@ class AgendaDao {
        }
     }
  
- 
+    public function readfk()
+    {
+        $sql = "SELECT usuario.cod_agenda, a.id_usuario, a.id_servico, a.hora_agenda, a.data_agenda, u.nome FROM agenda a JOIN usuario u ON a.id_usuario = u.id_usuario";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
 
 }
 
