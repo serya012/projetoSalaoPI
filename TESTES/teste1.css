@@ -106,6 +106,9 @@ body{
     justify-content: center;
     text-decoration: none;
     padding-bottom: 20px;
+    height: 20vh;
+    align-items: center;
+    
 }
 .conhecaEquipe button{
 
@@ -139,7 +142,180 @@ body{
     height: 3vh;
     background-color: #F7C375;
 }
+.mainCard{
+  width: 100%;
+  background-color: #C68E8D;
+  height: 70vh;
+  
+  
+}
+.cardTxt{
+  
+padding-top: 30px;
+
+}
+.cardTxt p{
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  color: #F7C375;
+  }
+.cardGerais{
+  display: flex;
+  justify-content: space-between;
+  margin-top: px;
+  padding: 30px;
+  
+}
+.cardG{
+  
+  background-color: white;
+  width: 350px;
+  height: 500px;
+  border-radius: 30px;
+  
+}
+.card1{
+  
+}
+.card1 img{
+  height: 100px;
+  border-radius: 100px;
+ border: 2px solid #C68E8D ;
+
+
+
+}
+.card1 p{
+  padding-top: 30px;
+  text-align: center;
+}
+.card1 a{
+  padding-top: 60px;
+}
+.card1 button{
+  background-color: transparent;
+  border: 2px solid #C68E8D;
+  width: 120px;
+  height: 35px;
+  border-radius: 20px;
+}
+
+
+.card2 img{
+  height: 100px;
+  border-radius: 100px;
+ border: 2px solid #C68E8D ;
+
+}
+.card2 p{
+  padding-top: 30px;
+  text-align: center;
+}
+.card2 a{
+  padding-top: 60px;
+}
+.card2 button{
+  background-color: transparent;
+  border: 2px solid #C68E8D;
+  width: 120px;
+  height: 35px;
+  border-radius: 20px;
+}
+
+
+.card3 img{
+  height: 100px;
+  border-radius: 100px;
+ border: 2px solid #C68E8D ;
+
+}
+.card3 p{
+  padding-top: 30px;
+  text-align: center;
+}
+.card3 a{
+  padding-top: 60px;
+}
+.card3 button{
+  background-color: transparent;
+  border: 2px solid #C68E8D;
+  width: 120px;
+  height: 35px;
+  border-radius: 20px;
+}
+
+
+.card4 img{
+  height: 100px;
+  border-radius: 100px;
+ border: 2px solid #C68E8D ;
+
+}
+.card4 p{
+  padding-top: 30px;
+  text-align: center;
+}
+.card4 a{
+  padding-top: 60px;
+}
+.card4 button{
+  background-color: transparent;
+  border: 2px solid #C68E8D;
+  width: 120px;
+  height: 35px;
+  border-radius: 20px;
+}
+.rodapePrincipal{
+  width: 100%;
+  height: 65vh;
+  background-color: #9B6D41;
+}
+.rodapeTxtPequeno{
+  width: 100%;
+  height: 3vh;
+}
   /*Responsividade*/
+  /*Altura*/
+  @media  screen and (max-height: 805px) {
+    .content1 a{
+      position: absolute;
+      top: 550px;
+      color: white;
+    }
+    .content1 button{
+      width: 28vh;
+      height: 10vh;
+      text-align: center;
+      border: 3px solid #f9ecec;
+      background: transparent;
+      color: #F9F2EC;
+      cursor: pointer;
+      font-size: 25px;
+     }
+  }
+
+  
+ 
+  @media  screen and (max-height: 667px) {
+    .content1 a{
+      top: 500px;
+    }
+    .textlocal1{
+      width: 700px;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      padding-top: 100px;
+      height: 130vh;
+  }
+  
+  .textlocal1 p{
+      font-size: 20px;
+      color: #9B6D41;
+  }
+  }
+   /*Largura*/
   @media screen and (max-width: 1742px){
     .txtContent2 .MaiorC{
         color: white;
@@ -176,6 +352,21 @@ body{
         
       }
 }
+@media screen and (max-width: 956px){
+  .textlocal1{
+    width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    height: 130vh;
+}
+
+.textlocal1 p{
+    font-size: 22px;
+    color: #9B6D41;
+}
+}
 
 @media screen and (max-width: 866px){
     .florE img{
@@ -197,6 +388,20 @@ body{
         font-size: 35px;
         
       }
+
+      .textlocal1{
+        width: 700px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+        height: 130vh;
+    }
+    
+    .textlocal1 p{
+        font-size: 20px;
+        color: #9B6D41;
+    }
 }
 
 @media screen and (max-width: 700px){
@@ -219,6 +424,20 @@ body{
         font-size: 25px;
         
       }
+
+      .textlocal1{
+        width: 600px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        height: 130vh;
+    }
+    
+    .textlocal1 p{
+        font-size: 20px;
+        color: #9B6D41;
+    }
 }
 @media screen and (max-width: 650px){
     .florE img{
@@ -227,7 +446,63 @@ body{
       .florD img{
         display: none;
       }
-     
+      .textlocal1{
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+        height: 130vh;
+    }
+    
+    .textlocal1 p{
+        font-size: 18px;
+        color: #9B6D41;
+    }
+}
+
+@media screen and (max-width: 550px){
+  .florE img{
+      display: none;
+    }
+    .florD img{
+      display: none;
+    }
+    .textlocal1{
+      width: 400px;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      padding-top: 100px;
+      height: 130vh;
+  }
+  
+  .textlocal1 p{
+      font-size: 18px;
+      color: #9B6D41;
+  }
+}
+
+@media screen and (max-width: 445px){
+  .florE img{
+      display: none;
+    }
+    .florD img{
+      display: none;
+    }
+    .textlocal1{
+      width: 280px;
+      height: 480px;
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+      height: 130vh;
+  }
+  
+  .textlocal1 p{
+      font-size: 16px;
+      color: #9B6D41;
+  }
 }
 
  
