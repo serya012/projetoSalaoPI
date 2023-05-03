@@ -1,6 +1,8 @@
 <?php
     session_start();
         $logado = $_SESSION['usuario'];
+        $id = $_SESSION['id_usuario'];
+        
 
     require_once '..\..\Model\conexao.php';
     require_once '..\..\Model\agenda.php';
@@ -9,7 +11,7 @@
     $agenda = new \App\Model\agenda();
     $agendaDao = new \App\Model\agendaDao();
     try {
-        $agendaDao->read();
+        $agendamentos = $agendaDao->readU($id);
     } catch(\PDOException $e){
         echo 'Erro: no read_agenda.php - verificar tabela '.$e->getMessage();
     }
@@ -73,7 +75,7 @@
         <div class="col">Ações</div>
     </div>
     <?php
-        foreach ($agendaDao->read() as $agenda):
+        foreach ($agendamentos as $agenda):
             echo ('<div class="row">
                     <div class="col-3">'.$agenda["nome_usuario"].'</div>
                     <div class="col-3">'.$agenda["servico"].'</div>
