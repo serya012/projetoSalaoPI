@@ -82,7 +82,7 @@
                     <div class="col-3">'.$agenda["hora_agenda"].'</div>
                     <div class="col-1">'.$agenda["data_agenda"].'</div>
                     <div class="col">
-                        <a href="delete_agenda.php"><button type="button" class="btn btn-light" title="Agendar">Agendar</button></a>
+                        <a href="delete_agenda.php"><button type="button" class="btn btn-light" title="Agendar">Desmarcar</button></a>
                     </div>
                    </div>'
                 );          
