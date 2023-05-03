@@ -20,7 +20,7 @@ if (isset($_POST["gravar"])){
         $funcao = $_POST['funcao'];
         $nivel = 2;
        
-        
+        echo $nome;
 
         $funcionario = new \App\Model\Funcionario();
         $funcionario->setNomeF($nome);
@@ -155,7 +155,6 @@ if (isset($_POST["gravar"])){
                 <span class="invalid-feedback"><?php echo $funcao_err; ?></span>
               </div>
             </div>
-    
             <div class="continue-button">
               <button type="submit" name="gravar"><a href="">Cadastrar</a></button>
             </div>
