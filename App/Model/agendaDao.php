@@ -46,6 +46,14 @@ class AgendaDao {
         endif;
    }
 
+   public function readU($id){
+   
+    $sql = 'SELECT agenda.*, usuario.nome_usuario, servico.servico FROM agenda INNER JOIN usuario ON agenda.id_usuario = usuario.id_usuario INNER JOIN servico ON agenda.id_servico = servico.id_servico WHERE usuario.id_usuario = :id';
+    $stmt = Conexao::getConn()->prepare($sql);
+    $stmt->bindValue(':id', $id);
+    $stmt->execute();
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+}
 
    # função para atualizar (alterar)
    public function update(Agenda $a){
