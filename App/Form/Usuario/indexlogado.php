@@ -52,180 +52,216 @@
 
   </header>
 
-  <main>
-    <div class="content1">
-      <picture>
-        <img src="../../../img/salao1.png" alt="salao">
-      </picture>
-      <a href="read_servico.php"><button type="button"><span>Agende Agora</span></button></a>
-    </div>
-    <div class="content2">
-      <picture class="img1content2">
-        <img src="../../../img/imgcontent2t.png" alt="sobrenós">
-      </picture>
-    </div>
-    <div class="contentText">
-      <div class="textlocal1">
-        <p> Há alguns anos atrás, quatro mulheres se conheceram em um curso de cabeleireiras no Senac. Elas rapidamente
-          perceberam que tinham muitas coisas em comum, incluindo a paixão pela beleza e o desejo de construir algo
-          próprio. Depois de se formarem no curso, as quatro mulheres, chamadas Juliana, Gilda, Natália e Prisciane,
-          começaram a trabalhar em salões de beleza diferentes. No entanto, elas mantiveram contato e continuaram a
-          conversar sobre suas ambições de abrir um negócio próprio. <br><br>
-
-          Um dia então, as quatro mulheres decidiram que era hora de seguir em frente com seu sonho de abrir um estúdio
-          de
-          beleza para todos. Elas queriam criar um espaço acolhedor e luxuoso onde seus clientes, principalmente as
-          mulheres, pudessem se sentir bonitas e confiantes. <br><br>
-
-          Elas obtiveram então, informações sobre como iniciar um negócio e elaboraram um plano de negócios detalhado.
-          Depois de muitas reuniões, pesquisas e esforços, elas finalmente conseguiram abrir seu próprio estúdio de
-          beleza, que chamaram de Studios SóDelas. Com esforço e trabalhando juntas, oferecem serviços de alta qualidade
-          em cabelos, maquiagens e cuidados com a pele. <br><br>
-
-          O Studios SóDelas se tornou um sucesso entre as mulheres da região e o negócio cresceu rapidamente. Hoje, o
-          estúdio é um dos mais conhecidos e respeitados da cidade, com clientes fiéis e uma equipe de profissionais
-          talentosos. <br><br>
-
-          As fundadoras do Studios SóDelas são orgulhosas do que construíram juntas e continuam trabalhando duro para
-          manter a qualidade e a excelência que tornaram seu negócio um sucesso.
+  <div class="espacamento"></div>
+    <main>
+      <div class="content1">
+        <img src="../img/op.jpg" alt="" />
+        <p>
+          "Transforme sua beleza em uma obra-prima única e deslumbrante em nosso
+          salão de beleza com nossos serviços de alta qualidade e equipe
+          especializada!"
         </p>
+        <a href="read_servico.php"><button>Agende Agora</button></a>
       </div>
-    </div>
-    <div class="conhecaEquipe"><a href="../../../paginas/equipe_logado.html"><button type="button" class="btn-conheca-equipe"><span>Conheça nossa
-            equipe</span></button></a></div>
-
-    <div class="servicos1">
-      <div class="servicosdesc">
-        <h1>Alguns de Nossos Serviços</h1>
+      <div id="content2">
+        <div class="florE">
+          <img src="../img/florE.PNG" alt="" />
+        </div>
+        <div class="txtContent2">
+          <p class="MaiorC">Sobre nós</p>
+          <hr />
+          <hr />
+          <p class="MenorC">Veja um pouquinho da nossa história</p>
+        </div>
+        <div class="florD">
+          <img src="../img/florD.png" alt="" />
+        </div>
       </div>
-      <div id="sublinhado-servi"></div>
-      <div class="servicos1baixo">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
+      <div id="contentText">
+        <div class="textlocal1">
+          <p>
+            Há alguns anos atrás, quatro mulheres se conheceram em um curso de
+            cabeleireiras no Senac. Elas rapidamente perceberam que tinham
+            muitas coisas em comum, incluindo a paixão pela beleza e o desejo de
+            construir algo próprio. Depois de se formarem no curso, as quatro
+            mulheres, chamadas Juliana, Gilda, Natália e Prisciane, começaram a
+            trabalhar em salões de beleza diferentes. No entanto, elas
+            mantiveram contato e continuaram a conversar sobre suas ambições de
+            abrir um negócio próprio. <br /><br />
 
-            <div class="card swiper-slide">
-              <div class="card__image">
-                <img src="../../../img/corte1.jpg" alt="card image">
-              </div>
+            Um dia então, as quatro mulheres decidiram que era hora de seguir em
+            frente com seu sonho de abrir um estúdio de beleza para todos. Elas
+            queriam criar um espaço acolhedor e luxuoso onde seus clientes,
+            principalmente as mulheres, pudessem se sentir bonitas e confiantes.
+            <br /><br />
 
-              <div class="card__content">
-                <span class="card__title">Cabelos</span>
-                <span class="card__name"></span>
-                <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore
-                  provident non tempora odio est sunt, ipsum</p>
-                <a href="../../../paginas/servicos_logado.html"><button class="card__btn">Veja mais</button></a>
-              </div>
-            </div>
+            Elas obtiveram então, informações sobre como iniciar um negócio e
+            elaboraram um plano de negócios detalhado. Depois de muitas
+            reuniões, pesquisas e esforços, elas finalmente conseguiram abrir
+            seu próprio estúdio de beleza, que chamaram de Studios SóDelas. Com
+            esforço e trabalhando juntas, oferecem serviços de alta qualidade em
+            cabelos, maquiagens e cuidados com a pele. <br /><br />
 
-            <div class="card swiper-slide">
-              <div class="card__image">
-                <img src="../../../img/marquiagem1.PNG" alt="card image">
-              </div>
+            O Studios SóDelas se tornou um sucesso entre as mulheres da região e
+            o negócio cresceu rapidamente. Hoje, o estúdio é um dos mais
+            conhecidos e respeitados da cidade, com clientes fiéis e uma equipe
+            de profissionais talentosos. <br /><br />
 
-              <div class="card__content">
-                <span class="card__title">Maquiagem</span>
-                <span class="card__name"></span>
-                <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore
-                  provident non tempora odio est sunt, ipsum</p>
-                  <a href="../../../paginas/servicos_logado.html"><button class="card__btn">Veja mais</button></a>
-              </div>
-            </div>
+            As fundadoras do Studios SóDelas são orgulhosas do que construíram
+            juntas e continuam trabalhando duro para manter a qualidade e a
+            excelência que tornaram seu negócio um sucesso.
+          </p>
+        </div>
+      </div>
+      <div class="conhecaEquipe">
 
-            <div class="card swiper-slide">
-              <div class="card__image">
-                <img src="../../../img/estetica1.jpg" alt="card image">
-              </div>
+        <a href="../../../paginas/equipe.html"
+          ><button type="button" class="btn-conheca-equipe">
+            <span>Conheça nossa equipe</span>
+          </button></a
+        >
+      </div>
 
-              <div class="card__content">
-                <span class="card__title">Estética</span>
-                <span class="card__name"></span>
-                <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore
-                  provident non tempora odio est sunt, ipsum</p>
-                  <a href="../../../paginas/servicos_logado.html"><button class="card__btn">Veja mais</button></a>
-              </div>
-            </div>
-
-            <div class="card swiper-slide">
-              <div class="card__image">
-                <img src="../../../img/ciliosesombran.jpg" alt="card image">
-              </div>
-
-              <div class="card__content">
-                <span class="card__title">Cílios e Sombrancelhas</span>
-                <span class="card__name"></span>
-                <p class="card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit veritatis labore
-                  provident non tempora odio est sunt, ipsum</p>
-                  <a href="../../../paginas/servicos_logado.html"><button class="card__btn">Veja mais</button></a>
-              </div>
-
-            </div>
-
+      <div class="mainCard">
+        <div class="cardTxt">
+          <p>Veja alguns de nossos serviços</p>
+        </div>
+        <div class="cardGerais">
+          <div class="card1 cardG">
+            <img src="../img/cabelo.jfif" alt="" />
+            <p>Cabelos</p>
+            <p>
+              Transforme seu visual com nossos serviços de cabelo
+              personalizados.
+            </p>
+            <a href=""><button>Veja Mais</button></a>
+          </div>
+          <div class="card2 cardG">
+            <img src="../img/ciliosesombran.jpg" alt="" />
+            <p>Cilhos e Sombrancelhas</p>
+            <p>
+              Deixe seus cílios e sobrancelhas nas mãos dos nossos especialistas
+              e experimente o poder da beleza realçada!
+            </p>
+            <a href=""><button>Veja Mais</button></a>
+          </div>
+          <div class="card3 cardG">
+            <img src="../img/mulher-maquiada.jpg" alt="" />
+            <p>Maquiagem</p>
+            <p>
+              Deixe sua beleza brilhar com nossos serviços de maquiagem
+              exclusivos.
+            </p>
+            <a href=""><button>Veja Mais</button></a>
+          </div>
+          <div class="card4 cardG">
+            <img src="../../../img/estetica (1).jpg" alt="" />
+            <p>Estética</p>
+            <p>Relaxe e revitalize sua pele com nossos serviços de estética.</p>
+            <a href=""><button>Veja Mais</button></a>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+<br><br><br><br>
+   
+   
 
-  <footer class="rodape">
-    <div class="espacamentoRoda"></div>
-    <div class="imgRoda">
-      <img src="../../../img/parceiros.png" alt="">
+    <footer>
+      <div id="Parceiros-content">
+        <div class="txtParceiros">
+        <p class="text-parc">Parceiros</p>
+      </div>
+     
+      <div class="florPCR">
+      <div class="florE-pcr"><img src="../img/florE.png" alt=""></div>
+      <div class="pcrSó">
+        <div class="avonG">
+        <img class="avon" src="../img/Avon-removebg-preview.png" alt="">
+      </div>
+      <div  class="naturaG">
+        <img class="natura" src="../img/natura-removebg-preview.png" alt="">
+      </div>
+      <div class="panteneG">
+        <img class="pantene" src="../img/pantene-removebg-preview.png" alt="">
+      </div>
+      </div>
+      <div class="florD-pcr"><img src="../img/florD.png" alt=""></div>
     </div>
-    <div class="real-rodape">
-      <div class="contatoroda">
-        <picture>
-          <img src="../../../img/contatos.png" alt="contato">
-        </picture>
-        <div class="contato1">
-          <h3>Contato</h3>
+  
+      </div>
+      <div id="rodapePrincipal">
+        <div class="nuvem">
+          <div class="imgNuvem">
+            <img src="../img/contatos.png" alt="" />
+          </div>
+          <div class="txtNuvem">
+            <p class="text-contato1 textoRoda">Contato:</p>
+            <p class="text-contato2 textoRoda">Tel.: (21 9999 9999)</p>
+          </div>
         </div>
-        <div class="tel1">
-          <h3>Tel: (21)9999-9999</h3>
+        <div class="relogio">
+          <div class="imgRelogio">
+            <img src="../img/relogio.png" alt="" />
+          </div>
+          <div class="txtRelogio">
+            <p class="txtRel1 txtRel">Horário de funcionamento</p>
+            <p class="txtRel2 txtRel">Segunda a Sábado</p>
+            <p class="txtRel3 txtRel">9:00h às 19:00h</p>
+          </div>
+          <div class="btnRoda1 btnRoda">
+            <a href="../App/Form/Usuario/read_servico.php"><button>Agendamento</button></a>
+          </div>
+          <div class="btnRoda2 btnRoda">
+            <a href="../App/Login/login_funcionario.php"><button>Área Administrativa</button></a>
+          </div>
+        </div>
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.0798290705693!2d-43.45241898442105!3d-22.76241853845944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99670406251cd9%3A0x7a731a5987b46624!2sR.%20Humberto%20Gentil%20Baroni%2C%20189%20-%20Centro%2C%20Nova%20Igua%C3%A7u%20-%20RJ%2C%2026255-020!5e0!3m2!1spt-BR!2sbr!4v1681176419953!5m2!1spt-BR!2sbr"
+            width="300"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="text-local">
+            <p class="text-mapa1">Localização:</p>
+            <p class="text-mapa2">R. Humberto Gentil Baroni, 189 - Centro</p>
+            <p class="text-mapa3">Nova Iguaçu - RJ, 26255-020</p>
+          </div>
+         
         </div>
       </div>
-      <div class="horario">
-        <picture>
-          <img src="../../../img/relogio.png" alt="relogio">
-        </picture>
-        <div class="horafunci1">
-          <h3>Horários de funcionamento</h3>
-        </div>
-        <div class="horafunci2">
-          <h3>De segunda a sábado<br>9:00 ás 19:00h</h3>
-        </div>
+      <div class="rodape-txt">
+        <p class="text-footer">
+          Site criado por alunos do SENAC, é apenas um projeto
+        </p>
       </div>
-      <div class="maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.079829224956!2d-43.452805223726806!3d-22.762418532729274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99670406251cd9%3A0x7a731a5987b46624!2sR.%20Humberto%20Gentil%20Baroni%2C%20189%20-%20Centro%2C%20Nova%20Igua%C3%A7u%20-%20RJ%2C%2026255-020!5e0!3m2!1spt-BR!2sbr!4v1682388760065!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="loc">
-          <h3>Localização</h3>
-        </div>
-        <div class="loc2">
-          <h5>. Humberto Gentil Baroni, 189 - Centro, Nova Iguaçu - RJ, 26255-020</h5>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="js/mobilenavbar.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 300,
-        modifier: 1,
-        slideShadows: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/mobilenavbar.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 300,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
 
+   
+  </body>
 </html>
