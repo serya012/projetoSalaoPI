@@ -13,9 +13,9 @@ body{
     width: 100%;
     background-color: #F9F2EC;
 }
-.espacamento{
+
     
-}
+
 .content1 {
     display: inline-block;
     position: relative;
@@ -188,9 +188,7 @@ padding-top: 30px;
 .cardG img{
   margin-left: 125px;
 }
-.card1{
-  
-}
+
 .card1 img{
   height: 100px;
   width: 100px;
@@ -518,9 +516,7 @@ text-align: center;
       margin-top: 20px ;
       font-size: 20px;
     }
-    .florE-pcr{
-      
-    }
+
   }
   @media  screen and (max-height: 805px) {
     .content1 a{
