@@ -1,16 +1,15 @@
-# Salão de Beleza "Nome do Salão"
+# Salão de Beleza
 
-![Logo do Salão](caminho/para/logo.png)
+Este é o projeto de um salão de beleza desenvolvido por um Grupo, composto por:
 
-Este é o projeto de um salão de beleza desenvolvido pelo Grupo "Nome do Grupo", composto por:
-
-- [Nome do Membro 1](https://linkdomembro1.com)
-- [Nome do Membro 2](https://linkdomembro2.com)
-- [Nome do Membro 3](https://linkdomembro3.com)
+- [Thiago](https://github.com/Ghashie)
+- [Luiz](https://github.com/Dedelandia)
+- [Ryan](https://github.com/ryan7645)
+- [Patrick](https://github.com/PatrickAndradeSC)
 
 ## Sobre o Projeto
 
-O Salão de Beleza "Nome do Salão" é um projeto desenvolvido pelo Grupo "Nome do Grupo" com o objetivo de oferecer serviços de beleza de alta qualidade para os clientes. O projeto visa criar uma plataforma online onde os clientes podem conhecer os serviços oferecidos, agendar horários e entrar em contato com a equipe do salão.
+O Salão de Beleza é um projeto desenvolvido pelo Grupo, com o objetivo de oferecer serviços de beleza de alta qualidade para os clientes. O projeto visa criar uma plataforma online onde os clientes podem conhecer os serviços oferecidos, agendar horários e entrar em contato com a equipe do salão.
 
 ## Funcionalidades
 
@@ -22,12 +21,9 @@ O Salão de Beleza "Nome do Salão" é um projeto desenvolvido pelo Grupo "Nome 
 
 ## Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- PHP (para funcionalidades dinâmicas como agendamento)
-- Banco de Dados (se aplicável, por exemplo, MySQL, MongoDB)
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black)
+- ![PHP](https://img.shields.io/badge/PHP-777BB4.svg?style=for-the-badge&logo=PHP&logoColor=white)
+- ![SQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white)
 
-## Licença
-
-Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
